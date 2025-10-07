@@ -1,7 +1,7 @@
 # Project info (drives the name shown in the header/sidebar)
-project = "Partner Documentation Portal"
-author = "Your Company"
-release = "1.0"
+project = "Documentation Portal"
+author = "Alcatel-Lucent Enterprise"
+release = "1.1"
 
 # Root document (ensures RTD finds your index)
 master_doc = "index"   # (works across Sphinx versions)
