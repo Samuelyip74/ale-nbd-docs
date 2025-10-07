@@ -4,7 +4,7 @@ OmniSwitch 6900
 
 .. raw:: html
 
-   <iframe src="_static/omniswitch-6900-datasheet-en.pdf"
+   <iframe src="_static/OmniSwitch_6900_Datasheet.pdf"
            width="100%" height="800px"
            style="border:none;">
    </iframe>
