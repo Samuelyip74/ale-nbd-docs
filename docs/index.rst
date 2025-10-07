@@ -1,152 +1,136 @@
 =========================================================
-Partner Documentation Portal
+Alcatel-Lucent Enterprise Documentation Portal
 =========================================================
 
-Welcome to the Partner Documentation Portal — your one-stop hub for all information related to our products, solutions, and partner enablement.
+Welcome to the Documentation Portal — your one-stop hub for all information related to our products, solutions, and partner enablement.
+
+.. toctree::
+   :maxdepth: 2
+   :caption: About
+   :hidden:
+
+   about/company-overview
+   about/why-partner
+   about/differentiators
+   about/references-awards
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Product Overview
+   :hidden:
+
+   product/portfolio
+   product/families
+   product/solution-architecture
+   product/roadmap
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Release Information
+   :hidden:
+
+   release/latest
+   release/release-notes-archive
+   release/upgrade-guides
+   release/eol-notices
+   release/known-issues
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Product Docs
+   :hidden:
+
+   docs/datasheets
+   docs/specifications
+   docs/user-guides
+   docs/licensing
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Design & Implementation
+   :hidden:
+
+   design/design-guides
+   design/best-practices
+   design/reference-architectures
+   design/tools-calculators
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Sales & Quoting
+   :hidden:
+
+   sales/how-to-quote
+   sales/bundles
+   sales/demo-labs
+   sales/deal-registration
+   sales/partner-pricing
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Training & Enablement
+   :hidden:
+
+   enablement/training-calendar
+   enablement/elearning-cert
+   enablement/webinars
+   enablement/sales-playbooks
+   enablement/tech-deep-dives
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Support & Maintenance
+   :hidden:
+
+   support/channels
+   support/rma
+   support/downloads
+   support/warranty
+   support/kb-faq
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Marketing Resources
+   :hidden:
+
+   marketing/collateral
+   marketing/cobranding
+   marketing/case-studies
+   marketing/campaign-kits
+   marketing/brand-assets
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Compliance & Security
+   :hidden:
+
+   security/advisories
+   security/certifications
+   security/vuln-disclosure
+   security/data-protection
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Partner Tools & Portals
+   :hidden:
+
+   portals/partner-portal
+   portals/quoting-licensing
+   portals/support-portal
+   portals/training-portal
+   portals/marketing-hub
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Appendices
+   :hidden:
+
+   appendix/glossary
+   appendix/acronyms
+   appendix/site-changelog
+   appendix/download-index
 
 .. contents::
    :depth: 2
    :local:
    :backlinks: top
-
-
-Home
-=========================================================
-- Welcome Message
-- About This Portal
-- How to Use This Site
-- Contact & Support Links
-- Latest Updates / Announcements
-
-
-About Our Company
-=========================================================
-- Company Overview
-- Vision, Mission, and Values
-- Why Partner with Us
-- Our Differentiators
-- Global Presence & References
-- Awards and Certifications
-- Sustainability and CSR Initiatives
-
-
-Product Overview
-=========================================================
-- Product Portfolio Summary
-- Product Families (e.g., OmniSwitch, OmniAccess, OmniVista)
-- Solution Architecture Overview
-- Technology Roadmap (High-level)
-- Competitive Positioning
-
-
-Release Information
-=========================================================
-- Latest Software Releases
-- Release Notes Archive
-- Firmware Upgrade Guides
-- End-of-Life / End-of-Support Notices
-- Known Issues & Resolutions
-
-
-Product Documentation
-=========================================================
-**Datasheets**
-  - Product Datasheet (per model/family)
-  - Accessory & Module Datasheets
-
-**Specifications**
-  - Hardware Specifications
-  - Software Feature Matrix
-
-**User Guides**
-  - Installation & Setup
-  - Configuration Guide
-  - Management & Monitoring
-  - Troubleshooting Guide
-
-**Licensing & Feature Activation**
-  - License Tiers and SKUs
-  - License Management Guide
-
-
-Design & Implementation
-=========================================================
-- Design Guides
-  - Campus Network Design
-  - Data Center Design
-  - Wireless Network Design
-  - Ring / Redundancy Topology Design
-- Best Practices
-  - VLAN & IP Design
-  - QoS, Security, Multicast, OSPF, etc.
-  - Integration with Third-Party Systems
-- Network Examples
-  - Reference Architectures
-  - Example Configurations
-- Tools & Calculators
-  - BOM Estimator
-  - Network Sizing Tools
-
-
-Sales & Quoting
-=========================================================
-- How to Quote
-  - Using the Partner Quoting Tool
-  - SKU & Bundle References
-  - Discount & Margin Guidelines
-- Solution Bundles / Packages
-- Demo Kit / Lab Access Information
-- Deal Registration Process
-- Partner Pricing & Programs
-
-
-Training & Enablement
-=========================================================
-- Partner Training Calendar
-- eLearning & Certification Paths
-- Product Webinars & Workshops
-- Sales Playbooks
-- Technical Deep Dives
-
-
-Support & Maintenance
-=========================================================
-- Technical Support Channels
-- RMA Process
-- Software Download Portal
-- Warranty & Support Policy
-- Knowledge Base & FAQs
-
-
-Marketing Resources
-=========================================================
-- Partner Marketing Collaterals
-- Co-branding Guidelines
-- Case Studies & Success Stories
-- Campaign Kits
-- Brand Assets (Logos, Templates, etc.)
-
-
-Compliance & Security
-=========================================================
-- Security Advisories
-- Compliance Certifications (ISO, GDPR, etc.)
-- Vulnerability Disclosure Policy
-- Data Protection Overview
-
-
-Partner Tools & Portals
-=========================================================
-- Partner Portal Access
-- Quoting / Licensing Portal
-- Support Portal
-- Training & Certification Portal
-- Marketing Hub
-
-
-Appendices
-=========================================================
-- Glossary of Terms
-- Acronyms & Definitions
-- Change Log (for this site)
-- Document Download Index
