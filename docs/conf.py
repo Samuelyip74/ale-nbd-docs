@@ -18,7 +18,7 @@ html_theme = "sphinx_rtd_theme"
 # html_theme_options = {"logo_only": False, "collapse_navigation": False}
 html_theme_options = {
     "includehidden": True,
-    "navigation_depth": 2,
+    "navigation_depth": 4,
     "collapse_navigation": False,
     "titles_only": False,
 }

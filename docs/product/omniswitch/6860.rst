@@ -1,0 +1,5 @@
+==================
+OmniSwitch 6860
+==================
+
+Compact aggregation and access switch for enterprise networks.
