@@ -26,4 +26,5 @@ html_theme_options = {
 # If you use MyST Markdown anywhere:
 # extensions = ["myst_parser"]
 # myst_enable_extensions = ["colon_fence"]
+html_static_path = ['_static']
 root_doc = "index"
