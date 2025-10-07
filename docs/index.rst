@@ -5,7 +5,7 @@ Alcatel-Lucent Enterprise Documentation Portal
 Welcome to the Documentation Portal — your one-stop hub for all information related to our products, solutions, and partner enablement.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: About
    :hidden:
 
@@ -31,15 +31,14 @@ About Our Company
 
 :doc:`Product Overview <product/overview>`
 =========================================================
-
-
-Release Information
-=========================================================
-- Latest Software Releases
-- Release Notes Archive
-- Firmware Upgrade Guides
-- End-of-Life / End-of-Support Notices
-- Known Issues & Resolutions
+- Portfolio Summary
+- :doc:`OmniSwitch <product/omniswitch>`
+- OmniAccess Stellar
+- OmniVista Cirrus
+- OmniVista Terra
+- Solution Architecture Overview
+- Technology Roadmap (High-level)
+- Competitive Positioning
 
 
 Product Documentation
@@ -61,6 +60,15 @@ Product Documentation
 **Licensing & Feature Activation**
   - License Tiers and SKUs
   - License Management Guide
+
+
+Release Information
+=========================================================
+- Latest Software Releases
+- Release Notes Archive
+- Firmware Upgrade Guides
+- End-of-Life / End-of-Support Notices
+- Known Issues & Resolutions
 
 
 Design & Implementation
