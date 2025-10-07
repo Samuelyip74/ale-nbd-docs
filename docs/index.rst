@@ -29,7 +29,8 @@ About Our Company
 - Sustainability and CSR Initiatives
 
 
-See the :doc:`Product Overview <product/overview>` page for more details.
+:doc:`Product Overview <product/overview>`
+=========================================================
 
 
 Release Information
