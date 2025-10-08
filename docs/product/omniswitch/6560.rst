@@ -1,0 +1,10 @@
+==================
+OmniSwitch 6560
+==================
+
+.. raw:: html
+
+   <iframe src="/en/latest/_static/OmniSwitch_6560_Datasheet.pdf"
+           width="100%" height="800px"
+           style="border:none;">
+   </iframe>
