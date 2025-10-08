@@ -1,5 +1,5 @@
 =====================
-Product Overview
+Datasheet
 =====================
 
 An overview of our networking product families.
@@ -7,4 +7,7 @@ An overview of our networking product families.
 .. toctree::
    :maxdepth: 2
 
-   datasheet/index
+   omniswitch/index
+   stellar/index
+   omnivista-cirrus
+   omnivista-terra
