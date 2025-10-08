@@ -8,6 +8,6 @@ An overview of our networking product families.
    :maxdepth: 2
 
    omniswitch/index
-   omniaccess-stellar
+   omniaccess-stellar/index
    omnivista-cirrus
    omnivista-terra
