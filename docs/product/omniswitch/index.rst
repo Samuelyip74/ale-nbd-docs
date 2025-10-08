@@ -14,7 +14,7 @@ Our OmniSwitch series provides enterprise-class switching for all environments.
    6865
    6560
    6570
-   6350
+   6360
    2360
    2260
    

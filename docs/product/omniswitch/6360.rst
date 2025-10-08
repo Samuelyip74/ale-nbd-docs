@@ -1,10 +1,10 @@
 ==================
-OmniSwitch 6350
+OmniSwitch 6360
 ==================
 
 .. raw:: html
 
-   <iframe src="/en/latest/_static/OmniSwitch_6350_Datasheet.pdf"
+   <iframe src="/en/latest/_static/OmniSwitch_6360_Datasheet.pdf"
            width="100%" height="800px"
            style="border:none;">
    </iframe>
