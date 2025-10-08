@@ -1,5 +1,5 @@
 =====================
-Product Overview
+Certification
 =====================
 
 An overview of our networking product families.
@@ -7,7 +7,8 @@ An overview of our networking product families.
 .. toctree::
    :maxdepth: 2
 
-   datasheet/index
-   user-guides/index
-   release-notes/index
-   certificates/index
+   Common Criteria
+   FIPS 140-2
+   NEMA TS-2
+   EN 50155
+   EN 61373
