@@ -8,3 +8,5 @@ An overview of our networking product families.
    :maxdepth: 2
 
    datasheet/index
+   user-guides/index
+   release-notes/index
