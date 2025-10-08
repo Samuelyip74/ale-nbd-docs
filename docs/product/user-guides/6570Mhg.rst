@@ -4,7 +4,7 @@ OmniSwitch 6570M Hardware Guide
 
 .. raw:: html
 
-   <iframe src="/en/latest/_static/OmniSwitch 6570M Hardware Guide.pdf"
+   <iframe src="/en/latest/_static/Omniswitch 6570M Hardware Guide.pdf"
            width="100%" height="800px"
            style="border:none;">
    </iframe>
