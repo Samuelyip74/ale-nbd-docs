@@ -7,15 +7,19 @@ Our OmniSwitch series provides enterprise-class switching for all environments.
 .. toctree::
    :maxdepth: 2
 
-   9900
-   6900
-   6870
-   6860
-   6865
-   6560
-   6570M
-   6360
-   2360
-   2260
+   AP1570
+   AP1520
+   AP1511
+   AP1451
+   AP1431
+   AP1411
+   AP1360
+   AP1351
+   AP1331
+   AP1320-series
+   AP1311
+   AP1301H
+   AP1301
+   
    
 

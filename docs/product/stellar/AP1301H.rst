@@ -1,0 +1,10 @@
+==================
+OmniAccess Stellar AP1301H
+==================
+
+.. raw:: html
+
+   <iframe src="/en/latest/_static/omniaccess-stellar-oaw-ap1301h-datasheet-en.pdf"
+           width="100%" height="800px"
+           style="border:none;">
+   </iframe>
