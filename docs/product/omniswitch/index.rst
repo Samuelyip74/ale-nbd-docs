@@ -1,5 +1,5 @@
 ==================
-OmniSwitch Family
+OmniSwitch
 ==================
 
 Our OmniSwitch series provides enterprise-class switching for all environments.

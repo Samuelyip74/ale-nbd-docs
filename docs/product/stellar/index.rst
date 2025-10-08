@@ -1,8 +1,8 @@
 ==================
-OmniSwitch Family
+OmniAccess Stellar
 ==================
 
-Our OmniSwitch series provides enterprise-class switching for all environments.
+Our OmniAccess Stellar series provides enterprise-class switching for all environments.
 
 .. toctree::
    :maxdepth: 2
