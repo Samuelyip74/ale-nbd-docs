@@ -24,9 +24,7 @@ Welcome to the Documentation Portal — your one-stop hub for all information re
    :maxdepth: 2
    :caption: Resources
 
-   resources/white-papers
-   resources/case-studies
-   resources/brochures
-   resources/solution-briefs
+   resources/index
+
 
 
