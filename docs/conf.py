@@ -27,4 +27,8 @@ html_theme_options = {
 # extensions = ["myst_parser"]
 # myst_enable_extensions = ["colon_fence"]
 html_static_path = ['_static']
+
+def setup(app):
+    app.add_css_file('custom.css')
+
 root_doc = "index"
