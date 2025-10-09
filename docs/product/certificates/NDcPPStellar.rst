@@ -1,5 +1,5 @@
 ==================
-Common Criteria Certificate for Alcatel-Lucent Stellar Access Points: 
+Common Criteria Certificate for Alcatel-Lucent Stellar Access Points
 ==================
 
 .. raw:: html

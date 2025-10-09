@@ -1,5 +1,5 @@
 ==================
-Common Criteria Certificate for Alcatel-Lucent OmniSwitches: 
+Common Criteria Certificate for Alcatel-Lucent OmniSwitches
 ==================
 
 .. raw:: html
