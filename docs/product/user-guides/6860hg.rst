@@ -5,6 +5,6 @@ OmniSwitch 6860 Hardware Guide
 .. raw:: html
 
    <iframe src="/en/latest/_static/OmniSwitch 6860 Hardware Guide.pdf"
-           width="100%" height="800px"
+           width="1024px" height="800px"
            style="border:none;">
    </iframe>
