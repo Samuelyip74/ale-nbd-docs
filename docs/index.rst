@@ -20,7 +20,6 @@ Welcome to the Documentation Portal — your one-stop hub for all information re
 
    product/index
 
-## Resources
 .. toctree::
    :maxdepth: 2
    :caption: Resources
