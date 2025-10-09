@@ -1,6 +1,5 @@
 ==================
 ALE ISO/IEC 27001: 
-Certificate that ALE International is compliant to ISO27001:2022/2023 several requirements for design, implementation and support of cloud-based solutions (details in certificate).
 ==================
 
 .. raw:: html

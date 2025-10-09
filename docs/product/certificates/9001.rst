@@ -1,6 +1,5 @@
 ==================
 ALE ISO 9001 Certificate: 
-Certificate that ALE International operates a Quality Management System compliant with ISO 9001:2015 requirements.
 ==================
 
 .. raw:: html
