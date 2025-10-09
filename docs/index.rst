@@ -20,23 +20,14 @@ Welcome to the Documentation Portal — your one-stop hub for all information re
 
    product/index
 
+## Resources
 .. toctree::
    :maxdepth: 2
-   :caption: Release Information
-   :hidden:
+   :caption: Resources
 
-   release/latest
-   release/release-notes-archive
-   release/upgrade-guides
-   release/eol-notices
-   release/known-issues
+   resources/white-papers
+   resources/case-studies
+   resources/brochures
+   resources/solution-briefs
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Design & Implementation
-   :hidden:
 
-   design/design-guides
-   design/best-practices
-   design/reference-architectures
-   design/tools-calculators
