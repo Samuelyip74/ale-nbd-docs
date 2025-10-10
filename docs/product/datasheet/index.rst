@@ -9,5 +9,4 @@ An overview of our networking product families.
 
    omniswitch/index
    stellar/index
-   omnivista-cirrus
-   omnivista-terra
+   omnivista/index
