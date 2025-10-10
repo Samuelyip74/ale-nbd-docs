@@ -6,5 +6,5 @@ Troubleshooting Guide
    :maxdepth: 2
 
    stellar
-   omniswitch
+   
 

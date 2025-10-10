@@ -1,5 +1,5 @@
 =====================
-Certification
+Certifications
 =====================
 
 A collection of certificates held by ALE's Network Business Unit.
