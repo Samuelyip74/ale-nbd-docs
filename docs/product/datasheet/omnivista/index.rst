@@ -9,6 +9,7 @@ OmniVista 2500 or Cirrus provide network management for omniswitches and omniacc
 
    ov2500
    ovng
+   ovna
 
    
 
