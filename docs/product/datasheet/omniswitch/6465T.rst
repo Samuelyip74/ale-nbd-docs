@@ -1,0 +1,10 @@
+==================
+OmniSwitch 6465T
+==================
+
+.. raw:: html
+
+   <iframe src="/en/latest/_static/OmniSwitch_6465T_Datasheet.pdf"
+           width="1024px" height="800px"
+           style="border:none;">
+   </iframe>
