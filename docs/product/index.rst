@@ -11,4 +11,5 @@ An overview of our networking product families.
    user-guides/index
    release-notes/index
    troubleshooting/index
+   rfp/index
    certificates/index

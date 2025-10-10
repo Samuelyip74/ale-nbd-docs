@@ -1,0 +1,10 @@
+==================
+OmniSwitch 9900 RFP Template
+==================
+
+.. raw:: html
+
+   <iframe src="/en/latest/_static/omniswitch-9900-golden-rfp-en - 8.9R3.pdf"
+           width="1024px" height="800px"
+           style="border:none;">
+   </iframe>

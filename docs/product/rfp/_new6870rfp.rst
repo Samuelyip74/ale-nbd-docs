@@ -1,0 +1,10 @@
+==================
+OmniSwitch 6870 RFP Template
+==================
+
+.. raw:: html
+
+   <iframe src="/en/latest/_static/omniswitch-6900-25G-100G-golden-rfp-en 1.pdf"
+           width="1024px" height="800px"
+           style="border:none;">
+   </iframe>
