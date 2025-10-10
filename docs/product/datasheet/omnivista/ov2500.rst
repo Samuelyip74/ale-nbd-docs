@@ -1,0 +1,10 @@
+==================
+OmniVista 2500 Network Management System
+==================
+
+.. raw:: html
+
+   <iframe src="/en/latest/_static/omnivista-2500-nms-datasheet-en.pdf"
+           width="1024px" height="800px"
+           style="border:none;">
+   </iframe>
