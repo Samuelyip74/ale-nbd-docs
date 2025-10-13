@@ -52,13 +52,11 @@ Use this section to translate requirements into the right product mix.
 
 Bill of Materials (BOM) example
 ------------------------------------------
-Use this template table for the quote BOM. Keep one line per SKU.
-
-**Hardware**
+The following is an example BOM for a typical deployment of two OmniSwitch 6360-PH24 switches with 10G uplinks, PoE, and cloud management. Adjust quantities and SKUs based on actual requirements.
 
 .. list-table::
    :header-rows: 1
-   :widths: 12 34 8
+   :widths: 12 20 8
 
    * - SKU
      - Description
@@ -67,28 +65,36 @@ Use this template table for the quote BOM. Keep one line per SKU.
      -  
      -       
    * - OS6360-PH24
-     - OS6360-PH24 fixed 1RU chassis 24 PoE 1G BaseT, 2 1G* RJ45/SFP+ combo, 2 1G/10G SFP+ uplink/VFL ports. Internal AC PSU (380W budget), includes country specific power cord, guides and 19" rack mount kit. *10G license upgradeable.  
+     - OS6360-PH24 fixed 1RU chassis 24 PoE 1G BaseT, 2 1G* RJ45/SFP+ combo, 
+       2 1G/10G SFP+ uplink/VFL ports. Internal AC PSU (380W budget), includes 
+       country specific power cord, guides and 19" rack mount kit. *10G license upgradeable.  
      - 2
    * - SFP-10G-SR
-     - 10 Gigabit optical transceiver SFP+. Supports multimode fiber over 850nm wavelength nominal) with an LC connector. Typical reach of 300m 
+     - 10 Gigabit optical transceiver SFP+. Supports multimode fiber over 850nm 
+       wavelength nominal with an LC connector. Typical reach of 300m 
      - 2
    * - **License**
      -  
      -   
    * - OS6360-SW-PERF
-     - Performance software license allowing the 2 RJ45/SFP+ combo ports of the OS6360-PH24 or OS6360-PH48  model to operate at 10G speed  
+     - Performance software license allowing the 2 RJ45/SFP+ combo ports of 
+       the OS6360-PH24 or OS6360-PH48  model to operate at 10G speed  
      - 2     
    * - **Support Services**
      -  
      -       
    * - PP3N-OS6360
-     - 3 years Partner Support Plus for one OS6360 Includes 24x7 access to technical assistance, software updates and upgrades. Includes advanced replacement of faulty equipment. Please see Network Essentials document on MyPortal.  
+     - 3 years Partner Support Plus for one OS6360 Includes 24x7 access to technical
+       assistance, software updates and upgrades. Includes advanced replacement of faulty
+       equipment. Please see Network Essentials document on MyPortal.  
      - 2
    * - **Cloud Management License**
      -  
      -   
    * - OVCX-63-BAS-3Y
-     - OmniVista  Cirrus 10  - Public Cloud - Base Level - 3 Year  - Covers OS63xx Devices  - Ordering through Ebuy  - Prepaid mode - Base Support (Excl. device hardware maintenacce  support). Includes OVC10 Updates  & Support  
+     - OmniVista  Cirrus 10  - Public Cloud - Base Level - 3 Year  - Covers OS63xx 
+       Devices  - Ordering through Ebuy  - Prepaid mode - Base Support (Excl. device
+       hardware maintenacce  support). Includes OVC10 Updates  & Support  
      - 2
 
 
