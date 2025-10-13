@@ -27,16 +27,6 @@ Welcome to the Documentation Portal — your one-stop hub for all information re
    resources/index
 
 
-.. only:: html
-
-.. raw:: html
-
-   <style>
-   html body div.ethical-sidebar,
-   html body div.ethical-footer {
-      display: none !important;
-   }
-   </style>
 
 
 

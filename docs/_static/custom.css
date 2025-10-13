@@ -10,12 +10,8 @@
   margin: 0 auto;  
 }
 
-/* Hide Ethical Ads in HTML builds on RTD */
-.ea-placement,                       /* generic ad container */
-.ea-placement.ea-type-text,          /* text ad variant */
-.ethical-sidebar,                    /* legacy */
-.ethical-ads,                        /* current class */
-#ethical-ad-placeholder,             /* id used by RTD */
-.readthedocs-ea-readthedocs-sidebar-nostyle-sphinx { /* <-- needs a DOT (class) */
+/* Both are more specific than 'div.ethical-sidebar' */
+html body div.ethical-sidebar,
+html body div.ethical-footer {
   display: none !important;
 }
