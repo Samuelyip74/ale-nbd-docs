@@ -50,10 +50,13 @@ The following is an example BOM for a typical deployment of two OmniSwitch 6360-
          <td></td>
        </tr>
        <tr>
-         <td>OS6360-PH24</td>
-         <td>OS6360-PH24 fixed 1RU chassis, 24 PoE 1G BaseT, 2 x 1G RJ45/SFP+ combo, 
-             2 x 1G/10G SFP+ uplink/VFL ports. Internal AC PSU (380W), includes country-
-             specific power cord, guides, and 19&quot; rack mount kit. <em>10G license upgradeable</em>.</td>
+         <td>OS6360-P24</td>
+         <td>OS6360-P24 fixed 1RU chassis 24 PoE 1G BaseT, 2 fixed RJ45/SFP combo (1G), 2 fixed 1G/10G SFP+ uplink/stacking ports. Internal AC PSU (180W budget), includes country specific power cord, guides and 19" rack mount kit.  </td>
+         <td>2</td>
+       </tr>
+       <tr>
+         <td>OS6360-CBL-1M</td>
+         <td>1 meter long 10Gbs SFP+ direct stacking cable for OS6360 24 and 48 port models</td>
          <td>2</td>
        </tr>
        <tr>
@@ -63,20 +66,7 @@ The following is an example BOM for a typical deployment of two OmniSwitch 6360-
          <td>2</td>
        </tr>
 
-       <!-- License Section -->
-       <tr>
-         <td><strong>License</strong></td>
-         <td></td>
-         <td></td>
-       </tr>
-       <tr>
-         <td>OS6360-SW-PERF</td>
-         <td>Performance software license enabling the 2 RJ45/SFP+ combo ports of the 
-             OS6360-PH24 or OS6360-PH48 model to operate at 10G speed.</td>
-         <td>2</td>
-       </tr>
-
-       <!-- Support Services Section -->
+       !-- Support Services Section -->
        <tr>
          <td><strong>Support Services</strong></td>
          <td></td>

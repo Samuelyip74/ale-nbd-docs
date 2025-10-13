@@ -4,6 +4,7 @@ How to Quote
 
 Audience & Outcomes
 -------------------
+
 **Audience:** Presales engineers, solution consultants, and channel partners.
 
 **Outcomes:** By the end of this guide you will be able to:
@@ -13,6 +14,7 @@ Audience & Outcomes
 
 Prerequisites
 -------------
+
 - Understanding of customer requirements and constraints.
 - Familiarity with networking concepts (switching, PoE, stacking).
 - Basic knowledge of licensing models and support services.
