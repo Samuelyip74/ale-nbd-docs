@@ -1,5 +1,5 @@
 ==================
-OmniVista Cirrus
+OmniVista Cirrus Ordering Guide
 ==================
 
 .. raw:: html
