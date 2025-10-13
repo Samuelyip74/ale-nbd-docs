@@ -54,46 +54,81 @@ Bill of Materials (BOM) example
 ------------------------------------------
 The following is an example BOM for a typical deployment of two OmniSwitch 6360-PH24 switches with 10G uplinks, PoE, and cloud management. Adjust quantities and SKUs based on actual requirements.
 
-.. table:: Bill of Materials (BOM)
-   :widths: 12 20 8
-   :align: left
+.. raw:: html
 
-   +------------------+------------------------------------------------------------+--------+
-   | **SKU**          | **Description**                                            | **Qty**|
-   +==================+============================================================+========+
-   | **Hardware**     |                                                            |        |
-   +------------------+------------------------------------------------------------+--------+
-   | OS6360-PH24      | OS6360-PH24 fixed 1RU chassis, 24 PoE 1G BaseT,            | 2      |
-   |                  | 2 x 1G RJ45/SFP+ combo, 2 x 1G/10G SFP+ uplink/VFL ports.  |        |
-   |                  | Internal AC PSU (380W), includes power cord, guides,       |        |
-   |                  | and 19" rack mount kit. *10G license upgradeable.*         |        |
-   +------------------+------------------------------------------------------------+--------+
-   | SFP-10G-SR       | 10 Gigabit SFP+ optical transceiver. Supports MMF over     | 2      |
-   |                  | 850nm with LC connector, typical reach 300m.               |        |
-   +------------------+------------------------------------------------------------+--------+
-   | **License**      |                                                            |        |
-   +------------------+------------------------------------------------------------+--------+
-   | OS6360-SW-PERF   | Performance license enabling the 2 RJ45/SFP+ combo ports   | 2      |
-   |                  | of OS6360-PH24/PH48 to operate at 10G speed.               |        |
-   +------------------+------------------------------------------------------------+--------+
-   | **Support        |                                                            |        |
-   | Services**       |                                                            |        |
-   +------------------+------------------------------------------------------------+--------+
-   | PP3N-OS6360      | 3-year Partner Support Plus for OS6360. Includes 24x7      | 2      |
-   |                  | technical assistance, software updates/upgrades, and       |        |
-   |                  | advanced HW replacement. See Network Essentials on         |        |
-   |                  | MyPortal.                                                  |        |
-   +------------------+------------------------------------------------------------+--------+
-   | **Cloud          |                                                            |        |
-   | Management       |                                                            |        |
-   | License**        |                                                            |        |
-   +------------------+------------------------------------------------------------+--------+
-   | OVCX-63-BAS-3Y   | OmniVista Cirrus 10 – Public Cloud – Base Level – 3-Year   | 2      |
-   |                  | license for OS63xx devices. Ordered via Ebuy. Prepaid,     |        |
-   |                  | includes OVC10 updates & support (excludes HW maintenance).|        |
-   +------------------+------------------------------------------------------------+--------+
+   <table style="width:100%; table-layout: fixed; border-collapse: collapse;" border="1">
+     <thead>
+       <tr>
+         <th style="width:12%;">SKU</th>
+         <th style="width:68%;">Description</th>
+         <th style="width:10%;">Qty</th>
+       </tr>
+     </thead>
+     <tbody>
 
+       <!-- Hardware Section -->
+       <tr>
+         <td><strong>Hardware</strong></td>
+         <td></td>
+         <td></td>
+       </tr>
+       <tr>
+         <td>OS6360-PH24</td>
+         <td>OS6360-PH24 fixed 1RU chassis, 24 PoE 1G BaseT, 2 x 1G RJ45/SFP+ combo, 
+             2 x 1G/10G SFP+ uplink/VFL ports. Internal AC PSU (380W), includes country-
+             specific power cord, guides, and 19&quot; rack mount kit. <em>10G license upgradeable</em>.</td>
+         <td>2</td>
+       </tr>
+       <tr>
+         <td>SFP-10G-SR</td>
+         <td>10 Gigabit optical transceiver SFP+. Supports multimode fiber over 850nm 
+             wavelength with LC connector. Typical reach of 300m.</td>
+         <td>2</td>
+       </tr>
 
+       <!-- License Section -->
+       <tr>
+         <td><strong>License</strong></td>
+         <td></td>
+         <td></td>
+       </tr>
+       <tr>
+         <td>OS6360-SW-PERF</td>
+         <td>Performance software license enabling the 2 RJ45/SFP+ combo ports of the 
+             OS6360-PH24 or OS6360-PH48 model to operate at 10G speed.</td>
+         <td>2</td>
+       </tr>
+
+       <!-- Support Services Section -->
+       <tr>
+         <td><strong>Support Services</strong></td>
+         <td></td>
+         <td></td>
+       </tr>
+       <tr>
+         <td>PP3N-OS6360</td>
+         <td>3 years Partner Support Plus for one OS6360. Includes 24x7 technical assistance, 
+             software updates and upgrades, and advanced replacement of faulty equipment. 
+             Refer to Network Essentials on MyPortal.</td>
+         <td>2</td>
+       </tr>
+
+       <!-- Cloud Management License Section -->
+       <tr>
+         <td><strong>Cloud Management License</strong></td>
+         <td></td>
+         <td></td>
+       </tr>
+       <tr>
+         <td>OVCX-63-BAS-3Y</td>
+         <td>OmniVista Cirrus 10 – Public Cloud – Base Level – 3-Year subscription for OS63xx 
+             devices. Ordered via Ebuy. Prepaid mode. Includes OVC10 updates &amp; support 
+             (excludes device hardware maintenance).</td>
+         <td>2</td>
+       </tr>
+
+     </tbody>
+   </table>
 
 
 Frequently Asked Questions (FAQ)
