@@ -94,7 +94,7 @@ Example BOM for two OmniSwitch OS6465-P6 units with 1G uplinks, PoE, and cloud m
      
        Supports single mode fiber with an LC connector. 
        
-      Typical reach of 10 Km.  
+       Typical reach of 10 Km.  
      - 2
 
    * - **Support Services**
