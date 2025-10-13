@@ -24,68 +24,31 @@ Prerequisites
 - Known **regional constraints** (certifications, import, lead times).
 - Access to current **price list**, **discount policy**, and **SKU catalog** (see :ref:`pricing-refs`).
 
-Quoting Workflow (At a Glance)
-------------------------------
-1. **Qualify scope** → capture requirements and constraints.
-2. **Size the solution** → map needs to product families and license tiers.
-3. **Assemble BOM** → hardware, licenses, software subscriptions, services.
-4. **Validate** → compatibility, power, optics, quantities, spares.
-5. **Price & Discount** → apply bands, programs, and promotions.
-6. **Review & Approve** → technical + commercial checks.
-7. **Deliver Quote Pack** → BOM, pricing, assumptions, diagrams, T&Cs.
+.. _quote-checklist:
 
-.. tip::
-   Save time with the :ref:`quote-checklist` before requesting approvals.
+Quote Checklist (Copy/Paste)
+----------------------------
+- [ ] Select the appropriate model based on the customer requirements (Ports/Uplink Speed, PoE Budget, Transceivers).
+- [ ] Select the appropriate power supplies (AC/DC, Redundant).
+- [ ] Add required accessories (Rack mount kits, Power Cords, SFPs).
+- [ ] Add software licenses, if necessary
+- [ ] Add support contract (Partner Support / Support Plus).
+- [ ] Add Cloud Management License (OmniVista Cirrus)
 
-Sizing & Selection
+
+OmniSwitch 6360 Product Selection
 ------------------
 Use this section to translate requirements into the right product mix.
 
 **Inputs to collect**
-- Sites & topology: campus, branch, DC, trackside, onboard, IoT.
-- Scale: users/ports/APs, throughput, latency, redundancy.
-- Services: management platform, analytics, security features.
-- Environmental: temp range, MTBF, form factor, PoE budget.
+- Users Port: Speed / PoE / Count per switch.
+- Uplink: Speed / Type (fiber/copper) / Count per switch.
+- Power Supplies: AC or DC / Redundant or not.
+- Stacking: Number of switches per stack / Stack bandwidth.
+- Accessories: Power cords / Rack mount kits / SFPs.
 
-**Selection rules of thumb**
-- **Edge**: pick switches/APs by port type/PoE class and density.
-- **Aggregation/Core**: size for peak *x* 1.5 headroom, HA/stacking.
-- **Wireless**: AP model by client mix and RF design; controller/subscription alignment.
-- **Licensing**: align feature tier to required capabilities only; avoid over-tiering.
-- **Optics & cabling**: match reach/data rate, check DDM and vendor support.
 
-Core Building Blocks (Reference)
---------------------------------
-.. list-table::
-   :header-rows: 1
-   :widths: 20 35 20 25
-
-   * - Family
-     - Typical Use
-     - Key Specs
-     - Notes
-   * - Access Switches
-     - Edge user/device connectivity, PoE for APs/CCTV/IoT
-     - 1/2.5/10G access, 10/25/40/100G uplinks
-     - Verify PoE budget and thermal; stacking vs standalone
-   * - Aggregation/Core
-     - High-speed distribution, routing, resiliency
-     - 25/40/100G, VRRP/MLAG/Stacking
-     - Ensure hitless upgrade options if required
-   * - Wireless APs
-     - Client access, Wi-Fi 6/7 features
-     - OFDMA/MU-MIMO, tri-band options
-     - Confirm regulatory domain and mounting kits
-   * - Management/Cloud
-     - Provisioning, monitoring, analytics
-     - Per-device or tiered subscription
-     - Check license concurrency and data retention
-   * - Security/Services
-     - NAC, segmentation, threat telemetry
-     - Device/user counts, policy scale
-     - Hardware vs. software enforcement trade-offs
-
-BOM Builder (Hardware, Licenses, Services)
+BOM Builder (Hardware/Accessories, Licenses, Support Services)
 ------------------------------------------
 Use this template table for the quote BOM. Keep one line per SKU.
 
@@ -96,51 +59,25 @@ Use this template table for the quote BOM. Keep one line per SKU.
    * - SKU
      - Description
      - Qty
-     - UoM
-     - Unit Price
-     - Ext. Price
-     - Notes
    * - XX-ACCESS-48P
      - 48x 1G PoE+ access switch with 4x SFP+
      - 10
-     - each
-     - 1,234.00
-     - 12,340.00
-     - Stack of 10; PoE budget >= required
    * - XX-SFP-10G-SR
      - 10G SR SFP+ transceiver
      - 24
-     - each
-     - 95.00
-     - 2,280.00
-     - Include spares (N+10%)
    * - XX-AP-AX
      - Wi-Fi 6 AP, internal antenna
      - 60
-     - each
-     - 399.00
-     - 23,940.00
-     - Ceiling mount kit included
    * - XX-LIC-NET-ADV-1Y
      - Network advanced features, 1-year subscription
      - 70
-     - device
-     - 120.00
-     - 8,400.00
-     - Co-term to contract end
    * - SRV-DEPLOY-BASIC
      - Remote deployment & config (per site)
      - 5
-     - site
-     - 1,200.00
-     - 6,000.00
-     - Up to 2 days per site
 
-.. note::
-   Add **region-specific SKUs** for power cords, rack kits, and regulatory domain variants.
 
-Licensing & Subscriptions
--------------------------
+Licensing 
+---------
 Document what each tier unlocks and how it’s counted.
 
 .. list-table::
@@ -164,8 +101,31 @@ Document what each tier unlocks and how it’s counted.
      - Per device + data retention
      - True-up quarterly
 
-.. warning::
-   Always confirm **subscription alignment**: device count == license count, term matches **deal close + lead time + deployment window**.
+Support Services 
+----------------
+Document what each tier unlocks and how it’s counted.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 30 25 25
+
+   * - Tier
+     - Capabilities
+     - Metering
+     - Co-Term Policy
+   * - Base
+     - Monitoring, inventory, basic config
+     - Per device
+     - Align to support contract date
+   * - Advanced
+     - Automation, analytics, API, security features
+     - Per device or per user (if NAC)
+     - Auto-adjust on adds/moves
+   * - Premium
+     - Full feature set incl. compliance/reporting
+     - Per device + data retention
+     - True-up quarterly
+
 
 Optics, Cables & Power Budget
 -----------------------------
@@ -248,51 +208,6 @@ Pricing & Discounting
 .. important::
    Stack **only** compatible programs. Document assumptions in the quote cover page.
 
-Commercial Terms & T&Cs
------------------------
-Include or attach:
-- **Validity** (e.g., 30 days), **payment terms**, **Incoterms**, **delivery lead time**.
-- **Warranty** and **support SLAs** by product family.
-- **EOL/EOS** statements if refresh cycles are relevant.
-- **Exclusions & assumptions**: cabling, civil works, RF survey, etc.
-
-Technical & Commercial Validation
----------------------------------
-- Compatibility: software versions, license tiers, optics.
-- Capacity: throughput, PoE, backplane, stacking limits.
-- Redundancy: PSU, fan, uplinks, HA features.
-- Services: scope, travel, milestones, acceptance criteria.
-
-.. _quote-checklist:
-
-Quote Checklist (Copy/Paste)
-----------------------------
-- [ ] Scope confirmed (sites, users, growth).
-- [ ] Correct models and regulatory variants.
-- [ ] Optics/cables complete (with spares).
-- [ ] PoE and power budgets validated.
-- [ ] Licenses/subscriptions aligned and co-termed.
-- [ ] Services scoped and scheduled.
-- [ ] Pricing bands and promos applied; margin OK.
-- [ ] T&Cs attached (validity, Incoterms, SLA).
-- [ ] Internal approvals captured.
-- [ ] Handover pack prepared.
-
-Internal Reviews & Approvals
-----------------------------
-- **Technical Review:** solution fit, risk, supportability.
-- **Commercial Review:** pricing, margin, terms, credit.
-- **Special Approvals:** strategic band, non-standard T&Cs, custom SKUs.
-
-Deliverables & Handover
------------------------
-Provide a **quote pack** with:
-- **Executive summary** (1 page): scope, value, outcomes.
-- **BOM & pricing** (CSV/PDF).
-- **Diagrams** (topology, rack elevations if needed).
-- **Assumptions & exclusions**.
-- **Implementation plan & services SOW**.
-- **SKU datasheets** (links to :ref:`datasheets-index`).
 
 Frequently Asked Questions (FAQ)
 --------------------------------
@@ -305,15 +220,7 @@ A: Yes—carry ~10% spares per optic type per site.
 **Q: Who approves Strategic band discounts?**  
 A: Follow the :ref:`approval-matrix` for thresholds and sign-offs.
 
-References
-----------
-.. _pricing-refs:
-
-- Price list & discount policy: :ref:`pricing-policy`
-- SKU catalog: :ref:`sku-catalog`
-- Datasheets: :ref:`datasheets-index`
-- Approval matrix: :ref:`approval-matrix`
 
 Change Log
 ----------
-- v1.0 — Initial presales quoting guide scaffold.
+- v1.0 — Initial ordering quoting guide.
