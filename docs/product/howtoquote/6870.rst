@@ -68,7 +68,7 @@ cloud management, and fiber uplinks.
      - 
      - 
    * - OS6870-P48Z
-     - OS6870-P48Z: Fixed chassis with 48x2.5G multi-gigabit 60W bt PoE ports, 2x100G QSFP28 VFL ports and 6x25G SFP28 ports. Includes 19" rack-mount kit, console adapter, 1200W AC PS and country specific power cord.  
+     - OS6870-P48Z: Fixed chassis with 48x2.5G multi-gigabit 60W bt PoE ports,</br> 2x100G QSFP28 VFL ports and 6x25G SFP28 ports. Includes 19" rack-mount kit, console adapter, 1200W AC PS and country specific power cord.  
      - 2
    * - QSFP-100G-C1M
      - 100 Gigabit direct attached copper cable 1m, QSFP28.
