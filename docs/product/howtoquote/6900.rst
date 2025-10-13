@@ -93,8 +93,14 @@ Cirrus cloud management.
    * - **Cloud Management License**
      - 
      - 
-   * - OVCX-65-BAS-3Y
-     - OmniVista Cirrus 10 Cloud Base License (3-Year) for OS65xx/OS69xx. Includes analytics, AI monitoring, and updates.
+   * - OVCX-69-BAS-3Y
+     - OmniVista  Cirrus 10  - Public Cloud - Base Level - 3 Year  
+       
+       Covers OS69xx Devices  - Ordering through Ebuy
+       
+       Prepaid mode - Base Support (Excl. device hardware maintenacce  support). 
+       
+       Includes OVC10 Updates  & Support.
      - 2
 
 

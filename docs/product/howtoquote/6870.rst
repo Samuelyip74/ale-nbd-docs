@@ -92,7 +92,13 @@ cloud management, and fiber uplinks.
      - 
      - 
    * - OVCX-68-BAS-3Y
-     - OmniVista  Cirrus 10  - Public Cloud - Base Level - 3 Year  - Covers OS68xx Devices  - Ordering through Ebuy  - Prepaid mode - Base Support (Excl. device hardware maintenacce  support). Includes OVC10 Updates  & Support
+     - OmniVista  Cirrus 10  - Public Cloud - Base Level - 3 Year  
+       
+       Covers OS68xx Devices  - Ordering through Ebuy  - Prepaid mode 
+       
+       Base Support (Excl. device hardware maintenacce  support). 
+       
+       Includes OVC10 Updates  & Support
      - 2
 
 
