@@ -1,16 +1,21 @@
+/* Expand content width */
 .wy-nav-content {
+  max-width: none !important;   /* none avoids a fixed pixel cap */
+  margin: 0 auto;  
+}
+
+/* Optional: also let inner rst content grow */
+.wy-nav-content .rst-content {
   max-width: 100% !important;
-  margin: 0 auto;
+  margin: 0 auto;  
 }
 
-.ea-placement.ea-type-text {
-  display: none !important;
-}
-
-.ethical-sidebar {
-  display: none !important;
-}
-
-readthedocs-ea-readthedocs-sidebar-nostyle-sphinx {
+/* Hide Ethical Ads in HTML builds on RTD */
+.ea-placement,                       /* generic ad container */
+.ea-placement.ea-type-text,          /* text ad variant */
+.ethical-sidebar,                    /* legacy */
+.ethical-ads,                        /* current class */
+#ethical-ad-placeholder,             /* id used by RTD */
+.readthedocs-ea-readthedocs-sidebar-nostyle-sphinx { /* <-- needs a DOT (class) */
   display: none !important;
 }
