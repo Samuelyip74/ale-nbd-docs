@@ -72,27 +72,58 @@ Example BOM for two OmniSwitch OS6465-P6 units with 1G uplinks, PoE, and cloud m
      - 
      - 
    * - OS6465-P6
-     - Hardened fanless switch with 4× RJ-45 PoE+, 2× SFP, relay I/O, console, and USB. Power supply not included.
+     - Hardened GigE fan-less switch. 4x10/100/1000 RJ-45 PoE+ (2x60W PoE), 
+     
+       2x100/1000 Base-X SFP,RS-232 Console, Alarm relay: 1 In 1 out & USB port. 
+       
+       Includes user manual, access card & TS-35/7.5 /15 DIN rail mounting hardware. 
+       
+       Order Power Supply separately.  
      - 2
    * - OS6465-BPN-H
-     - 180W AC DIN-rail power supply. Supports OS6465-P6/P12. Ships with power cord and DIN hardware.
+     - OS6465 modular DIN 180W AC backup power supply. Provides system 
+     
+       & PoE power to one OS6465-P6 or OS6465-P12 switch. Ships with country 
+       
+      specific power cord & TS-35/7.5 or 15 DIN rail mounting hardware  
+. 
+       
+       Ships with power cord and DIN hardware.
+
      - 2
    * - ISFP-10G-LR
-     - 10G SFP+ optical transceiver, 1310nm, up to 10 km over SMF.
+     - 10 Gigabit industrial optical transceiver (SFP+). 
+     
+       Supports single mode fiber with an LC connector. 
+       
+      Typical reach of 10 Km.  
+.
      - 2
 
    * - **Support Services**
      - 
      - 
    * - PP10-OS6465
-     - 10-year Partner Long-Term Support Plus. Includes 24×7 technical support, software updates, and advanced hardware replacement.
+     - 10 years Partner Long Term Support Plus for one OS6465 Includes 24x7 
+     
+       access to technical assistance, software updates and upgrades. Includes 
+       
+       advanced replacement of faulty equipment. Please see Network Essentials 
+       
+       document on MyPortal.
      - 2
 
    * - **Cloud Management License**
      - 
      - 
    * - OVCX-64-BAS-5Y
-     - OmniVista Cirrus 10 Base, 5-Year subscription. Secure cloud management, software updates included.
+     - OmniVista  Cirrus 10  - Public Cloud - Base Level - 5 Year  
+       
+       Covers OS64xx Devices  - Ordering through Ebuy  
+       
+       Prepaid mode - Base Support (Excl. device hardware maintenacce  support). 
+       
+       Includes OVC10 Updates  & Support  
      - 2
 
 

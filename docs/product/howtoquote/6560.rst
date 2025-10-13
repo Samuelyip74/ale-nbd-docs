@@ -69,10 +69,20 @@ and OmniVista Cirrus cloud management. Adjust quantities based on project requir
      - 
      - 
    * - OS6560-P24X4
-     - 24-port PoE+ Gigabit switch with 2 × 1G SFP and 4 × 10G SFP+ uplinks. Includes 600 W AC PSU and rack mount kit.
+     - OS6560-P24X4 GigE fixed chassis  24 RJ-45 PoE 10/100/1G BaseT, 
+     
+       2 fixed SFP (1G), 4 fixed SFP+ (1G/10G) uplink/stacking ports. 
+     
+       1RU size, 600W AC power supply. Includes country specific power cord, 
+     
+       guides, and 19" rack mount hardware.  
+
      - 2
    * - OS6560-BP-PH
-     - 600 W modular AC PoE power supply for OS6560 PoE models. Includes country-specific power cord.
+     - OS6560-BP-PH modular 600W AC PoE  power supply. Provides system and 
+       
+       PoE  power to one OS6560 PoE switch. Ships with country specific power cord. 
+       
      - 2
    * - SFP-10G-C1M
      - 10G Direct Attach Copper (DAC) cable, 1 metre, for uplink/stacking connections.

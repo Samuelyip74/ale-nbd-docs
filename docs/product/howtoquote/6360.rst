@@ -77,14 +77,23 @@ Example BOM for two OmniSwitch OS6360-P24 switches with 10G uplinks, PoE support
      - 
      - 
    * - OS6360-P24
-     - 24-port PoE switch with 2 × RJ-45/SFP combo (1G) and 2 × 1G/10G SFP+ uplink/stacking ports.  
-       Internal AC PSU (180W PoE budget). Includes power cord, guides, and 19" rack mount kit.
+     - 24-port PoE switch with 2 × RJ-45/SFP combo (1G) 
+     
+       and 2 × 1G/10G SFP+ uplink/stacking ports.  
+       
+       Internal AC PSU (180W PoE budget). Includes power cord, 
+       
+       guides, and 19" rack mount kit.
      - 2
    * - OS6360-CBL-1M
-     - 1-metre 10G SFP+ direct stacking cable for OS6360 24 and 48-port models.
+     - 1-metre 10G SFP+ direct stacking cable for OS6360 24 and 
+     
+       48-port models.
      - 2
    * - SFP-10G-SR
-     - 10G SFP+ optical transceiver (850 nm, multimode fiber) with typical reach of 300 m.
+     - 10G SFP+ optical transceiver (850 nm, multimode fiber) with 
+     
+       typical reach of 300 m.
      - 2
 
    * - **Support Services**
