@@ -1,7 +1,7 @@
 .. _how-to-quote:
 
 =================================
-OmniSwitch 6360 ORdering Guide
+OmniSwitch 6360 Ordering Guide
 =================================
 
 .. contents::
@@ -13,21 +13,22 @@ Audience & Outcomes
 **Audience:** Presales engineers, solution consultants, and channel partners.
 
 **Outcomes:** By the end of this guide you will be able to:
+
 - Select the right products and licenses for a customer use case.
 - Produce a complete and supportable Bill of Materials (BOM).
-- Apply pricing, discounts, and services correctly.
-- Pass internal review and hand off cleanly to Sales and Delivery.
+
 
 Prerequisites
 -------------
-- Confirmed customer **use case**, **site count**, **users/devices**, **performance targets**, and **growth horizon** (12–36 months).
-- Known **regional constraints** (certifications, import, lead times).
-- Access to current **price list**, **discount policy**, and **SKU catalog** (see :ref:`pricing-refs`).
+- Understanding of customer requirements and constraints.
+- Familiarity with networking concepts (switching, PoE, stacking).
+- Basic knowledge of licensing models and support services.
+- Access to current **price list**, **discount policy**, and **SKU catalog** (MyPortal).
 
 .. _quote-checklist:
 
-Quote Checklist (Copy/Paste)
-----------------------------
+Quote Checklist
+---------------
 - [ ] Select the appropriate model based on the customer requirements (Ports/Uplink Speed, PoE Budget, Transceivers).
 - [ ] Select the appropriate power supplies (AC/DC, Redundant).
 - [ ] Add required accessories (Rack mount kits, Power Cords, SFPs).
@@ -41,6 +42,7 @@ OmniSwitch 6360 Product Selection
 Use this section to translate requirements into the right product mix.
 
 **Inputs to collect**
+
 - Users Port: Speed / PoE / Count per switch.
 - Uplink: Speed / Type (fiber/copper) / Count per switch.
 - Power Supplies: AC or DC / Redundant or not.
@@ -54,7 +56,7 @@ Use this template table for the quote BOM. Keep one line per SKU.
 
 .. list-table::
    :header-rows: 1
-   :widths: 12 34 8 8 10 10 18
+   :widths: 12 34 8
 
    * - SKU
      - Description
@@ -131,82 +133,7 @@ Optics, Cables & Power Budget
 -----------------------------
 - Validate **uplink speeds** and **port types** at both ends.
 - Compute **PoE**: sum device draw at *realistic* class, add 20–30% headroom.
-- Include **redundant PSUs** and **power cords** per regional standard.
-
-Example BOMs (Copy & Adapt)
----------------------------
-Campus Edge & Aggregation (template)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. code-block:: yaml
-
-   project: ACME Campus Refresh
-   sites: 3
-   bom:
-     - sku: XX-ACCESS-48P
-       qty: 24
-       notes: "2 stacks per site, 4 switches per stack, PoE+"
-     - sku: XX-AGG-32Q
-       qty: 6
-       notes: "Core/agg, 100G capable"
-     - sku: XX-SFP-10G-SR
-       qty: 80
-       notes: "10G uplinks and spares"
-     - sku: XX-LIC-NET-ADV-3Y
-       qty: 30
-       notes: "Co-term to 36 months"
-     - sku: SRV-DEPLOY-PLUS
-       qty: 3
-       notes: "Onsite deployment per site"
-
-Branch with Wi-Fi (template)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. code-block:: yaml
-
-   project: ACME Branch Expansion
-   sites: 12
-   bom:
-     - sku: XX-ACCESS-24P
-       qty: 24
-       notes: "2 per site, PoE for APs"
-     - sku: XX-AP-AX
-       qty: 120
-       notes: "10 per site average"
-     - sku: XX-LIC-WIFI-ADV-1Y
-       qty: 120
-       notes: "Advanced Wi-Fi features"
-     - sku: SRV-REMOTE-STAGING
-       qty: 12
-       notes: "Zero-touch prep per site"
-
-Pricing & Discounting
----------------------
-- Start from **book price** (current list). Apply **programmatic discounts** by band and region.
-- Account for **promo SKUs** or bundles when applicable.
-- Add **services** margins per policy.
-
-.. list-table::
-   :header-rows: 1
-   :widths: 25 25 25 25
-
-   * - Band
-     - Eligibility
-     - Typical Range
-     - Notes
-   * - Standard
-     - All partners
-     - 0–15%
-     - Small deals or renewals
-   * - Growth
-     - Registered, strategic accounts
-     - 15–30%
-     - Competitive motions
-   * - Strategic
-     - Net-new logos / lighthouse
-     - 30–40%+
-     - Requires VP approval
-
-.. important::
-   Stack **only** compatible programs. Document assumptions in the quote cover page.
+- Include **redundant PSUs** and **power cords**.
 
 
 Frequently Asked Questions (FAQ)
