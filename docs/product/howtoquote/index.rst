@@ -21,9 +21,10 @@ Prerequisites
 - Access to current **price list**, **discount policy**, and **SKU catalog** (MyPortal).
 
 **Inputs to collect**
+
 - Sites & topology: campus, branch, DC, trackside, onboard, IoT.
-- Scale: users/ports/APs, throughput, latency, redundancy.
-- Services: management platform, analytics, security features.
+- Scale: users/ports/APs, link speed, throughput, latency, redundancy.
+- Services: management platform, cloud/on-premises, security features.
 - Environmental: temp range, MTBF, form factor, PoE budget.
 
 Quote Checklist
