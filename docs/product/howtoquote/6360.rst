@@ -29,7 +29,7 @@ Below are the key models and their features:
 
 Bill of Materials (BOM) example
 ------------------------------------------
-The following is an example BOM for a typical deployment of two OmniSwitch 6360-PH24 switches with 10G uplinks, PoE, and cloud management. Adjust quantities and SKUs based on actual requirements.
+The following is an example BOM for a typical deployment of two OmniSwitch 6360-P24 switches with 10G uplinks, PoE, and cloud management. Adjust quantities and SKUs based on actual requirements.
 
 .. raw:: html
 
@@ -66,7 +66,7 @@ The following is an example BOM for a typical deployment of two OmniSwitch 6360-
          <td>2</td>
        </tr>
 
-       !-- Support Services Section -->
+       <!-- Support Services Section -->
        <tr>
          <td><strong>Support Services</strong></td>
          <td></td>
@@ -112,6 +112,10 @@ A: You can mount the switch on a flat surface wall using the **OS6360-WALL-MNT**
 
 A: You need to purchase the OS6360-SW-PERF license when you want to enable the 10G uplink ports on the OS6360-PH24 or OS6360-PH48 models.
 
+**Q: What is the difference between OVCX-63-BAS-3Y and OVCX-63-BIZ-3Y?**
+
+A: OVCX-63-BIZ-3Y includes all the features of OVCX-63-BAS-3Y plus Partner Support Plus for the duration of the subscription.  
+BIZ and PPXX licenses are mutually exclusive.
 
 Change Log
 ----------
