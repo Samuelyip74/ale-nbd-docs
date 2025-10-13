@@ -43,7 +43,7 @@ Ordering Guide
 ---------------
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    9900
    6900
