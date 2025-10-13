@@ -52,7 +52,8 @@ Designed to reduce complexity in deployment, configuration, and ongoing manageme
     **Consistent Policy and Fabric Integration**
         The use of SPB Fabric and unified user profiles allows consistent policy enforcement across wired and wireless environments without complex manual VLAN stitching.
 
-Technical Requirements
+
+Design Objectives
 ------------------------------------
 
 - **User & device scale:** <X> concurrent users, <Y> IoT/OT endpoints, growth <Z>%/year
@@ -64,15 +65,17 @@ Technical Requirements
 - **Operations:** Unified Management, API/automation, AIOps with anomaly detection
 - **Sustainability & TCO:** High-efficiency PoE, lifecycle automation, Opex-friendly subscription option
 
-Reference Architecture
+Architecture
 -------------------------
 
-This architecture now incorporates:
+This architecture incorporates the following key components and principles:
 
-- **EVPN-VXLAN campus fabric** for scalable L2/L3 virtualization and seamless mobility.
+- **EVPN-VXLAN Data Center Fabric** for scalable L2/L3 virtualization and seamless mobility.
+- **High-Performance Campus Core/Distribution** with high resiliency and fast convergence.
+- **Multi-gigabit wired access** with 1/2.5/5/10G ports and PoE+/Hi-PoE for modern devices and APs.
 - **Dynamic Radio Management (DRM)**, to provide optimized Wi-Fi performance in high-density environments.
 - **Macro & Micro Segmentation** aligned with Zero Trust Architecture.
-- **Zero Trust Enforcement Flow using UPAM (OmniVista Built-In NAC) → OmniSwitch/Stellar → Palo Alto NGFW**
+- **Unified Management & Automation** via OmniVista Cirrus and OmniVista Network Advisor.
 
 Campus Fabric
 ~~~~~~~~~~~~~~~~~
@@ -144,51 +147,6 @@ IoT/OT Onboarding & Fingerprinting
 - **Dynamic policy:** Category-based UNP enforcement at the edge (switch/AP) to auto-place devices into correct containers/VRFs.
 - **Hardening:** Per-device PSK or certs; restrict East-West; rate-limit, DHCP-snooping, ARP inspection where applicable.
 
-
-Addressing Key Modern Drivers
---------------------------------
-
-- **Wi-Fi 7 readiness:** Multi-link operation (MLO), 320-MHz channels in 6 GHz where regulatory/RF permits; ensure multi-gig edge and adequate PoE budgets.
-- **Automation/DAN:** Accelerate service activation with fabric auto-attach and templates; reduce human error.
-- **AI-assisted Ops:** Use AIOps insights to detect anomalies, capacity saturation, and noisy neighbors; enable intent-based drift checks.
-
-6) IP Plan & VLAN/VRF Schema (example)
---------------------------------------
-
-.. list-table:: IP Plan & VLAN/VRF Schema (example)
-   :header-rows: 1
-   :widths: 15 15 15 25 30
-
-   * - Zone
-     - VRF
-     - VLANs
-     - IP CIDR
-     - Notes
-   * - Corp Users
-     - VRF-CORP
-     - 100–150
-     - 172.16.X.0/24 (per VLAN schema)
-     - 802.1X; SGT/UNP role mapping
-   * - Guests
-     - VRF-GUEST
-     - 200–209
-     - 10.20.0.0/16
-     - Internet-only; rate-limit
-   * - IoT – Building
-     - VRF-IOT
-     - 300–349
-     - 10.30.0.0/16
-     - Per-category UNPs
-   * - Voice
-     - VRF-VOICE
-     - 60
-     - 10.60.0.0/16
-     - LLDP-MED auto-VLAN
-   * - Management
-     - VRF-MGMT
-     - 99
-     - 10.99.0.0/16
-     - OOB mgmt; restricted
 
 QoS & Traffic Engineering
 ----------------------------
