@@ -10,7 +10,7 @@ Summary
 --------------------
 
 This design targets a campus environment with a classic Core/Distribution model integrated with an EVPN-VXLAN fabric extension for data center interconnect. The architecture enforces Zero Trust principles with NAC/Firewall integration and strict Guest & IoT isolation.
-This document proposes a validated, scalable, and secure campus network architecture for wired and wireless access using Alcatel-Lucent Enterprise (ALE) OmniSwitch LAN, OmniAccess Stellar WLAN, and OmniVista management. The design supports Digital Age Networking (automation-first operations), zero-trust segmentation, and Wi-Fi 7 readiness with multi-gigabit edge, while enabling an optional Network-as-a-Service (NaaS) commercial model.
+This document proposes a validated, scalable, and secure campus network architecture for wired and wireless access using Alcatel-Lucent Enterprise (ALE) OmniSwitch LAN, OmniAccess Stellar WLAN, and OmniVista management. The design supports Digital Age Networking (automation-first operations), zero-trust segmentation, and Wi-Fi 7 readiness with multi-gigabit edge.
 
 Technical Requirements
 ------------------------------------
