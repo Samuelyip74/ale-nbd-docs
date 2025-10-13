@@ -1,3 +1,128 @@
-==================
-OmniSwitch 6900
-==================
+.. _omniswitch-6900-quote-guide:
+
+=============================
+OmniSwitch 6900 Ordering Guide
+=============================
+
+.. contents::
+   :local:
+   :depth: 2
+
+
+OmniSwitch 6900 Models
+----------------------
+
+The OmniSwitch 6900 family is a high-performance, low-latency switching platform designed for enterprise core,
+data center leaf-spine fabrics, and high-density campus backbones. It supports advanced Ethernet services,
+Layer 2/3 fabric technologies (SPB, EVPN/VXLAN), MACsec, and both AC/DC power.
+
+**Model Series Overview**
+
+- **X & T Series – Campus / Core Edge**
+  Fixed 10G/25G switching for aggregation and high-density campus core.
+  
+- **V & C Series – Fabric Spine / Data Center**
+  High-performance models with 40G/100G uplinks for spine/core roles.
+
+**X & T Series (Campus Core Aggregation)**
+
+OS6900-X24
+   24 × 10G SFP+ ports, 2 × QSFP+ uplinks (40G), ultra-low latency.  
+   Ideal for campus core or collapsed distribution layer.
+
+OS6900-X48
+   48 × 10G SFP+ ports, 4 × 40G QSFP uplinks.  
+   Supports SPB, VRF, MACsec, and VXLAN with license.
+
+OS6900-T24
+   24 × 10G Base-T (RJ-45) + 2 × QSFP+ uplinks (40G).  
+   Suitable for mixed fiber/copper aggregation.
+
+OS6900-T48
+   48 × 10G Base-T + 4 × 40G QSFP uplinks.  
+   Ideal for campus backbone modernization.
+
+**V & C Series (Fabric Spine / Data Center)**
+
+OS6900-V48
+   48 × 10G SFP+ ports + 6 × 40G/100G QSFP uplinks.  
+   Supports EVPN/VXLAN, SPB Fabric, MPLS, and Data Center bridging.
+
+OS6900-C32
+   32 × 100G QSFP28 ports, spine-ready platform.  
+   Optimized for large-scale fabric, MACsec, and distributed core.
+
+OS6900-V72
+   72 × 10G SFP+ ports + 6 × 100G QSFP uplinks.  
+   Combines access density with high-speed fabric aggregation.
+
+
+Bill of Materials (BOM) Example – Campus Core Deployment
+---------------------------------------------------------
+
+A typical deployment of two OS6900-X48 switches as a resilient campus core with 40G fabric links and OmniVista
+Cirrus cloud management.
+
+.. list-table::
+   :widths: 15 65 10
+   :header-rows: 1
+
+   * - **SKU**
+     - **Description**
+     - **Qty**
+   * - **Hardware**
+     - 
+     - 
+   * - OS6900-X48
+     - 48-port 10G SFP+ switch with 4 × 40G QSFP uplinks. Supports advanced fabric and MACsec (via license).
+     - 2
+   * - QSFP-40G-DAC1M
+     - 40G Direct Attach Copper (DAC) cable, 1 metre, for stacking or uplink redundancy.
+     - 2
+   * - SFP-10G-LR
+     - 10G SFP+ optical transceiver (1310 nm, SMF, up to 10 km reach).
+     - 2
+
+   * - **Support Services**
+     - 
+     - 
+   * - PP3N-OS6900
+     - 3-Year Partner Support Plus. Includes 24×7 TAC access, software updates, and hardware replacement.
+     - 2
+
+   * - **Cloud Management License**
+     - 
+     - 
+   * - OVCX-65-BAS-3Y
+     - OmniVista Cirrus 10 Cloud Base License (3-Year) for OS65xx/OS69xx. Includes analytics, AI monitoring, and updates.
+     - 2
+
+
+Frequently Asked Questions (FAQ)
+--------------------------------
+
+**Q: What advanced fabric features are supported on the OmniSwitch 6900?**  
+A: OS6900 supports SPB Fabric, EVPN/VXLAN, MPLS, VRF, and Layer 2/3 virtualization.  
+Fabric features require the Metro/Fabric or Advanced Routing (AR) license.
+
+**Q: Does OS6900 support MACsec encryption?**  
+A: Yes. MACsec (802.1AE) is supported on both fiber (SFP+/QSFP+) and copper ports (on T models) with the proper license.
+
+**Q: What are the power options for OS6900?**  
+A: Most OS6900 models support hot-swappable AC or DC power supplies.  
+Select DC PSU for data center or telco deployments.
+
+**Q: Can OS6900 be managed via OmniVista Cirrus Cloud?**  
+A: Yes. Use **OVCX-69-BAS** or **OVCX-69-BIZ** for cloud-based provisioning, telemetry, and lifecycle management.
+
+**Q: How is resiliency implemented on OS6900?**  
+A: Supports Virtual Chassis, Multi-Chassis Link Aggregation (MC-LAG), fast failover, and 40G/100G redundant fabric links.
+
+**Q: Is VXLAN supported on OS6900?**  
+A: Yes. VXLAN bridging and EVPN control-plane are available with the proper software license.
+
+
+Change Log
+----------
+
+- **v1.0** — Initial OmniSwitch 6900 ordering and quoting guide.
