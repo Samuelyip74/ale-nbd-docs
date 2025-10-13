@@ -56,7 +56,7 @@ The following is an example BOM for a typical deployment of two OmniSwitch 6360-
 
 .. raw:: html
 
-   <table style="width:100%; table-layout: fixed; border-collapse: collapse;" border="1">
+   <table style="width:100%; table-layout: fixed; border-collapse: collapse;margin-bottom: 2em;" border="1">
      <thead>
        <tr>
          <th style="width:12%;">SKU</th>
@@ -69,8 +69,6 @@ The following is an example BOM for a typical deployment of two OmniSwitch 6360-
        <!-- Hardware Section -->
        <tr>
          <td><strong>Hardware</strong></td>
-         <td></td>
-         <td></td>
        </tr>
        <tr>
          <td>OS6360-PH24</td>
@@ -89,8 +87,6 @@ The following is an example BOM for a typical deployment of two OmniSwitch 6360-
        <!-- License Section -->
        <tr>
          <td><strong>License</strong></td>
-         <td></td>
-         <td></td>
        </tr>
        <tr>
          <td>OS6360-SW-PERF</td>
@@ -102,8 +98,6 @@ The following is an example BOM for a typical deployment of two OmniSwitch 6360-
        <!-- Support Services Section -->
        <tr>
          <td><strong>Support Services</strong></td>
-         <td></td>
-         <td></td>
        </tr>
        <tr>
          <td>PP3N-OS6360</td>
@@ -116,8 +110,6 @@ The following is an example BOM for a typical deployment of two OmniSwitch 6360-
        <!-- Cloud Management License Section -->
        <tr>
          <td><strong>Cloud Management License</strong></td>
-         <td></td>
-         <td></td>
        </tr>
        <tr>
          <td>OVCX-63-BAS-3Y</td>
