@@ -63,69 +63,27 @@ Use this template table for the quote BOM. Keep one line per SKU.
    * - SKU
      - Description
      - Qty
+   * - Hardware
+     -  
+     -       
    * - XX-ACCESS-48P
      - 48x 1G PoE+ access switch with 4x SFP+
      - 10
    * - XX-SFP-10G-SR
      - 10G SR SFP+ transceiver
      - 24
-   * - XX-AP-AX
-     - Wi-Fi 6 AP, internal antenna
-     - 60
-   * - XX-LIC-NET-ADV-1Y
-     - Network advanced features, 1-year subscription
-     - 70
+   * - Support Services
+     -  
+     -       
    * - SRV-DEPLOY-BASIC
      - Remote deployment & config (per site)
      - 5
-
-
-**Licensing**
-
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20 30 25 25
-
-   * - Tier
-     - Capabilities
-     - Metering
-     - Co-Term Policy
-   * - Base
-     - Monitoring, inventory, basic config
-     - Per device
-     - Align to support contract date
-   * - Advanced
-     - Automation, analytics, API, security features
-     - Per device or per user (if NAC)
-     - Auto-adjust on adds/moves
-   * - Premium
-     - Full feature set incl. compliance/reporting
-     - Per device + data retention
-     - True-up quarterly
-
-**Support Services**
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20 30 25 25
-
-   * - Tier
-     - Capabilities
-     - Metering
-     - Co-Term Policy
-   * - Base
-     - Monitoring, inventory, basic config
-     - Per device
-     - Align to support contract date
-   * - Advanced
-     - Automation, analytics, API, security features
-     - Per device or per user (if NAC)
-     - Auto-adjust on adds/moves
-   * - Premium
-     - Full feature set incl. compliance/reporting
-     - Per device + data retention
-     - True-up quarterly
+   * - Licenses
+     -  
+     -   
+   * - XX-LIC-NET-ADV-1Y
+     - Network advanced features, 1-year subscription
+     - 70
 
 
 
