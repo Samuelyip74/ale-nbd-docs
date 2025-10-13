@@ -24,8 +24,6 @@ Prerequisites
 - Services: management platform, analytics, security features.
 - Environmental: temp range, MTBF, form factor, PoE budget.
 
-.. _quote-checklist:
-
 Quote Checklist
 ---------------
 - [ ] Select the appropriate model based on the customer requirements (Ports/Uplink Speed, PoE Budget, Transceivers).
@@ -35,6 +33,11 @@ Quote Checklist
 - [ ] Add support contract (Partner Support / Support Plus).
 - [ ] Add Cloud Management License (OmniVista Cirrus)
 
+
+.. _order-orderging:
+
+Ordering Guide
+---------------
 
 .. toctree::
    :maxdepth: 2
