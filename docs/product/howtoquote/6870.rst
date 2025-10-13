@@ -1,3 +1,118 @@
-==================
-OmniSwitch 6870
-==================
+.. _omniswitch-6870-quote-guide:
+
+=============================
+OmniSwitch 6870 Ordering Guide
+=============================
+
+.. contents::
+   :local:
+   :depth: 2
+
+
+OmniSwitch 6870 Models
+----------------------
+
+The OmniSwitch 6870 is a premium enterprise switch family designed for high-density Multi-Gigabit access, 
+Wi-Fi 6/6E deployment, and fabric-enabled core/aggregation roles. It supports advanced hardware features such as 
+25/100G uplinks, MACsec, SPB/VXLAN fabric, MPLS, and high PoE++ delivery for next-generation edge infrastructure.
+
+**Family Model Categories**
+
+- **Z Series — Multi-Gig Access Edge (Wi-Fi 6/6E)**  
+  High-density PoE++, optimized for access layer with 2.5G/5G ports.
+
+- **M Series — Premium Multi-Gig with Higher Uplink Capacity**  
+  Expanded uplinks (40/100G), AI telemetry, advanced fabric services.
+
+- **V Series — Fabric Core/Aggregation Variants**  
+  High uplink capacity, MPLS/SPB-ready, positioned for core/aggregation.
+
+**Access / Multi-Gig Models (Z Series)**
+
+OS6870-P24Z
+   24 × 1G/2.5G/5G Multi-Gig PoE+ / PoE++ (802.3bt up to 90W),  
+   2 × SFP+ (10G) and 2 × QSFP uplinks (25G/40G depending on model).  
+   Designed for Wi-Fi 6/6E APs and powered edge devices.
+
+OS6870-P48Z
+   48 × 1G/2.5G/5G Multi-Gig PoE+/PoE++ access ports,  
+   2 × 10G SFP+ uplinks, 2 × QSFP (25G/40G) uplinks or stacking.  
+   Ideal for high-density campus wireless and enterprise edge.
+
+**Premium Multi-Gig / Fabric Models (M and V Series)**
+
+OS6870-P48M
+   48 × 1G/2.5G/5G/10G Multi-Gig PoE++ ports with advanced QoS,  
+   2 × 10G SFP+ uplinks, 2 × 40G/100G QSFP uplinks.  
+   AI-telemetry enabled, supports SPB/MPLS and Fabric Connect.
+
+OS6870-V12
+   Aggregation/Core variant with 12 × 25G SFP28 or modular uplink slots (100G ready),  
+   No PoE. Designed for collapsed core, SPB/MPLS fabric, and backbone services.
+
+
+Bill of Materials (BOM) Example – High-Density Access
+-----------------------------------------------------
+
+Example BOM for a Wi-Fi 6/6E edge deployment using two OmniSwitch 6870-P48Z units with PoE++, 
+cloud management, and fiber uplinks.
+
+.. list-table::
+   :widths: 15 65 10
+   :header-rows: 1
+
+   * - **SKU**
+     - **Description**
+     - **Qty**
+   * - **Hardware**
+     - 
+     - 
+   * - OS6870-P48Z
+     - OS6870-P48Z: Fixed chassis with 48x2.5G multi-gigabit 60W bt PoE ports, 2x100G QSFP28 VFL ports and 6x25G SFP28 ports. Includes 19" rack-mount kit, console adapter, 1200W AC PS and country specific power cord.  
+     - 2
+   * - QSFP-100G-C1M
+     - 100 Gigabit direct attached copper cable 1m, QSFP28.
+     - 2
+   * - SFP-10G-LR
+     - 10G SFP+ optical transceiver (1310 nm, SMF, up to 10 km).
+     - 2
+
+   * - **Support Services**
+     - 
+     - 
+   * - PP3N-OS6870
+     - 3-Year Partner Support Plus: 24×7 TAC access, software upgrades, and hardware replacement.
+     - 2
+
+   * - **Cloud Management License**
+     - 
+     - 
+   * - OVCX-68-BAS-3Y
+     - OmniVista  Cirrus 10  - Public Cloud - Base Level - 3 Year  - Covers OS68xx Devices  - Ordering through Ebuy  - Prepaid mode - Base Support (Excl. device hardware maintenacce  support). Includes OVC10 Updates  & Support
+     - 2
+
+
+Frequently Asked Questions (FAQ)
+--------------------------------
+
+**Q: Does OmniSwitch 6870 support MACsec encryption?**  
+A: Yes. MACsec (802.1AE) is supported on copper and fiber uplink ports with an optional MACsec license, OS-SW-MACSEC.
+
+**Q: Can 6870 be used for Wi-Fi 6/6E high-power access points?**  
+A: Yes. OS6870-P24Z/P48Z and P48M models support PoE++ (802.3bt) delivering up to 90W, ideal for next-generation APs, cameras, and IoT.
+
+**Q: How is OmniVista support handled?**  
+A: OS6870 can be managed via **OmniVista Cirrus 10 (OVCX licenses)** for cloud-based provisioning, monitoring, and AI analytics.  
+On-prem OmniVista 2500 is also supported.
+
+**Q: Does OS6870 support DC power variants?**  
+A: Yes.
+
+**Q: What stacking or virtual chassis capabilities exist?**  
+A: The 6870 supports Virtual Chassis (VC) stacking up to 8 units via VFL ports, enabling simplified management and redundancy.
+
+
+Change Log
+----------
+
+- **v1.0** — Initial OmniSwitch 6870 ordering and quoting guide.

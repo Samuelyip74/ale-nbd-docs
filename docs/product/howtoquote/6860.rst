@@ -1,3 +1,114 @@
-==================
-OmniSwitch 6860
-==================
+.. _omniswitch-6860-quote-guide:
+
+=============================
+OmniSwitch 6860 Ordering Guide
+=============================
+
+.. contents::
+   :local:
+   :depth: 2
+
+
+OmniSwitch 6860 Models
+----------------------
+
+The OmniSwitch 6860 series is a high-performance, enterprise-grade LAN switch family designed for 
+high-density access, Wi-Fi 6/6E edge, and secure campus aggregation. These switches support 
+Multi-Gigabit access, advanced PoE++, MACsec, SPB-M, MPLS, and full fabric services with 
+hardware-accelerated performance.
+
+**High-Density Multi-Gigabit (Wi-Fi 6/6E Edge)**
+
+OS6860-P24Z
+   24 × 2.5G/5G Multi-Gig PoE+ (802.3at) and PoE++ (802.3bt) ports,  
+   2 × 1G/10G SFP+ uplinks, 2 × 20G QSFP+ stacking/uplink ports.  
+   Supports up to 90W per port (PoE++), ideal for Wi-Fi 6/6E APs.
+
+OS6860-P48Z
+   48 × 2.5G/5G Multi-Gig PoE+(802.3at)/PoE++ (802.3bt) access ports,  
+   2 × 1G/10G SFP+ uplinks, 2 × 20G QSFP+ stacking/uplinks.  
+   Designed for dense wireless edge and high-power IP devices.
+
+OS6860-P48M
+   48 × 1G/2.5G/5G/10G Multi-Gig PoE++ ports (full-speed),  
+   2 × 1G/10G SFP+, 2 × 40G/100G QSFP uplinks (depending on model variant).  
+   Highest-end 6860 access switch with expanded uplink capacity and QoS hardware acceleration.
+
+
+Bill of Materials (BOM) Example
+-------------------------------
+
+Example BOM for two OS6860-P48Z units at a high-density wireless edge deployment with 25G uplinks, PoE++, 
+and OmniVista Cirrus cloud management.
+
+.. list-table::
+   :widths: 15 65 10
+   :header-rows: 1
+
+   * - **SKU**
+     - **Description**
+     - **Qty**
+   * - **Hardware**
+     - 
+     - 
+   * - OS6860-P48Z
+     - 48-port Multi-Gig PoE++ (2.5/5G) switch with 2 × SFP+ and 2 × QSFP uplinks. Supports up to 90W per port.
+     - 2
+   * - QSFP-25G-DAC1M
+     - 25G Direct Attach Copper (DAC) cable, 1 metre, for high-speed stacking or uplinks.
+     - 2
+   * - SFP-10G-LR
+     - 10G SFP+ optical transceiver for long-range uplinks (10 km SMF).
+     - 2
+
+   * - **Support Services**
+     - 
+     - 
+   * - PP3N-OS6860
+     - 3-Year Partner Support Plus. Includes 24×7 TAC access, software upgrades, and hardware replacement.
+     - 2
+
+   * - **Cloud Management License**
+     - 
+     - 
+   * - OVCX-65-BAS-3Y
+     - OmniVista Cirrus 10 Cloud Management – Base License (3-Year) for OS65xx/OS68xx. Includes analytics and updates.
+     - 2
+
+
+Frequently Asked Questions (FAQ)
+--------------------------------
+
+**Q: What licenses are required for advanced routing and fabric services?**  
+A: Install **OS6860-SW-AR** for Advanced Routing (OSPF, BGP, VRFs) and **Metro/Fabric license** if MPLS or SPB-M 
+core fabric services are required.
+
+**Q: Does the OmniSwitch 6860 support MACsec encryption?**  
+A: Yes. All OS6860 Multi-Gig models (Z and M) support IEEE 802.1AE MACsec on copper and fiber uplink ports with 
+the appropriate license.
+
+**Q: Can OS6860 be used for Wi-Fi 6/6E high-power access points?**  
+A: Yes. PoE++ (802.3bt) support enables up to 90W per port, ideal for Wi-Fi 6/6E APs, PTZ cameras, and LED PoE 
+lighting systems.
+
+**Q: What stacking capacity do OS6860 switches provide?**  
+A: OS6860 supports Virtual Chassis with up to 8 units using QSFP (20G/40G/100G) stacking at sub-50ms failover. 
+Mixed stacking with 6860E and 6865 models is supported (software dependent).
+
+**Q: Can OS6860 be managed in the cloud?**  
+A: Yes. Use **OVCX-65-BAS** or **OVCX-65-BIZ** license to manage 6860 via OmniVista Cirrus 10. On-prem 
+OmniVista 2500 is also supported.
+
+**Q: Does OS6860 support SPB-M and Fabric Connect?**  
+A: Yes. SPB-M (Shortest Path Bridging - MAC) is supported with Metro/Fabric license, enabling 
+zero-touch Layer 2/3 fabric services.
+
+**Q: Are there DC variants available for OS6860?**  
+A: No. OS6860 is an enterprise campus switch and is AC-powered only. For DC-based industrial installations, use 
+**OmniSwitch 6865**.
+
+
+Change Log
+----------
+
+- **v1.0** — Initial OmniSwitch 6860 ordering and quoting guide.
