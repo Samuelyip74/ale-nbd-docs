@@ -63,27 +63,33 @@ Use this template table for the quote BOM. Keep one line per SKU.
    * - SKU
      - Description
      - Qty
-   * - Hardware
+   * - **Hardware**
      -  
      -       
-   * - XX-ACCESS-48P
-     - 48x 1G PoE+ access switch with 4x SFP+
-     - 10
-   * - XX-SFP-10G-SR
-     - 10G SR SFP+ transceiver
-     - 24
-   * - Support Services
-     -  
-     -       
-   * - SRV-DEPLOY-BASIC
-     - Remote deployment & config (per site)
-     - 5
-   * - Licenses
+   * - OS6360-PH24
+     - OS6360-PH24 fixed 1RU chassis 24 PoE 1G BaseT, 2 1G* RJ45/SFP+ combo, 2 1G/10G SFP+ uplink/VFL ports. Internal AC PSU (380W budget), includes country specific power cord, guides and 19" rack mount kit. *10G license upgradeable.  
+     - 2
+   * - SFP-10G-SR
+     - 10 Gigabit optical transceiver SFP+. Supports multimode fiber over 850nm wavelength nominal) with an LC connector. Typical reach of 300m 
+     - 2
+   * - **License**
      -  
      -   
-   * - XX-LIC-NET-ADV-1Y
-     - Network advanced features, 1-year subscription
-     - 70
+   * - OS6360-SW-PERF
+     - Performance software license allowing the 2 RJ45/SFP+ combo ports of the OS6360-PH24 or OS6360-PH48  model to operate at 10G speed  
+     - 2     
+   * - **Support Services**
+     -  
+     -       
+   * - PP3N-OS6360
+     - 3 years Partner Support Plus for one OS6360 Includes 24x7 access to technical assistance, software updates and upgrades. Includes advanced replacement of faulty equipment. Please see Network Essentials document on MyPortal.  
+     - 2
+   * - **Cloud Management License**
+     -  
+     -   
+   * - OVCX-63-BAS-3Y
+     - OmniVista  Cirrus 10  - Public Cloud - Base Level - 3 Year  - Covers OS63xx Devices  - Ordering through Ebuy  - Prepaid mode - Base Support (Excl. device hardware maintenacce  support). Includes OVC10 Updates  & Support  
+     - 2
 
 
 
