@@ -50,9 +50,11 @@ Use this section to translate requirements into the right product mix.
 - Accessories: Power cords / Rack mount kits / SFPs.
 
 
-BOM Builder (Hardware/Accessories, Licenses, Support Services)
+Bill of Materials (BOM) example
 ------------------------------------------
 Use this template table for the quote BOM. Keep one line per SKU.
+
+**Hardware**
 
 .. list-table::
    :header-rows: 1
@@ -78,9 +80,8 @@ Use this template table for the quote BOM. Keep one line per SKU.
      - 5
 
 
-Licensing 
----------
-Document what each tier unlocks and how it’s counted.
+**Licensing**
+
 
 .. list-table::
    :header-rows: 1
@@ -103,9 +104,7 @@ Document what each tier unlocks and how it’s counted.
      - Per device + data retention
      - True-up quarterly
 
-Support Services 
-----------------
-Document what each tier unlocks and how it’s counted.
+**Support Services**
 
 .. list-table::
    :header-rows: 1
@@ -128,12 +127,6 @@ Document what each tier unlocks and how it’s counted.
      - Per device + data retention
      - True-up quarterly
 
-
-Optics, Cables & Power Budget
------------------------------
-- Validate **uplink speeds** and **port types** at both ends.
-- Compute **PoE**: sum device draw at *realistic* class, add 20–30% headroom.
-- Include **redundant PSUs** and **power cords**.
 
 
 Frequently Asked Questions (FAQ)
