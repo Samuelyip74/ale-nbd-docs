@@ -88,7 +88,6 @@ Example BOM for two OmniSwitch OS6465-P6 units with 1G uplinks, PoE, and cloud m
        specific power cord & TS-35/7.5 or 15 DIN rail mounting hardware  
        
        Ships with power cord and DIN hardware.
-
      - 2
    * - ISFP-10G-LR
      - 10 Gigabit industrial optical transceiver (SFP+). 
@@ -96,7 +95,6 @@ Example BOM for two OmniSwitch OS6465-P6 units with 1G uplinks, PoE, and cloud m
        Supports single mode fiber with an LC connector. 
        
       Typical reach of 10 Km.  
-      
      - 2
 
    * - **Support Services**
@@ -130,13 +128,16 @@ Frequently Asked Questions (FAQ)
 --------------------------------
 
 **Q: What is the difference between T and non-T models?**  
+
 A: The 6465T models are designed for indoor/campus environments with integrated AC power and optional fan operation 
 (up to 60°C with fan). The standard OS6465 models are fully hardened, fanless, and support -40°C to +75°C for industrial use.
 
 **Q: Can I enable MACSec on the OmniSwitch 6465?**  
+
 A: Yes, MACSec requires the **OS-SW-MACSEC** license, which must be purchased and installed before activation.
 
-**Q: What is the difference between OVCX-64-BAS and OVCX-64-BIZ?**  
+**Q: What is the difference between OVCX-64-BAS and OVCX-64-BIZ?** 
+
 A: OVCX-64-BAS includes cloud management and base support. OVCX-64-BIZ adds Partner Support Plus benefits.
    BIZ and PPxx licenses cannot be combined.
 
