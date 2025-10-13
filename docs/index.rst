@@ -6,13 +6,9 @@ Welcome to the Documentation Portal — your one-stop hub for all information re
 
 .. toctree::
    :maxdepth: 2
-   :caption: About
-   :hidden:
+   :caption: Solutions & Blueprints
 
-   about/company-overview
-   about/why-partner
-   about/differentiators
-   about/references-awards
+   solutions/index
 
 .. toctree::
    :maxdepth: 3
