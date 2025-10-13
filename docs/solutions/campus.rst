@@ -9,8 +9,54 @@ Campus/Enterprise Network Design (Wired & Wireless)
 Summary
 --------------------
 
-This design targets a campus environment with a classic Core/Distribution model integrated with an EVPN-VXLAN fabric extension for data center interconnect. The architecture enforces Zero Trust principles with NAC/Firewall integration and strict Guest & IoT isolation.
-This document proposes a validated, scalable, and secure campus network architecture for wired and wireless access using Alcatel-Lucent Enterprise (ALE) OmniSwitch LAN, OmniAccess Stellar WLAN, and OmniVista management. The design supports Digital Age Networking (automation-first operations), zero-trust segmentation, and Wi-Fi 7 readiness with multi-gigabit edge.
+This design proposes a validated, scalable, and secure campus network architecture for wired and wireless access using Alcatel-Lucent Enterprise (ALE) OmniSwitch LAN, OmniAccess Stellar WLAN, and OmniVista Management. 
+The design adopted three key principles: performance, security, and operational simplicity.
+
+**Performance**
+
+To deliver a high-quality user experience across both wired and wireless infrastructure, the design emphasizes:
+
+**High Availability & Redundancy**
+
+Use of resilient network topologies such as OSPF (Open Shortest Path First), and Virtual Chassis ensures non-stop forwarding, rapid convergence, and network continuity.
+
+**Optimized Traffic Flow & Low Latency**
+
+Traffic engineering supports equal-cost multipathing (ECMP) and intelligent load balancing across multiple links, reducing congestion and ensuring stable performance for critical applications such as voice, video collaboration, and real-time mobility services.
+
+**Scalable Throughput for Growth**
+
+Architecture supports seamless scalability—from small deployments to large multi-building campuses—accommodating future expansion in users, IoT devices, and application demands without redesign.
+
+
+**Security**
+
+Security is integrated from the edge to the core, protecting users, devices, and data throughout the campus:
+
+**Unified Access Control (Wired & Wireless)**
+Enforcement of BYOD, corporate, and guest policies through OmniAccess Stellar WLAN and OmniSwitch Access Guardian, using 802.1X, MAC authentication, and dynamic VLAN assignment.
+
+**Network Micro-Segmentation & User Isolation**
+Use of virtualized services (VRF) to isolate departments, critical systems, and IoT endpoints, preventing lateral movement and containing potential threats.
+
+**Advanced Threat Detection & Compliance**
+Integration with OmniVista Cirrus or OmniVista Network Advisor for real-time analytics, rogue AP detection, dynamic quarantine, and automated remediation, aligning with Zero Trust security principles.
+
+**Operational Simplicity**
+
+Designed to reduce complexity in deployment, configuration, and ongoing management:
+
+**Single-Pane-of-Glass Management**
+
+Centralized visibility and control via OmniVista for LAN, WLAN, and user policies—reducing IT effort and human error.
+
+**Automation & Zero-Touch Provisioning (ZTP)**
+
+Plug-and-play onboarding of switches and access points with automated configuration templates, minimizing deployment time and ensuring configuration consistency.
+
+**Consistent Policy and Fabric Integration**
+
+The use of SPB Fabric and unified user profiles allows consistent policy enforcement across wired and wireless environments without complex manual VLAN stitching.
 
 Technical Requirements
 ------------------------------------
