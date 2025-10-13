@@ -25,7 +25,7 @@ Below are the key models and their features:
 
 Bill of Materials (BOM) example
 ------------------------------------------
-The following is an example BOM for a typical deployment of two OmniSwitch 6360-P24 switches with 10G uplinks, PoE, and cloud management. Adjust quantities and SKUs based on actual requirements.
+The following is an example BOM for a typical deployment of two OmniSwitch OS6465-P6 switches with 1G uplinks, PoE, and cloud management. Adjust quantities and SKUs based on actual requirements.
 
 .. raw:: html
 
