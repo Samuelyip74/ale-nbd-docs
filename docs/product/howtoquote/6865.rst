@@ -1,3 +1,115 @@
-==================
-OmniSwitch 6865
-==================
+.. _omniswitch-6865-quote-guide:
+
+=============================
+OmniSwitch 6865 Ordering Guide
+=============================
+
+.. contents::
+   :local:
+   :depth: 2
+
+
+OmniSwitch 6865 Models
+----------------------
+
+The OmniSwitch 6865 series is a fully hardened, industrial-grade Ethernet LAN switch family designed for mission-critical environments such as transportation, power utilities, roadside cabinets, and heavy industry. These models support extended temperature operation, dual AC/DC power options, precision timing (IEEE 1588v2 PTP), SPB-M, robust PoE, and comprehensive security capabilities.
+
+**Hardened & Industrial Features (Common Across All Models)**
+
+- Operating Temperature: **-40°C to +74°C**
+- SPB-M (Shortest Path Bridging - MAC) and OSPF support with license
+- IEEE 1588v2 Precision Time Protocol (PTP) support
+- DIN rail or 19" rack mounting
+- AC and/or DC power supply variants (depending on model)
+- Industrial EMC compliance (EN50121-X)
+
+**Available Models**
+
+OS6865-P16X (AC / DC)
+   Hardened PoE model with:
+   - 12 × RJ-45 Gigabit PoE+/PoE++ access ports (4 high-power PoE++ up to 75W)
+   - 2 × 1G SFP and 2 × 10G SFP+ uplink/stacking ports
+   Supports AC or DC redundant power input, SPB-M, MACsec (license), and PTP timing.
+
+OS6865-U12X (AC / DC)
+   Fiber-focused industrial aggregation switch with:
+   - 8 × 1G SFP and 2 × 10G SFP+ uplink ports
+   - 2 × dual-speed 1G/10G SFP+ ports for stacking or backbone
+   Ideal for fiber rings and SPB core in industrial networks. Supports AC or DC PSU.
+
+OS6865-U28X (AC / DC)
+   High-port fiber aggregation model with:
+   - 24 × 1G SFP access ports
+   - 4 × 10G SFP+ uplink/stacking ports
+   Designed for aggregation and ring architectures with SPB-M, PTP, and dual-power capability.
+
+
+Bill of Materials (BOM) Example
+-------------------------------
+
+Example BOM for two hardened OS6865-P16X switches deployed in an industrial cabinet with 10G uplinks, PoE support, DC redundancy, and OmniVista Cirrus cloud management.
+
+.. list-table::
+   :widths: 15 65 10
+   :header-rows: 1
+
+   * - **SKU**
+     - **Description**
+     - **Qty**
+   * - **Hardware**
+     - 
+     - 
+   * - OS6865-P16X
+     - Hardened PoE switch with 12 × PoE+ ports (4 × 75W), 2 × 1G SFP, 2 × 10G SFP+ ports. Industrial AC/DC capable.
+     - 2
+   * - OS6865-PS-DC
+     - DC Power Supply Module for OS6865. Supports dual DC feed and redundant power operation.
+     - 2
+   * - SFP-10G-LR
+     - 10G SFP+ optical transceiver (1310 nm, SMF, 10 km typical reach).
+     - 2
+   * - SFP-1G-SX
+     - 1G SFP optical transceiver (850 nm, MMF, 300 m).
+     - 2
+
+   * - **Support Services**
+     - 
+     - 
+   * - PP10-OS6865
+     - 10-Year Partner Support Plus. Includes 24×7 technical assistance, industrial hardware replacement, and software updates.
+     - 2
+
+   * - **Cloud Management License**
+     - 
+     - 
+   * - OVCX-65-BAS-3Y
+     - OmniVista Cirrus 10 Cloud – Base Level – 3-Year subscription for OS65xx/OS68xx devices. Includes updates & analytics.
+     - 2
+
+
+Frequently Asked Questions (FAQ)
+--------------------------------
+
+**Q: Is the OmniSwitch 6865 suitable for outdoor or roadside deployment?**  
+A: Yes. The OS6865 is fully hardened (-40°C to +74°C), supports DC power input, and complies with EN50121 railway EMC standards. It is suitable for cabinets, tunnels, substations, and transport waysides.
+
+**Q: Does OS6865 support MACSec encryption?**  
+A: MACSec (802.1AE) is available with the appropriate software license. Check specific model capabilities and license **OS6865-SW-MACSEC** if available.
+
+**Q: What routing features are available, and do I need a license?**  
+A: Basic Layer-3 routing (static, RIP) is included. To enable full OSPF and SPB core routing, install the **OS6865-SW-AR** or Metro license.
+
+**Q: Does OS6865 support Precision Time Protocol (PTP)?**  
+A: Yes. IEEE 1588v2 PTP is supported on all SFP/SFP+ ports. Ideal for power utility and transport applications requiring sub-microsecond timing.
+
+**Q: Can OS6865 be managed via OmniVista Cirrus Cloud?**  
+A: Yes. Use **OVCX-65-BAS** or **OVCX-65-BIZ** licenses for cloud-based provisioning, analytics, and remote monitoring.
+
+**Q: What power configurations are available (AC/DC)?**  
+A: All OS6865 models support AC-only, DC-only, or AC+DC hybrid configurations. Dual DC input is recommended for industrial redundancy.
+
+
+Change Log
+----------
+
+- **v1.0** — Initial OmniSwitch 6865 ordering and quoting guide.
