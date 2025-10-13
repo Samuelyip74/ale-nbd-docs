@@ -100,16 +100,28 @@ Example BOM for two OmniSwitch OS6360-P24 switches with 10G uplinks, PoE support
      - 
      - 
    * - PP3N-OS6360
-     - 3-Year Partner Support Plus. Includes 24×7 technical assistance, software updates, upgrades,  
-       and advanced hardware replacement. Refer to Network Essentials on MyPortal.
+     - 3-Year Partner Support Plus. Includes 24×7 technical assistance, 
+     
+       software updates, upgrades,  and advanced hardware replacement. 
+       
+       Refer to Network Essentials on MyPortal.
+
      - 2
 
    * - **Cloud Management License**
      - 
      - 
    * - OVCX-63-BAS-3Y
-     - OmniVista Cirrus 10 Cloud – Base Level – 3-Year subscription for OS63xx devices.  
-       Includes OVC10 updates and support. Ordered via Ebuy. Excludes hardware maintenance.
+     - OmniVista Cirrus 10 Cloud 
+       
+       Base Level 
+       
+       3-Year subscription for OS63xx devices.  
+       
+       Includes OVC10 updates and support. 
+       
+       Ordered via Ebuy. Excludes hardware maintenance.
+
      - 2
 
 

@@ -85,8 +85,7 @@ Example BOM for two OmniSwitch OS6465-P6 units with 1G uplinks, PoE, and cloud m
      
        & PoE power to one OS6465-P6 or OS6465-P12 switch. Ships with country 
        
-      specific power cord & TS-35/7.5 or 15 DIN rail mounting hardware  
-. 
+       specific power cord & TS-35/7.5 or 15 DIN rail mounting hardware  
        
        Ships with power cord and DIN hardware.
 
@@ -97,7 +96,7 @@ Example BOM for two OmniSwitch OS6465-P6 units with 1G uplinks, PoE, and cloud m
        Supports single mode fiber with an LC connector. 
        
       Typical reach of 10 Km.  
-.
+      
      - 2
 
    * - **Support Services**
