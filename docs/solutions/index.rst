@@ -1,14 +1,19 @@
 =============================
-Solutions & Validated Designs
+Solutions & Blueprints
 =============================
 
-Explore validated architectures and deployment blueprints tailored for different industries and environments.
+Explore innovative architectures and deployment blueprints tailored for different industries and environments.
 These designs accelerate implementation with proven best practices and reference configurations.
 
 .. toctree::
    :maxdepth: 1
 
    campus
-   datacenter
-   transportation
-   cctv
+   campus-spb
+   data-center-spb
+   data-center-evpn
+   transportation-rail
+   transportation-its
+   hospitality
+   surveillance
+   metro-ethernet
