@@ -1,8 +1,8 @@
-.. _how-to-quote:
+.. _omniswitch-6465-quote-guide:
 
-=================================
+=============================
 OmniSwitch 6465 Ordering Guide
-=================================
+=============================
 
 .. contents::
    :local:
@@ -10,105 +10,108 @@ OmniSwitch 6465 Ordering Guide
 
 
 OmniSwitch 6465 Models
-------------------
+----------------------
 
-The OmniSwitch 6465 series includes several models to suit different deployment scenarios. 
-Below are the key models and their features:
+The OmniSwitch 6465 series is designed for industrial, transportation, and harsh environment deployments. 
+These models are fully hardened, fanless, and support extended temperature ranges, PoE, and flexible mounting.
 
-- OS6465-P6: Hardened GigE fan-less switch. 4x10/100/1000 RJ-45 PoE+ (2x60W PoE), 2x100/1000 Base-X SFP,RS-232 Console, Alarm relay: 1 In 1 out & USB port. Includes user manual, access card & TS-35/7.5 /15 DIN rail mounting hardware. Order Power Supply separately.  
-- OS6465H-P12: Hardened GigE fan-less switch. 8x10/100/1000 BaseT RJ-45 802.3bt type-3 PoE, 4x100/1000 BaseX SFP, alarm relay, RS-232 console & USB ports. FPoE/PPoE and upto 240W PoE budget. Includes user manual & DIN mounting hardware. Order power supply separately.  
-- OS6465-P28: Hardened GigE fan-less 1RU switch. 22x10/100/1000Base-T PoE+ ports (8x60W), 2x100/1000 Base-X SFP, 4 x 1G/10G SFP+, RS-232 Console, 1 USB and Alarm relay: 1 In, 1 out.Includes user manuals and 19" rack mount kit. PSU must be ordered separately 
-- OS6465-P28D: Hardened GigE fan-less 1RU switch. 22x10/100/1000Base-T PoE+ ports(8x60W), 2x100/1000 Base-X SFP, 4x 1G/10G SFP+, RS-232 Console, 1 USB and Alarm relay: 1 In, 1 out. Includes 24/48V DC PSU, PS tray, user manuals and 19" rack mount kit  
-- OS6465T-12: OS6465T-12 GigE chassis. 8 RJ45 10/100/1000 BaseT, 2 Gig combo, 2 SFP ports. 1RU x 1/2 rack, internal AC PSU. Includes a country specific power cord, manuals/SW access card, RJ45-DB9 adaptor. Mounting kits and rubber tabletop feet to be ordered separately  
-- OS6465T-P12: OS6465T-P12 GigE chassis. 8 RJ45 10/100/1000 BaseT PoE+, 2 Gig combo, 2 SFP ports. 1RU x 1/2 rack, internal AC PSU. Includes a country specific power cord, manuals/SW access card, RJ45-DB9 adaptor. Mounting kits and rubber tabletop feet ordered separately  
+OS6465-P6
+   Hardened fanless Gigabit switch with:
+   - 4 × 10/100/1000 RJ-45 PoE+ ports (2 × 60W high PoE)
+   - 2 × 100/1000 Base-X SFP ports
+   - RS-232 console, alarm relay (1 in / 1 out), USB port  
+   Includes user manual, access card, and DIN rail mounting hardware.  
+   **Note:** Power supply must be ordered separately.
+
+OS6465H-P12
+   Industrial PoE switch with:
+   - 8 × 10/100/1000 Base-T RJ-45 (802.3bt Type 3 PoE)
+   - 4 × 100/1000 Base-X SFP ports
+   - RS-232 console, alarm relay, USB port  
+   Supports up to 240W PoE budget (FPoE/PPoE). Power supply ordered separately.
+
+OS6465-P28
+   Hardened 1RU fanless switch with:
+   - 22 × 10/100/1000 Base-T PoE+ ports (8 × 60W high PoE)
+   - 2 × 100/1000 Base-X SFP and 4 × 1G/10G SFP+ uplinks
+   - RS-232 console, USB, alarm relay  
+   Ships with 19" rack mount kit. **Power supply ordered separately.**
+
+OS6465-P28D
+   Same as OS6465-P28, but includes:
+   - 24/48V DC power supply and power tray  
+   Ships with rack mount kit, manuals, and accessories.
+
+OS6465T-12
+   Compact Gigabit chassis (1RU x 1/2 width) with:
+   - 8 × RJ-45 Base-T
+   - 2 × Gigabit combo ports
+   - 2 × SFP ports  
+   Includes internal AC power supply, country-specific power cord, SW access card, and RJ45-to-DB9 adapter.  
+   **Mounting kits ordered separately.**
+
+OS6465T-P12
+   Same form factor as OS6465T-12, with:
+   - 8 × 10/100/1000 Base-T PoE+ ports  
+   Includes internal AC PSU and accessories. Mounting hardware ordered separately.
 
 
-Bill of Materials (BOM) example
-------------------------------------------
-The following is an example BOM for a typical deployment of two OmniSwitch OS6465-P6 switches with 1G uplinks, PoE, and cloud management. Adjust quantities and SKUs based on actual requirements.
+Bill of Materials (BOM) Example
+-------------------------------
 
-.. raw:: html
+Example BOM for two OmniSwitch OS6465-P6 units with 1G uplinks, PoE, and cloud management.
 
-   <table style="width:100%; table-layout: fixed; border-collapse: collapse;margin-bottom: 2em;" border="1">
-     <thead>
-       <tr>
-         <th style="width:12%;">SKU</th>
-         <th style="width:68%;">Description</th>
-         <th style="width:10%;">Qty</th>
-       </tr>
-     </thead>
-     <tbody>
+.. list-table::
+   :widths: 15 65 10
+   :header-rows: 1
 
-       <!-- Hardware Section -->
-       <tr>
-         <td><strong>Hardware</strong></td>
-         <td></td>
-         <td></td>
-       </tr>
-       <tr>
-         <td>OS6465-P6</td>
-         <td>Hardened GigE fan-less switch. 4x10/100/1000 RJ-45 PoE+ (2x60W PoE), 2x100/1000 Base-X SFP,RS-232 Console, Alarm relay: 1 In 1 out & USB port. Includes user manual, access card & TS-35/7.5 /15 DIN rail mounting hardware. Order Power Supply separately.</td>
-         <td>1</td>
-       </tr>
-       <tr>
-         <td>OS6465-BPN-H</td>
-         <td>OS6465 modular DIN 180W AC backup power supply. Provides system & PoE power to one OS6465-P6 or OS6465-P12 switch. Ships with country specific power cord & TS-35/7.5 or 15 DIN rail mounting hardware</td>
-         <td>1</td>
-       </tr>
-       <tr>
-         <td>ISFP-10G-LR</td>
-         <td>10 Gigabit industrial optical transceiver (SFP+). Supports single mode fiber with an LC connector. Typical reach of 10 Km.</td>
-         <td>1</td>
-       </tr>
+   * - **SKU**
+     - **Description**
+     - **Qty**
+   * - **Hardware**
+     - 
+     - 
+   * - OS6465-P6
+     - Hardened fanless switch with 4× RJ-45 PoE+, 2× SFP, relay I/O, console, and USB. Power supply not included.
+     - 2
+   * - OS6465-BPN-H
+     - 180W AC DIN-rail power supply. Supports OS6465-P6/P12. Ships with power cord and DIN hardware.
+     - 2
+   * - ISFP-10G-LR
+     - 10G SFP+ optical transceiver, 1310nm, up to 10 km over SMF.
+     - 2
 
-       <!-- Support Services Section -->
-       <tr>
-         <td><strong>Support Services</strong></td>
-         <td></td>
-         <td></td>
-       </tr>
-       <tr>
-         <td>PP10-OS6465</td>
-         <td>10 years Partner Long Term Support Plus for one OS6465 Includes 24x7 access to technical assistance, software updates and upgrades. Includes advanced replacement of faulty equipment. Please see Network Essentials document on MyPortal.</td>
-         <td>1</td>
-       </tr>
+   * - **Support Services**
+     - 
+     - 
+   * - PP10-OS6465
+     - 10-year Partner Long-Term Support Plus. Includes 24×7 technical support, software updates, and advanced hardware replacement.
+     - 2
 
-       <!-- Cloud Management License Section -->
-       <tr>
-         <td><strong>Cloud Management License</strong></td>
-         <td></td>
-         <td></td>
-       </tr>
-       <tr>
-         <td>OVCX-64-BAS-5Y</td>
-         <td>OmniVista  Cirrus 10  - Public Cloud - Base Level - 5 Year  - Covers OS64xx Devices  - Ordering through Ebuy  - Prepaid mode - Base Support (Excl. device hardware maintenacce  support). Includes OVC10 Updates  & Support .</td>
-         <td>1</td>
-       </tr>
-
-     </tbody>
-   </table>
+   * - **Cloud Management License**
+     - 
+     - 
+   * - OVCX-64-BAS-5Y
+     - OmniVista Cirrus 10 Base, 5-Year subscription. Secure cloud management, software updates included.
+     - 2
 
 
 Frequently Asked Questions (FAQ)
 --------------------------------
-**Q: What is the difference between T and non-T model?**  
 
-A: The Alcatel-Lucent OmniSwitch 6465T-12 and 6465T-P12 models are power and acoustically optimized. 
-The T model operates without a fan up to 45°C ambient temperature and with a fan can operate up to 60°C.
-The 6465T models are designed for standard IT environments and include an internal power supply without power 
-redundancy. Wherease the OS6465 switches are a family of hardened, compact, fan-less gigabit Ethernet switches 
-that have been designed specifically for industrial applications.  The 6465 models are fanless model that can 
-operate in -40°C to +75°C temperature range.
+**Q: What is the difference between T and non-T models?**  
+A: The 6465T models are designed for indoor/campus environments with integrated AC power and optional fan operation 
+(up to 60°C with fan). The standard OS6465 models are fully hardened, fanless, and support -40°C to +75°C for industrial use.
 
-**Q: Can I turn on MACSec on the switch?**  
+**Q: Can I enable MACSec on the OmniSwitch 6465?**  
+A: Yes, MACSec requires the **OS-SW-MACSEC** license, which must be purchased and installed before activation.
 
-A: You need to purchase a **OS-SW-MACSEC** license and install into the switch before you can turn on the MACSec feature.
+**Q: What is the difference between OVCX-64-BAS and OVCX-64-BIZ?**  
+A: OVCX-64-BAS includes cloud management and base support. OVCX-64-BIZ adds Partner Support Plus benefits.
+   BIZ and PPxx licenses cannot be combined.
 
-**Q: What is the difference between OVCX-64-BAS-3Y and OVCX-64-BIZ-3Y?**
-
-A: OVCX-63-BIZ-3Y includes all the features of OVCX-63-BAS-3Y plus Partner Support Plus for the duration of the subscription.  
-BIZ and PPXX licenses are mutually exclusive.
 
 Change Log
 ----------
-- v1.0 — Initial ordering quoting guide.
+
+- **v1.0** — Initial ordering and quoting guide.

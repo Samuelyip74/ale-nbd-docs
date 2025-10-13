@@ -1,136 +1,122 @@
-.. _how-to-quote-6560:
+.. _omniswitch-6560-quote-guide:
 
-=================================
+=============================
 OmniSwitch 6560 Ordering Guide
-=================================
+=============================
 
 .. contents::
    :local:
    :depth: 2
 
+
 OmniSwitch 6560 Models
 ----------------------
 
-The OmniSwitch 6560 series is designed for enterprise campus and branch deployments, offering modular power, 
-stacking, MACSec, Multi-Gig, and PoE++ capabilities.
+The OmniSwitch 6560 series is designed for enterprise campus and branch environments, offering modular power,
+stacking, MACSec, Multi-Gigabit access, and PoE++ support for next-generation Wi-Fi and IP devices.
 
 **Gigabit Models**
 
-- **OS6560-24X4**  
-  24x 10/100/1000 RJ-45, 2x 1G SFP, 4x 1G/10G SFP+, fixed internal AC PSU. No PoE.
+OS6560-24X4
+   24 × 10/100/1000 RJ-45 access ports, 2 × 1G SFP, 4 × 1G/10G SFP+ uplink/stacking ports.  
+   Fixed internal AC power supply. No PoE support.
 
-- **OS6560-P24X4**  
-  24x 10/100/1000 RJ-45 PoE+, 2x 1G SFP, 4x 1G/10G SFP+, modular AC PSU (600W). PoE up to 600W.
+OS6560-P24X4
+   24 × 10/100/1000 RJ-45 PoE+ ports, 2 × 1G SFP, 4 × 1G/10G SFP+ uplink/stacking ports.  
+   Modular AC PSU (600 W). Provides up to 600 W PoE power.
 
-- **OS6560-48X4**  
-  48x 10/100/1000 RJ-45, 2x 1G SFP, 4x 1G/10G SFP+, fixed internal AC PSU. No PoE.
+OS6560-48X4
+   48 × 10/100/1000 RJ-45 access ports, 2 × 1G SFP, 4 × 1G/10G SFP+ uplink/stacking ports.  
+   Fixed internal AC power supply. No PoE support.
 
-- **OS6560-P48X4**  
-  48x 10/100/1000 RJ-45 PoE+, 2x 1G SFP, 4x 1G/10G SFP+, modular AC PSU (920W). PoE up to 920W.
+OS6560-P48X4
+   48 × 10/100/1000 RJ-45 PoE+ ports, 2 × 1G SFP, 4 × 1G/10G SFP+ uplink/stacking ports.  
+   Modular AC PSU (920 W). Provides up to 920 W PoE power.
 
-- **OS6560-X10**  
-  8x 10G SFP+ ports, 2x 20G QSFP+ stacking. High-density uplink or aggregation switch.
+OS6560-X10
+   High-density uplink/aggregation model with 8 × 10G SFP+ and 2 × 20G QSFP+ stacking ports.  
+   Fixed internal AC power supply. No copper access ports.
 
 **Multi-Gigabit Models (Wi-Fi 6/6E Ready)**
 
-- **OS6560E-P24Z8**  
-  24x 1G PoE, 4x 2.5G, 4x 5G Multi-Gig PoE++ (95W), 2x 10G SFP+. 600W AC PSU.
+OS6560E-P24Z8
+   24 × 10/100/1000 PoE+ ports, 4 × 2.5G and 4 × 5G Multi-Gig PoE++ (up to 95 W), 2 × 1G/10G SFP+ uplink ports.  
+   Internal 600 W AC power supply. Ideal for Wi-Fi 6/6E access points.
 
-- **OS6560-P24Z24 / OS6560-PXZ24**  
-  24x 2.5G/5G Multi-Gig PoE++, 4x 10G SFP+, 2x 20G stacking. 600W or 920W PSU bundle.
+OS6560-P24Z24 / OS6560-PXZ24
+   24 × 2.5G/5G Multi-Gig PoE++ ports (802.3bt), 4 × 1G/10G SFP+, and 2 × 20G stacking ports.  
+   Bundled with either 600 W (P24Z24) or 920 W (PXZ24) AC PSU.
 
-- **OS6560E-P48Z16**  
-  48x Multi-Gig PoE++ (2.5G / 5G mix), 4x 10G SFP+, 2x 20G stacking. 920W PSU.
+OS6560E-P48Z16
+   48 × Multi-Gig PoE++ ports (12 × 2.5G, 4 × 5G), 4 × 1G/10G SFP+, 2 × 20G stacking ports.  
+   Includes 920 W AC PSU for high-density PoE deployments.
+
 
 Bill of Materials (BOM) Example
 -------------------------------
 
-The following is a sample BOM for a typical deployment of two OmniSwitch OS6560-P24X4 switches 
-with 10G uplinks, PoE+, and OmniVista Cirrus cloud management. Adjust based on project requirements.
+The following example BOM is for two OmniSwitch OS6560-P24X4 switches with 10G uplinks, PoE+ power, 
+and OmniVista Cirrus cloud management. Adjust quantities based on project requirements.
 
-.. raw:: html
+.. list-table::
+   :widths: 15 65 10
+   :header-rows: 1
 
-   <table style="width:100%; table-layout: fixed; border-collapse: collapse;margin-bottom: 2em;" border="1">
-     <thead>
-       <tr>
-         <th style="width:12%;">SKU</th>
-         <th style="width:68%;">Description</th>
-         <th style="width:10%;">Qty</th>
-       </tr>
-     </thead>
-     <tbody>
+   * - **SKU**
+     - **Description**
+     - **Qty**
+   * - **Hardware**
+     - 
+     - 
+   * - OS6560-P24X4
+     - 24-port PoE+ Gigabit switch with 2 × 1G SFP and 4 × 10G SFP+ uplinks. Includes 600 W AC PSU and rack mount kit.
+     - 2
+   * - OS6560-BP-PH
+     - 600 W modular AC PoE power supply for OS6560 PoE models. Includes country-specific power cord.
+     - 2
+   * - SFP-10G-C1M
+     - 10G Direct Attach Copper (DAC) cable, 1 metre, for uplink/stacking connections.
+     - 2
+   * - SFP-10G-LR
+     - 10G SFP+ optical transceiver, 1310 nm, up to 10 km over single-mode fiber.
+     - 2
 
-       <!-- Hardware Section -->
-       <tr>
-         <td><strong>Hardware</strong></td>
-         <td></td>
-         <td></td>
-       </tr>
-       <tr>
-         <td>OS6560-P24X4</td>
-         <td>OS6560-P24X4 GigE fixed chassis  24 RJ-45 PoE 10/100/1G BaseT, 2 fixed SFP (1G), 4 fixed SFP+ (1G/10G) uplink/stacking ports. 1RU size, 600W AC power supply. Includes country specific power cord, guides, and 19" rack mount hardware.</td>
-         <td>2</td>
-       </tr>
-       <tr>
-         <td>OS6560-BP-PH</td>
-         <td>OS6560-BP-PH modular 600W AC PoE  power supply. Provides system and PoE  power to one OS6560 PoE switch. Ships with country specific power cord.</td>
-         <td>2</td>
-       </tr>
-       <tr>
-         <td>SFP-10G-C1M</td>
-         <td>10 Gigabit direct attached cable (DAC, uplink/stacking) 1m, SFP+.</td>
-         <td>2</td>
-       </tr>       
-       <tr>
-         <td>SFP-10G-LR</td>
-         <td>10 Gigabit SFP+ optical transceiver, 10 km single-mode fiber.</td>
-         <td>2</td>
-       </tr>
+   * - **Support Services**
+     - 
+     - 
+   * - PP3N-OS6560
+     - 3-Year Partner Support Plus: 24×7 technical assistance, software updates, and advanced hardware replacement.
+     - 2
 
-       <!-- Support Services Section -->
-       <tr>
-         <td><strong>Support Services</strong></td>
-         <td></td>
-         <td></td>
-       </tr>
-       <tr>
-         <td>PP3N-OS6560</td>
-         <td>3 years Partner Support Plus for one OS6560 Includes 24x7 access to technical assistance, software updates and upgrades. Includes advanced replacement of faulty equipment. Please see Network Essentials document on MyPortal.  .</td>
-         <td>2</td>
-       </tr>
+   * - **Cloud Management License**
+     - 
+     - 
+   * - OVCX-65-BAS-3Y
+     - OmniVista Cirrus 10 Cloud Base License (3-Year) for OS65xx series. Includes management updates and support.
+     - 2
 
-       <!-- Cloud Management License Section -->
-       <tr>
-         <td><strong>Cloud Management License</strong></td>
-         <td></td>
-         <td></td>
-       </tr>
-       <tr>
-         <td>OVCX-65-BAS-3Y</td>
-         <td>OmniVista  Cirrus 10  - Public Cloud - Base Level - 3 Year  - Covers OS65xx Devices  - Ordering through Ebuy  - Prepaid mode - Base Support (Excl. device hardware maintenacce  support). Includes OVC10 Updates  & Support  </td>
-         <td>2</td>
-       </tr>
-
-     </tbody>
-   </table>
 
 Frequently Asked Questions (FAQ)
 --------------------------------
 
 **Q: What is the difference between OS6560 and OS6560E models?**  
-A: OS6560E models support Multi-Gigabit (5G), up to 4 ports.
+A: OS6560E models include Multi-Gig (2.5G/5G) Ethernet ports and support higher PoE (802.3bt / 95 W) for next-generation 
+Wi-Fi access points. 
 
-**Q: Does OS6560 support MACSec?**  
-A: OS6560-48X4, OS6560-P48X4 and OS6560E-P48Z16 supports MACSec on all RJ-45 ports and uplink ports.
+**Q: Does the OmniSwitch 6560 support MACSec?**  
+A: Yes. OS6560-48X4, OS6560-P48X4, and OS6560E-P48Z16 support IEEE 802.1AE MACSec on all access and uplink ports.
 
 **Q: How do I enable full OSPF routing?**  
-A: Install the **OS6560-SW-AR** Advanced Routing license for extended OSPF capabilities.
+A: Install the **OS6560-SW-AR** Advanced Routing license to enable extended OSPFv2/v3 scalability and routing features.
 
-**Q: Can OmniSwitch 6560 be managed via OmniVista Cirrus cloud?**  
-A: Yes. Use **OVCX-65-BAS** (Base) or **OVCX-65-BIZ** (Business) licenses.
+**Q: Can the OmniSwitch 6560 be managed via OmniVista Cirrus cloud?**  
+A: Yes. Use **OVCX-65-BAS** (Base) or **OVCX-65-BIZ** (Business) licenses for secure cloud-based management and analytics.
+
 
 Change Log
 ----------
 
 - **v1.0** — Initial OS6560 ordering and quoting guide.
+
+
 

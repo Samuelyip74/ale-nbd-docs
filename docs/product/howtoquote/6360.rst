@@ -1,8 +1,8 @@
-.. _how-to-quote:
+.. _omniswitch-6360-quote-guide:
 
-=================================
+=============================
 OmniSwitch 6360 Ordering Guide
-=================================
+=============================
 
 .. contents::
    :local:
@@ -10,113 +10,117 @@ OmniSwitch 6360 Ordering Guide
 
 
 OmniSwitch 6360 Models
-------------------
+----------------------
 
-The OmniSwitch 6360 series includes several models to suit different deployment scenarios. 
-Below are the key models and their features:
+The OmniSwitch 6360 series includes multiple models designed for small to mid-sized enterprise deployments, 
+offering a balance of Gigabit access, PoE options, and flexible uplink capabilities.
 
-- OS6360-10: OS6360-10 GigE fixed chassis  8 RJ-45 10/100/1G BaseT, 2 10/100/1G BaseT, 2 fixed SFP (1G) uplink ports. 1RU size, internal AC power supply. Includes country specific power cord, guides.  Order 19" rack mount kit separately.  
-- OS6360-P10: 8 RJ-45 10/100/1G BaseT, 2 10/100/1G BaseT, 2 fixed SFP (1G) uplink ports. 1RU size, internal AC power supply (120W PoE budget) Includes country specific power cord, guides.  Order 19" rack mount kit separately.  
-- OS6360-24: OS6360-24 GigE fixed chassis  24 RJ-45 10/100/1G BaseT, 2 fixed RJ45/SFP combo (1G), 2 fixed SFP+ (1G/10G) uplink/stacking ports. 1RU size, internal AC power supply. Includes country specific power cord, guides, and 19" rack mount hardware.  
-- OS6360-PH24: OS6360-PH24 fixed 1RU chassis 24 PoE 1G BaseT, 2 1G* RJ45/SFP+ combo, 2 1G/10G SFP+ uplink/VFL ports. Internal AC PSU (380W budget), includes country specific power cord, guides and 19" rack mount kit. *10G license upgradeable.  
-- OS6360-P24: OS6360-P24 fixed 1RU chassis 24 PoE 1G BaseT, 2 fixed RJ45/SFP combo (1G), 2 fixed 1G/10G SFP+ uplink/stacking ports. Internal AC PSU (180W budget), includes country specific power cord, guides and 19" rack mount kit.  
-- OS6360-P24X: OS6360-P24X fixed 1RU chassis 24 PoE 1G BaseT, 2 fixed RJ45/SFP+ combo (1G/10G), 2 fixed 1G/10G SFP+ uplink/VFL ports. Internal AC PSU (380 budget), includes country specific power cord, guides and 19" rack mount kit.  
-- OS6360-48: OS6360-48 GigE fixed chassis  48 RJ-45 10/100/1G BaseT, 2 fixed RJ45/SFP combo (1G), 2 fixed SFP+ (1G/10G) uplink/stacking ports. 1RU size, internal AC power supply. Includes country specific power cord, guides, and 19" rack mount hardware.  
-- OS6360-PH48: OS6360-PH48 fixed 1RU chassis 46 PoE 1G BaseT, 2 PoE 1G/2.5G BaseT, 2 1G* RJ45/SFP+ combo, 2 1G/10G SFP+ uplink/VFL ports. Internal AC PSU (760W budget), includes country specific power cord, guides and 19" rack mount kit. *10G license upgradeable.  
-- OS6360-P48: OS6360-P48 fixed 1RU chassis 48 PoE 1G BaseT, 2 fixed RJ45/SFP combo (1G), 2 fixed 1G/10G SFP+ uplink/stacking ports. Internal AC PSU (350W budget), includes country specific power cord, guides and 19" rack mount kit.  
-- OS6360-P48X:OS6360-P48X fixed 1RU chassis 48 PoE 1G BaseT, 2 fixed RJ45/SFP+ combo (1G/10G), 2 fixed 1G/10G SFP+ uplink/VFL ports. Internal AC PSU (760W budget), includes country specific power cord, guides and 19" rack mount kit.  
+OS6360-10
+   Fixed Gigabit model with 8 × 10/100/1000 Base-T ports, 2 × 10/100/1000 Base-T ports, 
+   and 2 × 1G SFP uplink ports.  
+   1RU size with internal AC power supply. Includes country-specific power cord and guides.  
+   **Note:** 19" rack mount kit must be ordered separately.
+
+OS6360-P10
+   PoE version of OS6360-10 with 8 × 10/100/1000 Base-T, 2 × 10/100/1000 Base-T, and 2 × 1G SFP uplink ports.  
+   Internal AC power supply with **120W PoE budget**.  
+   **Note:** 19" rack mount kit must be ordered separately.
+
+OS6360-24
+   24 × 10/100/1000 Base-T ports, 2 × RJ-45/SFP combo (1G), and 2 × 1G/10G SFP+ uplink/stacking ports.  
+   Includes internal AC PSU, power cord, guides, and 19" rack mount hardware.
+
+OS6360-PH24
+   24 × PoE 1G Base-T ports, 2 × 1G RJ-45/SFP+ combo ports*, and 2 × 1G/10G SFP+ uplink/VFL ports.  
+   Internal AC PSU with **380W PoE budget**. Includes power cord, guides, and 19" rack mount kit.  
+   *10G support upgradeable via license.
+
+OS6360-P24
+   24 × PoE 1G Base-T ports, 2 × RJ-45/SFP combo (1G), and 2 × 1G/10G SFP+ uplink/stacking ports.  
+   Internal AC PSU with **180W PoE budget**. Includes power cord, guides, and 19" rack mount kit.
+
+OS6360-P24X
+   24 × PoE 1G Base-T ports, 2 × RJ-45/SFP+ combo (1G/10G), and 2 × 1G/10G SFP+ uplink/VFL ports.  
+   Internal AC PSU with **380W PoE budget**. Includes power cord, guides, and 19" rack mount kit.
+
+OS6360-48
+   48 × 10/100/1000 Base-T ports, 2 × RJ-45/SFP combo (1G), and 2 × 1G/10G SFP+ uplink/stacking ports.  
+   Includes internal AC PSU, power cord, guides, and 19" rack mount hardware.
+
+OS6360-PH48
+   46 × PoE 1G Base-T ports, 2 × PoE 1G/2.5G Base-T ports, 2 × 1G RJ-45/SFP+ combo*, and 2 × 1G/10G SFP+ uplink/VFL ports.  
+   Internal AC PSU with **760W PoE budget**. Includes power cord, guides, and 19" rack mount kit.  
+   *10G support upgradeable via license.
+
+OS6360-P48
+   48 × PoE 1G Base-T ports, 2 × RJ-45/SFP combo (1G), and 2 × 1G/10G SFP+ uplink/stacking ports.  
+   Internal AC PSU with **350W PoE budget**. Includes power cord, guides, and 19" rack mount kit.
+
+OS6360-P48X
+   48 × PoE 1G Base-T ports, 2 × RJ-45/SFP+ combo (1G/10G), and 2 × 1G/10G SFP+ uplink/VFL ports.  
+   Internal AC PSU with **760W PoE budget**. Includes power cord, guides, and 19" rack mount kit.
 
 
-Bill of Materials (BOM) example
-------------------------------------------
-The following is an example BOM for a typical deployment of two OmniSwitch 6360-P24 switches with 10G uplinks, PoE, and cloud management. Adjust quantities and SKUs based on actual requirements.
+Bill of Materials (BOM) Example
+-------------------------------
 
-.. raw:: html
+Example BOM for two OmniSwitch OS6360-P24 switches with 10G uplinks, PoE support, and cloud management.
 
-   <table style="width:100%; table-layout: fixed; border-collapse: collapse;margin-bottom: 2em;" border="1">
-     <thead>
-       <tr>
-         <th style="width:12%;">SKU</th>
-         <th style="width:68%;">Description</th>
-         <th style="width:10%;">Qty</th>
-       </tr>
-     </thead>
-     <tbody>
+.. list-table::
+   :widths: 15 65 10
+   :header-rows: 1
 
-       <!-- Hardware Section -->
-       <tr>
-         <td><strong>Hardware</strong></td>
-         <td></td>
-         <td></td>
-       </tr>
-       <tr>
-         <td>OS6360-P24</td>
-         <td>OS6360-P24 fixed 1RU chassis 24 PoE 1G BaseT, 2 fixed RJ45/SFP combo (1G), 2 fixed 1G/10G SFP+ uplink/stacking ports. Internal AC PSU (180W budget), includes country specific power cord, guides and 19" rack mount kit.  </td>
-         <td>2</td>
-       </tr>
-       <tr>
-         <td>OS6360-CBL-1M</td>
-         <td>1 meter long 10Gbs SFP+ direct stacking cable for OS6360 24 and 48 port models</td>
-         <td>2</td>
-       </tr>
-       <tr>
-         <td>SFP-10G-SR</td>
-         <td>10 Gigabit optical transceiver SFP+. Supports multimode fiber over 850nm 
-             wavelength with LC connector. Typical reach of 300m.</td>
-         <td>2</td>
-       </tr>
+   * - **SKU**
+     - **Description**
+     - **Qty**
+   * - **Hardware**
+     - 
+     - 
+   * - OS6360-P24
+     - 24-port PoE switch with 2 × RJ-45/SFP combo (1G) and 2 × 1G/10G SFP+ uplink/stacking ports.  
+       Internal AC PSU (180W PoE budget). Includes power cord, guides, and 19" rack mount kit.
+     - 2
+   * - OS6360-CBL-1M
+     - 1-metre 10G SFP+ direct stacking cable for OS6360 24 and 48-port models.
+     - 2
+   * - SFP-10G-SR
+     - 10G SFP+ optical transceiver (850 nm, multimode fiber) with typical reach of 300 m.
+     - 2
 
-       <!-- Support Services Section -->
-       <tr>
-         <td><strong>Support Services</strong></td>
-         <td></td>
-         <td></td>
-       </tr>
-       <tr>
-         <td>PP3N-OS6360</td>
-         <td>3 years Partner Support Plus for one OS6360. Includes 24x7 technical assistance, 
-             software updates and upgrades, and advanced replacement of faulty equipment. 
-             Refer to Network Essentials on MyPortal.</td>
-         <td>2</td>
-       </tr>
+   * - **Support Services**
+     - 
+     - 
+   * - PP3N-OS6360
+     - 3-Year Partner Support Plus. Includes 24×7 technical assistance, software updates, upgrades,  
+       and advanced hardware replacement. Refer to Network Essentials on MyPortal.
+     - 2
 
-       <!-- Cloud Management License Section -->
-       <tr>
-         <td><strong>Cloud Management License</strong></td>
-         <td></td>
-         <td></td>
-       </tr>
-       <tr>
-         <td>OVCX-63-BAS-3Y</td>
-         <td>OmniVista Cirrus 10 – Public Cloud – Base Level – 3-Year subscription for OS63xx 
-             devices. Ordered via Ebuy. Prepaid mode. Includes OVC10 updates &amp; support 
-             (excludes device hardware maintenance).</td>
-         <td>2</td>
-       </tr>
-
-     </tbody>
-   </table>
+   * - **Cloud Management License**
+     - 
+     - 
+   * - OVCX-63-BAS-3Y
+     - OmniVista Cirrus 10 Cloud – Base Level – 3-Year subscription for OS63xx devices.  
+       Includes OVC10 updates and support. Ordered via Ebuy. Excludes hardware maintenance.
+     - 2
 
 
 Frequently Asked Questions (FAQ)
 --------------------------------
-**Q: How do I mount OS6360-10/P10 on a 19" Rack?**  
 
-A: You need to purchase **OS6360-RM-19-L** in order to mount OS6360-10/P10 on a 19" Rack.
+**Q: How do I mount OS6360-10/P10 on a 19" rack?**  
+A: Purchase the **OS6360-RM-19-L** rack mount kit.
 
-**Q: My customer do not have a 19" Rack, what are my options to mount the switch?**  
+**Q: My customer does not have a 19" rack. What are the mounting alternatives?**  
+A: Use the **OS6360-WALL-MNT** kit to mount the switch on a flat surface or wall.
 
-A: You can mount the switch on a flat surface wall using the **OS6360-WALL-MNT** mounting kit.
+**Q: When is the OS6360-SW-PERF license required?**  
+A: The OS6360-SW-PERF license is required to enable 10G uplink ports on OS6360-PH24 or OS6360-PH48 models.
 
-**Q: When do I need to purchase the OS6360-SW-PERF license?**  
-
-A: You need to purchase the OS6360-SW-PERF license when you want to enable the 10G uplink ports on the OS6360-PH24 or OS6360-PH48 models.
-
-**Q: What is the difference between OVCX-63-BAS-3Y and OVCX-63-BIZ-3Y?**
-
-A: OVCX-63-BIZ-3Y includes all the features of OVCX-63-BAS-3Y plus Partner Support Plus for the duration of the subscription.  
-BIZ and PPXX licenses are mutually exclusive.
+**Q: What is the difference between OVCX-63-BAS-3Y and OVCX-63-BIZ-3Y?**  
+A: OVCX-63-BIZ-3Y includes all features of BAS plus Partner Support Plus.  
+   BAS and BIZ licenses are mutually exclusive.
 
 Change Log
 ----------
-- v1.0 — Initial ordering quoting guide.
+
+- **v1.0** — Initial OmniSwitch 6360 ordering and quoting guide.
