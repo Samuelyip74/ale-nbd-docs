@@ -1,3 +1,129 @@
-==================
-OmniSwitch 9900
-==================
+.. _omniswitch-9900-quote-guide:
+
+=============================
+OmniSwitch 9900 Ordering Guide
+=============================
+
+.. contents::
+   :local:
+   :depth: 2
+
+
+OmniSwitch 9900 Chassis Overview
+--------------------------------
+
+The OmniSwitch 9900 is a high-capacity, modular core switching platform designed for enterprise
+campus backbones, large-scale aggregation, and data center fabric environments. It supports advanced
+AOS features such as SPB Fabric, EVPN/VXLAN, MPLS, VRF, SDN, MACsec, and high PoE delivery.
+
+**Chassis Models**
+
+OS9907
+   7-slot (11RU) modular chassis supporting up to 5 line cards, dual CMM, and redundant AC/DC power.
+   Ideal for campus core or high-powered PoE aggregation.
+
+OS9912
+   12-slot (16RU) modular chassis with up to 10 line cards. Higher capacity fabric for large campus/distribution
+   networks or fabric core deployments.
+
+**Control and Management Modules (CMM)**
+
+OS9900-CMM
+   Control and fabric module providing central switching, routing, and fabric services.
+   Supports hitless failover with 1+1 redundancy.
+
+**Line Card Options**
+
+OS9900-X20
+   20-port SFP+ (10G) line card for high-density aggregation or L3 services.
+
+OS9900-X40
+   40-port SFP+ (10G) line card for maximum fiber density.
+
+OS9900-Q8
+   8-port QSFP (40G) card for spine/leaf uplinks or inter-chassis stacking.
+
+OS9900-Z24
+   24-port PoE+ / PoE++ (802.3at/bt) copper line card with 10G/25G capability (campus core edge).
+
+**Power Supply Options**
+
+OS9900-PS-AC
+   AC power supply module for campus installations.
+
+OS9900-PS-DC
+   DC power input module for telco and industrial deployments.
+
+
+Bill of Materials (BOM) Example – Campus Core Deployment
+---------------------------------------------------------
+
+Example BOM for two OS9907 chassis configured as a resilient campus core with PoE, fabric backbone,
+and OmniVista Cirrus cloud management.
+
+.. list-table::
+   :widths: 15 65 10
+   :header-rows: 1
+
+   * - **SKU**
+     - **Description**
+     - **Qty**
+   * - **Hardware**
+     - 
+     - 
+   * - OS9907
+     - 7-slot modular chassis with backplane, fan trays, and labeled slots. Supports dual CMM and redundant PSU.
+     - 2
+   * - OS9900-CMM
+     - Control and Management Module for OS9900 chassis. Required for fabric and routing operations.
+     - 2
+   * - OS9900-Z24
+     - 24-port 10G PoE+/PoE++ line card (campus access aggregation). Supports Wi-Fi 6/6E high-power APs.
+     - 4
+   * - OS9900-PS-AC
+     - AC power supply module for OS9900 chassis. Hot-swappable, redundant capable.
+     - 4
+
+   * - **Support Services**
+     - 
+     - 
+   * - PP10-OS9900
+     - 10-Year Partner Support Plus with hardware replacement, TAC access, and major software updates.
+     - 2
+
+   * - **Cloud Management License**
+     - 
+     - 
+   * - OVCX-65-BAS-3Y
+     - OmniVista Cirrus 10 Cloud Base License (3-Year) for OS69xx/OS99xx platforms.
+     - 2
+
+
+Frequently Asked Questions (FAQ)
+--------------------------------
+
+**Q: What fabric and routing capabilities does OS9900 support?**  
+A: OS9900 supports SPB-M, EVPN/VXLAN, MPLS, VRF, and advanced routing (BGP, OSPF, IS-IS) via Metro/Fabric
+or Advanced Routing (AR) license.
+
+**Q: Does OS9900 support PoE for access aggregation?**  
+A: Yes. OS9900-Z24 line cards provide PoE+/PoE++ (up to 90W) for campus edge APs, cameras, and IoT devices.
+
+**Q: What redundancy options are available?**  
+A: The system supports dual CMM, hot-swappable PSU, hitless failover, and Multi-Chassis Link Aggregation (MC-LAG)
+for sub-50ms resilience.
+
+**Q: Is MACsec supported?**  
+A: Yes. MACsec (802.1AE) is available on fiber and copper via license, depending on line card capabilities.
+
+**Q: Can OS9900 be cloud-managed via OmniVista Cirrus?**  
+A: Yes. OVCX-65 licenses allow zero-touch provisioning, telemetry, and remote monitoring via OmniVista Cirrus 10.
+
+**Q: Are DC power options available?**  
+A: Yes. Use OS9900-PS-DC modules for telco or industrial sites requiring battery-backed DC input.
+
+
+Change Log
+----------
+
+- **v1.0** — Initial OmniSwitch 9900 ordering and quoting guide.
