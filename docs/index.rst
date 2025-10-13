@@ -8,7 +8,7 @@ Welcome to the Documentation Portal — your one-stop hub for all information re
    :maxdepth: 2
    :caption: Solutions & Blueprints
 
-   solutions/index
+   solutions/index   
 
 .. toctree::
    :maxdepth: 3
