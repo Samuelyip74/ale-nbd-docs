@@ -4,9 +4,9 @@
 }
 
 .ea-placement.ea-type-text {
-  display: none;
+  display: none!important;
 }
 
 .ethical-sidebar {
-  display: none;
+  display: none!important;
 }
