@@ -62,7 +62,7 @@ that supports current operational needs while accommodating future growth. The f
 key objectives guide the overall architecture and implementation.
 
 Reliability and High Availability
----------------------------------
+~~~~~~~~~~~~~~~~~~~
 - Ensure continuous network operation with minimal downtime.
 - Implement redundancy at core, distribution, and access layers
   (e.g., dual core switches, link aggregation, redundant uplinks).
@@ -70,63 +70,67 @@ Reliability and High Availability
   and dynamic routing protocols (e.g., OSPF, BGP).
 
 Scalability and Future Growth
------------------------------
+~~~~~~~~~~~~~~~~~~~
 - Adopt a modular, hierarchical design (Core–Distribution–Access) to support expansion.
 - Allow seamless integration of additional buildings, departments, or services.
 - Design for high user density and increasing device connectivity (wired and wireless).
 
 Performance and Optimized Traffic Flow
---------------------------------------
+~~~~~~~~~~~~~~~~~~~
 - Deliver high bandwidth and low latency for critical applications such as voice, video, and data.
 - Use Quality of Service (QoS) to prioritize business-critical and real-time services.
 - Prevent bottlenecks through link aggregation, load balancing, and adequate uplink capacity.
 
 Security and Access Control
----------------------------
+~~~~~~~~~~~~~~~~~~~
+
 - Enforce network segmentation using VLANs, ACLs, and routing policies.
 - Implement identity-based access control (802.1X, NAC) for user and device authentication.
 - Protect against threats using perimeter firewalls, IDS/IPS, and continuous monitoring.
 
 Manageability and Operational Efficiency
-----------------------------------------
+~~~~~~~~~~~~~~~~~~~
 - Standardize configurations, naming conventions, and documentation.
 - Provide centralized network management for monitoring (SNMP, Syslog, NetFlow) and automation.
 - Support regular backup, configuration versioning, and software maintenance procedures.
 
 Resilience and Disaster Recovery
--------------------------------
+~~~~~~~~~~~~~~~~~~~
+
 - Include backup paths and redundant services for core functions (DNS, DHCP, authentication).
 - Document recovery procedures for hardware, link, or power failures.
 - Ensure the network design supports business continuity requirements.
 
 User Experience and Service Quality
------------------------------------
+~~~~~~~~~~~~~~~~~~~
+
 - Guarantee consistent performance across academic, administrative, and public spaces.
 - Deliver reliable wireless coverage with seamless roaming across the campus.
 - Support mobility, BYOD, IoT, VoIP, video conferencing, and collaboration platforms.
 
 Compliance and Policy Alignment
--------------------------------
+~~~~~~~~~~~~~~~~~~~
+
 - Align with institutional IT governance and industry standards (ISO, GDPR, HIPAA if applicable).
 - Ensure compliance with data protection, audit, and access control requirements.
 - Provide traceability and logging for security and operational audits.
 
 Energy Efficiency and Sustainability
-------------------------------------
+~~~~~~~~~~~~~~~~~~~
+
 - Use energy-efficient devices and intelligent power management.
 - Optimize cooling and rack space in network facilities.
 - Promote long-term sustainability by planning lifecycle replacement and hardware recycling.
 
 Proposed Network Architecture
-------------------------------------
-
+--------------------
 The proposed campus network architecture is designed to fulfil the key design objectives
 of high availability, scalability, performance, security, and operational efficiency.
 It integrates modern data center technologies with resilient campus infrastructure to
 deliver a unified, future-ready network platform.
 
 Core Architectural Principles
------------------------------
+~~~~~~~~~~~~~~~~~~~
 
 EVPN-VXLAN Fabric for Virtualization and Mobility
    Utilizes an EVPN-VXLAN overlay fabric to provide scalable Layer 2 and Layer 3
@@ -165,7 +169,7 @@ Unified Management and Automation
    reducing operational overhead and improving service delivery.
 
 Campus Core and Distribution Fabric Design
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
 
 The core and distribution layers form the operational backbone of the campus network.
 This design prioritizes high availability, deterministic performance, and fast
