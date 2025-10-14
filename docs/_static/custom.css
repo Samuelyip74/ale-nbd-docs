@@ -15,3 +15,7 @@ html body div.ethical-sidebar,
 html body div.ethical-footer {
   display: none !important;
 }
+
+.ea-placement.ea-type-text {
+  display: none !important;
+}
