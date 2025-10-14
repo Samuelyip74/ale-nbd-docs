@@ -55,7 +55,7 @@ Designed to reduce complexity in deployment, configuration, and ongoing manageme
 .. _design_objectives:
 
 Design Objectives
-=================
+-----------------
 
 The campus network design aims to provide a robust, scalable, and secure infrastructure
 that supports current operational needs while accommodating future growth. The following
@@ -118,7 +118,7 @@ Energy Efficiency and Sustainability
 - Promote long-term sustainability by planning lifecycle replacement and hardware recycling.
 
 Proposed Network Architecture
-=============================
+------------------------------------
 
 The proposed campus network architecture is designed to fulfil the key design objectives
 of high availability, scalability, performance, security, and operational efficiency.
@@ -302,7 +302,7 @@ accelerate deployment, and support AI-assisted troubleshooting and lifecycle man
      Wi-Fi optimization, and hardware refresh strategy.
 
 Security Architecture and Zero Trust Controls
-=============================================
+---------------------------------------------
 
 The security architecture follows a Zero Trust model, where identity, device posture,
 and policy enforcement are applied at every access point. Security is integrated into
@@ -377,7 +377,7 @@ IoT/OT Onboarding and Fingerprinting
      and Source-Guard at the access layer.
 
 QoS and Traffic Engineering
-===========================
+------------------------------------
 
 The Quality of Service (QoS) and traffic engineering strategy ensures consistent
 application performance across the campus, prioritizing real-time services such as
