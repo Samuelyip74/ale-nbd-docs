@@ -9,7 +9,7 @@ and large-scale environments around the world.
 
 **Global Presence and Heritage**
    - Headquartered in France with operations in over 50 countries.
-   - Serving more than **830,000 customers worldwide**, including government agencies,
+   - Serving more than **1,000,000+ customers worldwide**, including government agencies,
      airports, universities, hospitals, and financial institutions.
    - Solutions delivered through a global network of over 3,400 partners and resellers.
 
@@ -36,3 +36,25 @@ and large-scale environments around the world.
 By choosing ALE technologies, this campus network architecture benefits from a
 mature, secure, and future-ready networking platform supported by enterprise-grade
 hardware, software, and global service capabilities.
+
+Our Vision
+=====================================
+
+Our ***vision*** is to deliver the customized technology experiences our customers need. 
+Our mission is to make everything connect by delivering digital age networking, communications 
+and cloud solutions with services tailored for your business success. In the Cloud. On Premises. Hybrid.
+
+ALE is committed to developing technology solutions that work for our customers, 
+connecting people, machine, things and processes, while creating a more sustainable future for all.
+
+Our Values
+=====================================
+
+**Speed and agility**
+  Our focus is on results that are simple and make our customers, partners and employees happy.
+
+**Customer centricity**
+  Our customers and partners are our priority. We listen, understand and care.
+
+**Reliability**
+  We are accountable for our actions and build relationships based on trust.  
