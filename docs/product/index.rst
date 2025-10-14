@@ -10,6 +10,7 @@ An overview of our networking product families.
    datasheet/index
    user-guides/index
    release-notes/index
+   restfulapi/index
    howtoquote/index
    troubleshooting/index
    rfp/index
