@@ -168,7 +168,7 @@ Unified Management and Automation
    analytics, fault diagnostics, configuration compliance, and lifecycle management—
    reducing operational overhead and improving service delivery.
 
-Campus Core and Distribution Fabric Design
+Three-Tier: Core, Distribution and Access Network Design
 ~~~~~~~~~~~~~~~~~~~
 
 The core and distribution layers form the operational backbone of the campus network.

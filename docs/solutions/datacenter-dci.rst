@@ -127,8 +127,8 @@ DCI Solution Selection Guidance
      - Medium
      - High
    * - **Interoperability**
-     - Basic
-     - ALE Fabric Only
+     - Multi-Vendor
+     - Multi-Vendor
      - Multi-Vendor
    * - **Operational Simplicity**
      - High
