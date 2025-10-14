@@ -6,6 +6,12 @@ Welcome to the Documentation Portal — your one-stop hub for all information re
 
 .. toctree::
    :maxdepth: 2
+   :caption: About ALE
+
+   about/index
+
+.. toctree::
+   :maxdepth: 2
    :caption: Solutions & Blueprints
 
    solutions/index   
