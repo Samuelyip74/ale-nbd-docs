@@ -118,22 +118,26 @@ DCI Solution Selection Guidance
      - **VXLAN Gateway**
      - **SPB over GRE**
      - **EVPN-VXLAN**
+   * - **Models**
+     - OS6900
+     - OS6900 or OS6870
+     - OS6900     
    * - **Control Plane**
      - Flood & Learn
      - SPB IS-IS Fabric
      - BGP EVPN
    * - **Multi-Tenancy Scale**
      - Medium
-     - Medium
-     - High
+     - Large
+     - Large
    * - **Interoperability**
      - Multi-Vendor
      - Multi-Vendor
      - Multi-Vendor
-   * - **Operational Simplicity**
-     - High
-     - High
+   * - **Operational complexity**
+     - Easily
      - Moderate
+     - Complex
    * - **Ideal Use Case**
      - Fast L2 Extension
      - Fabric Extension
