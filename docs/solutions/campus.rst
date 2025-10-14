@@ -53,129 +53,380 @@ Designed to reduce complexity in deployment, configuration, and ongoing manageme
         The use of SPB Fabric and unified user profiles allows consistent policy enforcement across wired and wireless environments without complex manual VLAN stitching.
 
 
+.. _design_objectives:
+
 Design Objectives
+=================
+
+The campus network design aims to provide a robust, scalable, and secure infrastructure
+that supports current operational needs while accommodating future growth. The following
+key objectives guide the overall architecture and implementation.
+
+Reliability and High Availability
+---------------------------------
+- Ensure continuous network operation with minimal downtime.
+- Implement redundancy at core, distribution, and access layers 
+  (e.g., dual core switches, link aggregation, redundant uplinks).
+- Enable rapid failover and fast convergence using technologies such as STP, VRRP,
+  and dynamic routing protocols (e.g., OSPF, BGP).
+
+Scalability and Future Growth
+-----------------------------
+- Adopt a modular, hierarchical design (Core–Distribution–Access) to support expansion.
+- Allow seamless integration of additional buildings, departments, or services.
+- Design for high user density and increasing device connectivity (wired and wireless).
+
+Performance and Optimized Traffic Flow
+--------------------------------------
+- Deliver high bandwidth and low latency for critical applications such as voice, video, and data.
+- Use Quality of Service (QoS) to prioritize business-critical and real-time services.
+- Prevent bottlenecks through link aggregation, load balancing, and adequate uplink capacity.
+
+Security and Access Control
+---------------------------
+- Enforce network segmentation using VLANs, ACLs, and routing policies.
+- Implement identity-based access control (802.1X, NAC) for user and device authentication.
+- Protect against threats using perimeter firewalls, IDS/IPS, and continuous monitoring.
+
+Manageability and Operational Efficiency
+----------------------------------------
+- Standardize configurations, naming conventions, and documentation.
+- Provide centralized network management for monitoring (SNMP, Syslog, NetFlow) and automation.
+- Support regular backup, configuration versioning, and software maintenance procedures.
+
+Resilience and Disaster Recovery
+-------------------------------
+- Include backup paths and redundant services for core functions (DNS, DHCP, authentication).
+- Document recovery procedures for hardware, link, or power failures.
+- Ensure the network design supports business continuity requirements.
+
+User Experience and Service Quality
+-----------------------------------
+- Guarantee consistent performance across academic, administrative, and public spaces.
+- Deliver reliable wireless coverage with seamless roaming across the campus.
+- Support mobility, BYOD, IoT, VoIP, video conferencing, and collaboration platforms.
+
+Compliance and Policy Alignment
+-------------------------------
+- Align with institutional IT governance and industry standards (ISO, GDPR, HIPAA if applicable).
+- Ensure compliance with data protection, audit, and access control requirements.
+- Provide traceability and logging for security and operational audits.
+
+Energy Efficiency and Sustainability
 ------------------------------------
+- Use energy-efficient devices and intelligent power management.
+- Optimize cooling and rack space in network facilities.
+- Promote long-term sustainability by planning lifecycle replacement and hardware recycling.
 
-- **User & device scale:** <X> concurrent users, <Y> IoT/OT endpoints, growth <Z>%/year
-- **Sites:** HQ + <N> branches, <M> buildings, <F> floors each
-- **Applications:** Unified comms/voice, video collaboration, ERP/CRM, VDI, SaaS, on-prem DC, guest Wi-Fi
-- **Security posture:** Zero trust by default; identity-based segmentation; least-privilege access
-- **Availability:** Campus core HA, access redundancy where critical. Target SLA: <e.g., 99.95%>
-- **Performance:** Per-user throughput targets, Wi-Fi 7 multi-gig (>1/2.5/5/10 Gbps) uplinks, low latency for real-time apps
-- **Operations:** Unified Management, API/automation, AIOps with anomaly detection
-- **Sustainability & TCO:** High-efficiency PoE, lifecycle automation, Opex-friendly subscription option
+Proposed Network Architecture
+=============================
 
-Architecture
--------------------------
+The proposed campus network architecture is designed to fulfil the key design objectives
+of high availability, scalability, performance, security, and operational efficiency.
+It integrates modern data center technologies with resilient campus infrastructure to
+deliver a unified, future-ready network platform.
 
-This architecture incorporates the following key components and principles:
+Core Architectural Principles
+-----------------------------
 
-- **EVPN-VXLAN Data Center Fabric** for scalable L2/L3 virtualization and seamless mobility.
-- **High-Performance Campus Core/Distribution** with high resiliency and fast convergence.
-- **Multi-gigabit wired access** with 1/2.5/5/10G ports and PoE+/Hi-PoE for modern devices and APs.
-- **Dynamic Radio Management (DRM)**, to provide optimized Wi-Fi performance in high-density environments.
-- **Macro & Micro Segmentation** aligned with Zero Trust Architecture.
-- **Unified Management & Automation** via OmniVista Cirrus and OmniVista Network Advisor.
+EVPN-VXLAN Fabric for Virtualization and Mobility
+   Utilizes an EVPN-VXLAN overlay fabric to provide scalable Layer 2 and Layer 3
+   virtualization. This enables seamless host mobility, tenant separation, and
+   efficient east–west traffic handling within data center and campus environments.
+   The fabric supports multi-tenancy and simplifies large-scale segmentation.
 
-Campus Fabric
-~~~~~~~~~~~~~~~~~
+High-Performance and Resilient Core/Distribution
+   The campus core and distribution layers are built with high availability in mind,
+   using redundant routing paths, fast convergence protocols (e.g., OSPF, BGP),
+   and link aggregation. The design minimizes single points of failure and ensures
+   consistent service continuity during component failures or maintenance events.
 
-- **Core/Distribution:** Redundant OmniSwitch modular/core (e.g., OS9900/OS6900/OS6870) forming the campus fabric.
-- **Data Center:** Redundant OmniSwitch modular/switch (e.g., OS9900/OS6900/OS6870) forming the Data Center fabric in spine-leaf topology.
-- **Access:** OmniSwitch 6560/6570M/6860/6870 series at the edge with multi-gig (2.5/5/10G) ports and PoE+/Hi-PoE.
-- **East-West & Simplified L2/L3:** Use SPB (Shortest Path Bridging) or equivalent campus fabric to simplify VLAN extension and L3 virtualization, delivering fast convergence and deterministic paths.
-- **Uplinks:** Dual-homed access with MLAG/VC/IS-IS-SPB depending on platform; 25/40/100G core interconnects.
+Multi-Gigabit Wired Access with PoE/Hi-PoE
+   Access switches provide multi-rate interfaces (1/2.5/5/10 Gbps) to support modern
+   high-bandwidth endpoints such as Wi-Fi 6/6E access points, surveillance systems,
+   and IoT devices. Power over Ethernet (PoE+/Hi-PoE) ensures simplified device
+   deployment and centralized power control.
 
-Wireless LAN
-~~~~~~~~~~~~~~~~
+Optimized Wireless with Dynamic Radio Management (DRM)
+   Wireless infrastructure incorporates Dynamic Radio Management to automatically
+   optimize channel selection, transmit power, and load balancing. This ensures
+   reliable performance in high-density areas such as lecture halls, auditoriums,
+   offices, and public zones.
 
-- **APs:** OmniAccess Stellar (latest gen; Wi-Fi 6/6E/7-access points).
-- **Architecture:** Distributed controllerless architecture (APs coordinate; eliminates controller SPoF) with cloud-augment via OmniVista Cirrus.
-- **RF Design:** 5 GHz/6 GHz primary; 2.4 GHz legacy. DFS planning; channel width 20/40/80 (and 160/320 MHz for Wi-Fi 6E/7 where justified). 
-   Separate SSIDs for Corp (802.1X), Guest (captive portal), and IoT (MAC/UNP workflows). Band steering and min-RSSI enforced.
+Zero Trust Security with Macro and Micro Segmentation
+   Security is enforced through both macro-segmentation (VRFs, VLANs) and
+   micro-segmentation (policy-based access control). This Zero Trust approach ensures
+   that users and devices are authenticated, authorized, and monitored, regardless of
+   physical location on the network.
 
-Management & Automation
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+Unified Management and Automation
+   Centralized orchestration and visibility are provided by OmniVista Cirrus and
+   OmniVista Network Advisor. These platforms enable automated provisioning, AI-driven
+   analytics, fault diagnostics, configuration compliance, and lifecycle management—
+   reducing operational overhead and improving service delivery.
 
-- **Unified management:** OmniVista Cirrus (SaaS) for configuration, inventory, alarms, and analytics across LAN/WLAN.
-- **Automation:** Zero-Touch Provisioning (ZTP), fabric auto-attach/Intelligent Fabric (iFab) profiles, config templates.
-- **AIOps:** OmniVista Network Advisor for anomaly detection, root-cause hints, and capacity insights.
 
-Identity & Segmentation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- **UNP (User/Device Network Profiles):** Identity-based access with role-mapped VLAN/VRF/ACL/QoS.
-- **Micro-segmentation:** Containerized network “zones” for Corp/Guest/IoT/OT; dynamic policy enforcement at the edge (switch/AP) after fingerprinting & authentication.
+Campus Core and Distribution Fabric Design
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Detailed Design
-------------------
+The core and distribution layers form the operational backbone of the campus network.
+This design prioritizes high availability, deterministic performance, and fast
+convergence to ensure uninterrupted service delivery during failures, upgrades, or
+traffic surges. A fabric-based architecture is implemented to simplify L2/L3 services,
+support segmentation, and provide consistent connectivity across buildings and data centers.
 
-Wired Access
-~~~~~~~~~~~~~~~~
+**Core and Distribution Switching**
+   - Redundant OmniSwitch modular/core platforms (e.g., OS9900, OS6900, OS6870) deployed
+     in pairs to eliminate single points of failure.
+   - Devices operate as a virtual chassis to provide a single
+     logical control plane with unified configuration and hitless failover.
+   - High-speed 25/40/100G inter-switch links ensure ample backbone capacity for
+     campus-wide east–west and north–south traffic.
 
-- **Edge switches:** OS6560/6570M/6860/6870 with 1/2.5/5G access ports and 10G uplinks. PoE+ (30W) baseline; Hi-PoE (60–90/100W) where APs/cameras/IP Phone require it.
-- **Cabling:** Cat6A for multi-gig + PoE++ runs up to 100 m; fiber SM/MM for uplinks. Ensure power budgets per IDF and thermal planning.
-- **Access resiliency:** Dual uplinks to redundant distribution/fabric nodes; optional stack/VC at edge for simplified ops.
+**Data Center Integration (Spine-Leaf Fabric)**
+   - Dedicated data center fabric built using spine–leaf topology on OmniSwitch
+     platforms, leveraging EVPN-VXLAN for scalable network virtualization.
+   - Seamless integration between campus fabric and data center fabric enables
+     consistent multi-tenant VLAN extension, workload mobility, and DR readiness.
 
-Wireless Access
+**Access Layer Uplinks and Multihoming**
+   - Access switches (OS6560, OS6570M, OS6860, OS6870 series) are dual-homed to the
+     distribution/core layer using Link Aggregation Control Protocol (LACP) in
+     Multi-Chassis Link Aggregation (MLAG) or Virtual Chassis (VC) mode. This provides
+     redundant uplinks, eliminates single points of failure, and avoids dependency on
+     legacy spanning tree mechanisms for primary path selection.
+   - Multi-gigabit interfaces (1/2.5/5/10G) with PoE+/Hi-PoE support deliver scalable
+     edge connectivity for high-density endpoints such as access points, security
+     cameras, IoT sensors, and AV infrastructure.
+   - VLAN propagation and configuration consistency across the access layer are 
+     automated using Multiple VLAN Registration Protocol (MVRP), reducing manual
+     provisioning effort and preventing VLAN mismatch or orphaned segments.
+   - Spanning Tree Protocol (RSTP/MSTP) remains enabled in a protective role (loop guard,
+     BPDU guard, root guard), while primary traffic forwarding is managed through
+     LACP-based topologies to ensure deterministic routing and sub-second failover.
+
+**Campus Routing and Multicast Services**
+   - OSPF is implemented as the primary Interior Gateway Protocol (IGP) to provide
+     dynamic routing, fast convergence, and scalable Layer 3 reachability across
+     the campus backbone.
+   - Equal-Cost Multi-Path (ECMP) routing is leveraged to distribute traffic across
+     redundant links, ensuring deterministic load sharing and improved resiliency.
+   - Multicast routing (PIM Sparse Mode or Source-Specific Multicast) supports
+     real-time applications such as IPTV, digital signage, emergency broadcast
+     systems, and campus-wide live streaming.
+   - Logical segmentation is achieved using VLANs and VRFs, enabling separation of
+     administrative, academic, guest, and operations services without reliance on
+     complex legacy tunneling or proprietary protocols.
+
+**High Availability and Convergence Strategy**
+   - Sub-second failover through fast link detection, BFD, and topology-independent
+     loop-free routing ensures traffic continuity.
+   - ISSU (In-Service Software Upgrade)
+     capabilities allow maintenance activities without service interruption.
+   - End-to-end redundancy (dual fabrics, dual uplinks, redundant power/PSUs) supports
+     mission-critical applications and essential campus services.
+
+
+Wireless LAN Design
 ~~~~~~~~~~~~~~~~~~~
 
-- **Capacity planning:** Model clients/AP (busy hour), application mix (collab/video/AR), and SNR targets. Start with 25–35 clients per AP (enterprise office) and adjust for density areas (lecture halls, auditoria).
-- **PoE & Uplink planning:** Ensure AP ports support 2.5/5/10G and PoE+/bt; IDFs sized for higher draw for Wi-Fi 7 radios and scanning radios.
-- **Roaming:** 802.11k/v/r enabled; sticky-client mitigation via min-RSSI. For latency-sensitive voice, validate call-roam KPIs (<150 ms handoff where possible).
-- **Guest & IoT:** Guest SSID via captive portal/VLAN to internet breakout; IoT SSID with MAC or PSK per-device and dynamic UNP role assignment.
+The wireless LAN is designed to deliver consistent high-performance connectivity across
+the campus, with specific attention to high-density environments such as lecture theatres,
+auditoriums, laboratories, student hubs, and open collaboration areas. The architecture
+leverages Dynamic Radio Management (DRM) and advanced RF planning to ensure optimal
+coverage, capacity, and user experience.
 
-Core/Distribution & Routing
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Access Points (APs)**
+   - OmniAccess Stellar latest-generation Wi-Fi 6/6E/7-capable access points.
+   - Dual or tri-radio models to support simultaneous 2.4 GHz, 5 GHz, and 6 GHz bands.
+   - Support for OFDMA, MU-MIMO, and BSS Coloring to enhance multi-user performance.
 
-- **Fabric:** IP/OSPF at Core/Distribution; VRFs for Corp/Guest/IoT; summarized routing to WAN/SD-WAN.
-- **DHCP/DNS:** Redundant services with IPAM integration; DHCP option-based IoT onboarding as needed.
-- **Internet/WAN:** Dual ISPs; SD-WAN/SASE where applicable; QoS for UC.
+**Architecture**
+   - Distributed, controllerless architecture where APs coordinate autonomously,
+     eliminating single points of failure associated with centralized controllers.
+   - Cloud augmentation via OmniVista Cirrus for global policy management, AI-driven
+     insights, guest onboarding, and firmware lifecycle automation.
+
+**Dynamic Radio Management (DRM)**
+   - Automatic channel selection and transmit power adjustment to minimize interference.
+   - Intelligent band steering to direct capable clients to 5 GHz/6 GHz for improved throughput.
+   - Real-time load balancing between APs to prevent congestion during peak usage (e.g., exams, events).
+   - Automatic detection and mitigation of rogue APs and non-Wi-Fi interference sources.
+
+**RF Planning and Spectrum Strategy**
+   - 5 GHz and 6 GHz as primary bands for high-capacity traffic; 2.4 GHz retained for legacy/IoT devices.
+   - DFS channel awareness and pre-assigned channel plans to prevent radar interference.
+   - Channel width planning: 20/40 MHz default in dense areas; 80/160 MHz used selectively in low-density zones.
+   - Coverage design based on -65 dBm primary signal and secondary AP overlap for seamless roaming.
+
+**SSID and Access Segmentation**
+   - Corporate SSID secured using 802.1X/EAP with integration to RADIUS / NAC.
+   - Guest SSID using captive portal with bandwidth and time-based policies.
+   - IoT/Operations SSID using MAC-based authentication or Unified Profile policies (UNP).
+   - Client isolation and L2/L3 segmentation aligned with Zero Trust and micro-segmentation principles.
+
+**High-Density and User Experience Enhancements**
+   - Minimum RSSI enforcement to prevent low-quality client associations.
+   - Sticky client avoidance via intelligent roaming thresholds and 802.11k/r/v support.
+   - Application Visibility and QoS for prioritizing real-time services (VoIP, collaboration, LMS tools).
+
+
+
+Management and Automation Framework
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The network management and automation strategy is designed to ensure operational
+efficiency, proactive monitoring, and consistent policy enforcement across the entire
+campus fabric. Centralized tools and automation workflows reduce configuration errors,
+accelerate deployment, and support AI-assisted troubleshooting and lifecycle management.
+
+**Unified Management Platform**
+   - OmniVista Cirrus (SaaS) provides a single pane of glass for wired and wireless
+     infrastructure, offering centralized configuration, firmware lifecycle management,
+     topology visualization, inventory tracking, and alarm correlation.
+   - Role-based access control (RBAC) enables secure delegation of operational tasks to
+     network, security, and service desk teams.
+
+**Deployment Automation and Provisioning**
+   - Zero-Touch Provisioning (ZTP) enables automatic onboarding of new switches and
+     access points upon connection to the network, applying predefined configuration
+     profiles without manual intervention.
+   - Intelligent Fabric (iFab) and auto-attach mechanisms dynamically extend VLANs and
+     fabric services based on device roles or LLDP discovery, minimizing provisioning
+     time and preventing misconfiguration.
+   - Configuration templates enforce standards for naming, VLAN allocation, QoS policies,
+     and security parameters across all network domains.
+
+**AI-Driven Operations (AIOps)**
+   - OmniVista Network Advisor applies machine learning for anomaly detection, drift
+     identification, and predictive insight into bandwidth, client density, and hardware
+     health.
+   - Automated root-cause guidance assists operations teams in remediating issues
+     such as RF interference, link flaps, or authentication failures.
+   - Capacity and trend analytics provide actionable insights for capacity planning,
+     Wi-Fi optimization, and hardware refresh strategy.
+
+
+Security Architecture and Zero Trust Controls
+=============================================
+
+The security architecture follows a Zero Trust model, where identity, device posture,
+and policy enforcement are applied at every access point. Security is integrated into
+the switching, wireless, and management layers to ensure continuous protection against
+lateral movement, rogue devices, and credential-based threats.
 
 Security Controls (Zero Trust Approach)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- **Identity and Posture Enforcement**
+   - 802.1X with EAP-TLS for corporate users leveraging certificate-based authentication.
+   - MAC Authentication Bypass (MAB) and Per-Device PSK for non-supplicant devices
+     such as IoT, medical, and OT endpoints.
+   - Device posture validation via NAC integration (e.g., OmniVista NAC, ClearPass,
+     or Microsoft Entra Conditional Access).
 
-- **Identity & Posture:** 802.1X/EAP-TLS for users; MAB/PSK-per-device for non-supplicants; device posture via NAC integration.
-- **Edge enforcement:** UNP-mapped ACL/QoS at switch/AP, preventing lateral movement. Default-deny between zones; allowlists per app.
-- **Threat monitoring:** Dedicated scanning radios on AP models that support WIPS; NetFlow/sFlow export; syslog to SIEM.
-- **Privileged access:** Admin RADIUS/TACACS+, MFA for management plane; RBAC in OmniVista.
+- **Edge Policy Enforcement**
+   - User Network Profiles (UNP) map authenticated identities to their VLAN/VRF, ACL,
+     and QoS policies at the first point of entry (switch/AP).
+   - Default-deny inter-zone traffic with explicit allowlists per application or service.
+   - Prevention of lateral movement through edge ACLs and per-role traffic segmentation.
 
-IoT/OT Onboarding & Fingerprinting
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- **Threat Monitoring and Telemetry**
+   - Dedicated scanning radios (WIPS) on Stellar AP models for rogue AP detection,
+     Evil Twin attacks, and Wi-Fi intrusion prevention.
+   - NetFlow/sFlow export to SIEM or security analytics platforms for traffic anomaly
+     detection and behavior analytics.
+   - Syslog integration with Security Operations Centers (SOC) for event correlation,
+     compliance logging, and audit readiness.
 
-- **Discovery & classification:** OmniVista device fingerprinting (cloud-signature DB) builds an inventory; map device categories to UNPs.
-- **Dynamic policy:** Category-based UNP enforcement at the edge (switch/AP) to auto-place devices into correct containers/VRFs.
-- **Hardening:** Per-device PSK or certs; restrict East-West; rate-limit, DHCP-snooping, ARP inspection where applicable.
+- **Privileged Access Protection**
+   - Administrator authentication via RADIUS/TACACS+ with enforced MFA (e.g., Microsoft Entra ID).
+   - Role-Based Access Control (RBAC) in OmniVista to restrict configuration access
+     by job function (e.g., network ops vs. security admin).
+   - Command logging and session tracking for compliance and forensic audits.
 
 
-QoS & Traffic Engineering
-----------------------------
+Identity & Segmentation
+~~~~~~~~~~~~~~~~~~~~~~~~
+- **UNP-Based Segmentation**
+   - User/Device Network Profiles deliver identity-driven access, dynamically assigning
+     VLAN, VRF, ACL, and QoS policies based on role, posture, or device classification.
+   - Supports containerized segmentation for Corporate, Guest, IoT, and OT zones.
 
-- **Classification:** DSCP/802.11e mapping at AP; CoS/DSCP trust at edge.
-- **Queuing:** Priority for EF (voice), AF41/42 (video), weighted scheduling for data.
-- **Rate-limits:** Guest and IoT shaping; per-SSID/per-user policers.
+- **Micro-Segmentation**
+   - Fine-grained segmentation at the edge (switch/AP) isolates traffic between
+     device groups or application tiers.
+   - Dynamic enforcement using ACLs, VRFs, and virtual containers without traditional
+     VLAN sprawl or firewall bottlenecks.
 
-High Availability & Resilience
----------------------------------
+- **Guest Access Integration**
+   - Microsoft Entra ID and social media (Google, Facebook, LinkedIn) authentication
+     supported for guest onboarding via captive portal.
+   - Time- and bandwidth-limited access profiles, with optional sponsor approval
+     or email/SMS verification.
 
-- **Core:** Dual core switches with fast-converging fabric.
-- **Access:** Dual-homed uplinks; optional ring topologies in outdoor/track environments.
-- **WLAN:** Redundant DHCP/DNS; fast roaming; meshing only for special cases (wired preferred).
 
-Management, Monitoring & Automation Runbooks
------------------------------------------------
+IoT/OT Onboarding and Fingerprinting
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- **Discovery and Classification**
+   - Device fingerprinting using OmniVista’s cloud signature database to identify
+     device type, manufacturer, and OS.
+   - Device categories automatically mapped to corresponding UNP/role containers
+     (e.g., CCTV, HVAC, POS systems).
 
-- **Provisioning:** Golden templates; Git-versioned configs; ZTP for new sites.
-- **Change:** Staged rollouts; pre/post checks; automated config compliance.
-- **Monitoring:** OmniVista dashboards, AIOps events, syslog/SNMP to NMS/SIEM; SLOs per SSID/role.
-- **Backups:** Daily auto-backups of switch/AP configs; secure escrow of device PSKs/certs.
+- **Dynamic Policy Assignment**
+   - Category-based UNP enforcement places devices into correct VLAN/VRF with
+     appropriate ACL and QoS policies without manual intervention.
+   - Integration with DHCP-Snooping and ARP Inspection to prevent spoofing.
 
-Security Runbook
---------------------
+- **Hardening and Policy Containment**
+   - Per-device PSK or certificate-based onboarding for high-risk OT environments.
+   - East–West containment using edge ACLs, inter-VRF firewalls, and rate-limiting.
+   - Enforcement of infrastructure protections such as BPDU Guard, Storm Control,
+     and Source-Guard at the access layer.
 
-- Onboard users with cert-based 802.1X; fallback methods tightly scoped.
-- IoT onboarding via fingerprint→UNP→container; enforce ACL minimums.
-- Guest onboarding via captive portal, time-bound access, internet breakout only.
-- Vulnerability/Patch cadence: monthly security updates; emergency CVE process.
-- Incident response: isolate via UNP change at edge; capture PCAP on tap/SPAN; notify SOC.
+
+QoS and Traffic Engineering
+===========================
+
+The Quality of Service (QoS) and traffic engineering strategy ensures consistent
+application performance across the campus, prioritizing real-time services such as
+voice, video, and collaboration, while controlling bandwidth usage from guest and
+non-critical devices. Policies are enforced from the access layer to the core,
+maintaining an end-to-end differentiated service model aligned with enterprise SLAs.
+
+**Traffic Classification and Marking**
+   - Wireless traffic is classified at the point of entry using 802.11e/WMM profiles,
+     mapping SSID profiles and application types to DSCP values.
+   - Edge switches are configured to trust incoming CoS/DSCP markings from APs and
+     apply remarking where necessary to maintain class integrity.
+   - Application recognition (L7 DPI where supported) is used to identify collaboration
+     platforms (e.g., Teams, Zoom), VoIP services, and critical enterprise applications.
+
+**Queuing and Scheduling**
+   - Strict Priority Queues are dedicated for Expedited Forwarding (EF) traffic such as
+     VoIP signalling and real-time audio streams to ensure minimal latency and jitter.
+   - Assured Forwarding classes (AF41/AF42) are reserved for video conferencing and
+     high-priority collaboration traffic, using Weighted Round Robin (WRR) Scheduling
+   - Default best-effort queues handle data applications, with congestion management
+     algorithms preventing starvation of low-priority flows.
+
+**Rate-Limiting and Traffic Shaping**
+   - Per-SSID and per-user bandwidth policies are applied to guest and IoT networks to
+     prevent non-critical traffic from impacting corporate services.
+   - Policing and shaping profiles enforce maximum throughput limits and burst controls
+     during congestion periods.
+   - Multicast and broadcast traffic rate controls are implemented to safeguard campus
+     control plane stability and protect wireless airtime.
+
+**End-to-End QoS Policy Alignment**
+   - QoS markings are preserved across routing and switching hops to ensure consistent
+     treatment through the core and data center paths.
+   - Integration with WAN/SIP edge gateways ensures that QoS policies extend beyond
+     the campus for unified service quality across cloud and remote access environments.
+   - Compliance with industry models (DiffServ, RFC 4594) ensures interoperability with
+     carrier networks and hosted collaboration platforms.
+
+
+
 
