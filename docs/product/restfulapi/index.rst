@@ -2,11 +2,9 @@
 RestFul API Documentation
 =====================
 
-An overview of our networking product families.
-
 .. toctree::
    :maxdepth: 3
 
-   ovc
+   - `OmniVista Cirrus 10.5.1 RESTful API Documentation <https://eu.manage.ovcirrus.com/apidoc/apidoc.html>`_
    stellar
    pythonlibraries
