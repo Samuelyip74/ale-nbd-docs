@@ -1,4 +1,4 @@
-About Alcatel-Lucent Enterprise (ALE)
+Alcatel-Lucent Enterprise (ALE)
 =====================================
 
 Alcatel-Lucent Enterprise (ALE) is a global provider of networking, communications,
