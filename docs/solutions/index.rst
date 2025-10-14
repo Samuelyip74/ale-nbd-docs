@@ -12,6 +12,7 @@ These designs accelerate implementation with proven best practices and reference
    campus-spb
    data-center-spb
    data-center-evpn
+   datacenter-dci
    transportation-rail
    transportation-its
    hospitality
