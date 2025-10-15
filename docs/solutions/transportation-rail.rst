@@ -129,7 +129,7 @@ RF/Operations
 - DRM for channel/power; 20/40 MHz in dense platform/concourse areas; 80 MHz in low-density rooms.
 - 802.11k/r/v for roaming; sticky client avoidance; minimum RSSI enforcement.
 
-Station Network Design (Detailed)
+Station Network Design 
 ---------------------------------
 
 Physical Topology per Station
@@ -151,7 +151,7 @@ Logical Topology & Control Planes
 - **RSTP** in primary forwarding paths; protection features only.
 
 Trackside Network Architecture
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------
 
 The trackside network extends the core SPB/MPLS ring to wayside environments, enabling
 mission-critical communication for signalling, safety systems, surveillance, and
@@ -159,7 +159,7 @@ operational maintenance. It supports both **CBTC and ETCS** signalling models th
 strict segregation of safety-related and non-safety services.
 
 Trackside Fiber Topology & Redundancy
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Dual fiber routes aligned with track alignment (up-line / down-line or bi-directional).
 - Integration with station aggregation via geographically diverse entries.
@@ -168,7 +168,7 @@ Trackside Fiber Topology & Redundancy
 - Fast reroute (SPB or MPLS-FRR) ensures sub-50 ms convergence upon track cut or equipment loss.
 
 Wayside Cabinets & Industrial Switching
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Industrial EN50155/IEC61850-grade switches housed in trackside or tunnel cabinets.
 - Each cabinet includes:
@@ -179,7 +179,7 @@ Wayside Cabinets & Industrial Switching
   vibration, and EMC exposure typical of tunnel/viaduct conditions.
 
 Signalling System Integration (CBTC/ETCS Safe Zones)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Dedicated **Safety-Critical VRF or I-SID** reserved for signalling/CBTC/ETCS backhaul.
 - One-way data flow options supported through external firewalls or data diodes if mandated.
@@ -189,7 +189,7 @@ Signalling System Integration (CBTC/ETCS Safe Zones)
   ACL-based micro-segmentation.
 
 Trackside CCTV, PA, and Emergency Systems
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Trackside CCTV poles or tunnel cameras connected via Hi-PoE ports; multicast suppression
   and IGMP snooping enabled to protect backhaul capacity.
@@ -198,7 +198,7 @@ Trackside CCTV, PA, and Emergency Systems
   VRF-OPS or VRF-PUBLIC address spaces.
 
 Trackside Wireless (Maintenance Wi-Fi / Trainborne Access)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Optional Wi-Fi access points (ruggedized, 5/6 GHz) mounted at portals, crossover areas,
   or depots to support maintenance teams and rolling stock diagnostics.
@@ -206,7 +206,7 @@ Trackside Wireless (Maintenance Wi-Fi / Trainborne Access)
 - Alignment for future CBTC wireless bearer (e.g., 5.8 GHz track-to-train) if deployed.
 
 Environmental Hardening & Power
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - All trackside equipment designed for harsh environments:
   - Operating Temp: –25°C to +70°C (fanless preferred).
