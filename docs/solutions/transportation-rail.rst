@@ -294,8 +294,11 @@ Model Selection Matrix (Deployment Zone vs Technology)
    * - **Scalability**
      - 32 nodes ring  
      - Large scale with 
+       
        sub-second convergence 
-     - Large scale with 50ms convergence
+     - Large scale with 
+     
+       50ms convergence
 
    * - **Core / Backbone**
      - OS6900 / OS68xx      
