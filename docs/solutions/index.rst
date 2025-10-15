@@ -14,7 +14,6 @@ These designs accelerate implementation with proven best practices and reference
    data-center-evpn
    datacenter-dci
    transportation-rail
-   transportation-its
    hospitality
    surveillance
    metro-ethernet
