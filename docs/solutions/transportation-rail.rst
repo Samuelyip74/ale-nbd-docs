@@ -66,7 +66,7 @@ Proposed Network Architecture
 High Level Design - Transportation (Rail)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: /en/latest/_static/images/hld-transportation.png
+.. image:: https://ale-nbd-docs.readthedocs.io/en/latest/_static/images/hld-transportation.png
    :alt: High Level Design - Transportation (Rail)
    :align: center
    :width: 70%
