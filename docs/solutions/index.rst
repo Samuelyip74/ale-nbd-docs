@@ -9,8 +9,6 @@ These designs accelerate implementation with proven best practices and reference
    :maxdepth: 1
 
    campus
-   campus-spb
-   data-center-spb
    data-center-evpn
    datacenter-dci
    transportation-rail

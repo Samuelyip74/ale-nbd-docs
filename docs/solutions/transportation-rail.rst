@@ -14,7 +14,7 @@ This design proposes a validated, scalable, and secure rail transportation netwo
 The design is driven by five principles: **availability, determinism, security, visibility, and operational simplicity**.
 
 **Availability & Determinism**
-  - Fast convergence (<50 ms target) on ring failures with SPB or MPLS FRR, dual-homing of all station aggregation pairs, and ECMP across diverse fiber paths.
+  - Fast convergence on ring failures with ERP/SPB or MPLS FRR (<50ms), dual-homing of all station aggregation pairs, and ECMP across diverse fiber paths.
   - Hitless or near-hitless maintenance through ISSU-ready platforms and service-based rerouting.
 
 **Security & Segmentation**
@@ -23,15 +23,16 @@ The design is driven by five principles: **availability, determinism, security, 
 **Visibility & Simplicity**
   - Single-pane-of-glass (OmniVista) for LAN/WLAN, AIOps analytics, topology, and compliance. ZTP and fabric auto-attach reduce deployment time.
 
-**Time & Sync**
-  - Deterministic timing using **IEEE 1588v2 PTP** (where required) and NTP fallback; boundary/transparent clocks in aggregation switches.
+**Operational simplicity**
+  - Centralized visibility and control via OmniVista for LAN, WLAN, and user policies—reducing IT effort and human error.
+  - Plug-and-play onboarding of switches and access points with automated configuration templates, minimizing deployment time and ensuring configuration consistency.
 
 Design Objectives
 -----------------
 
 Reliability and High Availability
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Target sub-50 ms service protection on any single fiber cut or node failure on the ring.
+- Target sub-second service protection on any single fiber cut or node failure on the ring.
 - Redundant fiber pairs (clockwise/counter-clockwise), dual power feeds, and dual control centers (OCC/BOCC).
 - Station-tier redundancy using dual aggregation switches (A/B) with multi-homed access.
 
@@ -66,8 +67,9 @@ Proposed Network Architecture
 Core Architectural Principles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Ring Core with SPB/MPLS
+Ring Core with ERP / SPB /MPLS
 ^^^^^^^^^^^^^^^^^^^^^^^
+- **ERP Core**: ERP protocol control plane provides loop-free ring topology, per-service vlan, and fast convergence ERP. Ideal for IP/VLAN services between stations and OCC.
 - **SPB Core**: IS-IS control plane provides loop-free multipath, per-service trees, and fast convergence without STP. Ideal for L2VPN services (MAC-in-MAC/802.1ah) between stations and OCC.
 - **MPLS Core** (optional/adjacent): L2VPN (VPLS/EVPN) or L3VPN for inter-domain separation; **TI-LFA/FRR** for sub-50 ms protection. Useful for interop with IP/MPLS WAN or third-party backhaul.
 - Dual counter-rotating fibers; diverse splice points; automatic traffic re-optimization after restoration.
@@ -94,6 +96,7 @@ Macro Segmentation (VRFs / Service Instances)
 
 Service Delivery Mechanisms
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+- **VLAN** per service for L2 extension where needed (e.g., CCTV VLAN between station and central VMS).
 - **SPB I-SID** per service for L2 extension where needed (e.g., CCTV VLAN between station and central VMS).
 - **MPLS L2/L3VPN** per tenant/service for deterministic isolation across third-party segments.
 - **Inter-VRF** flows via firewalls or policy gateways with explicit allowlists (default-deny).
@@ -145,12 +148,72 @@ Logical Topology & Control Planes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - **Ring Core**: SPB (IS-IS) with I-SIDs per service; or MPLS with LDP/SR and L2/L3VPNs.
 - **Station Edge**: OSPF within VRF-IT if L3 aggregation is required for IT services; static/default routing for SCADA segments.
-- **No STP** in primary forwarding paths; protection features only.
+- **RSTP** in primary forwarding paths; protection features only.
 
-Addressing & Naming
-~~~~~~~~~~~~~~~~~~~
-- Summarized IP plan per station (e.g., /24 per subsystem VLAN, /31 P2P ring links).
-- Deterministic naming: ``<LINE>-STN<NN>-AGG-A/B``, ``<LINE>-STN<NN>-ACC-xx``; service IDs align with I-SID/VPN IDs.
+Trackside Network Architecture
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The trackside network extends the core SPB/MPLS ring to wayside environments, enabling
+mission-critical communication for signalling, safety systems, surveillance, and
+operational maintenance. It supports both **CBTC and ETCS** signalling models through
+strict segregation of safety-related and non-safety services.
+
+Trackside Fiber Topology & Redundancy
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Dual fiber routes aligned with track alignment (up-line / down-line or bi-directional).
+- Integration with station aggregation via geographically diverse entries.
+- Passive optical joints and splice enclosures installed at regular intervals with OTDR
+  test points for break detection and maintenance.
+- Fast reroute (SPB or MPLS-FRR) ensures sub-50 ms convergence upon track cut or equipment loss.
+
+Wayside Cabinets & Industrial Switching
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Industrial EN50155/IEC61850-grade switches housed in trackside or tunnel cabinets.
+- Each cabinet includes:
+  - SPB/MPLS uplinks to track fiber pair.
+  - PoE/Hi-PoE downlinks for field devices (CCTV, PA, Signal I/O, Emergency Phones).
+  - Dual DC power feeds (typically -48V DC) with local breaker isolation.
+- Cabinets are environmentally rated (IP54–IP66) to withstand temperature, humidity,
+  vibration, and EMC exposure typical of tunnel/viaduct conditions.
+
+Signalling System Integration (CBTC/ETCS Safe Zones)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Dedicated **Safety-Critical VRF or I-SID** reserved for signalling/CBTC/ETCS backhaul.
+- One-way data flow options supported through external firewalls or data diodes if mandated.
+- Integration with signalling Zone Controllers or Trackside Processing Units via secure
+  Layer 2/Layer 3 circuits, with latency and jitter guarantees.
+- Field I/O controllers connected via rugged access switches using static addressing and
+  ACL-based micro-segmentation.
+
+Trackside CCTV, PA, and Emergency Systems
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Trackside CCTV poles or tunnel cameras connected via Hi-PoE ports; multicast suppression
+  and IGMP snooping enabled to protect backhaul capacity.
+- Emergency Help Points (EHPs) and trackside telephony placed at evacuation walkways or portals.
+- PA/voice evacuation horns or tunnel loudspeakers linked to station PA controllers via
+  VRF-OPS or VRF-PUBLIC address spaces.
+
+Trackside Wireless (Maintenance Wi-Fi / Trainborne Access)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Optional Wi-Fi access points (ruggedized, 5/6 GHz) mounted at portals, crossover areas,
+  or depots to support maintenance teams and rolling stock diagnostics.
+- SSIDs segregated by VRF (Maintenance / Guest / Trainborne Service).
+- Alignment for future CBTC wireless bearer (e.g., 5.8 GHz track-to-train) if deployed.
+
+Environmental Hardening & Power
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- All trackside equipment designed for harsh environments:
+  - Operating Temp: –25°C to +70°C (fanless preferred).
+  - Vibration/Shock: IEC 60068-2.
+  - EMC Immunity: EN 50121-4 (railway signalling immunity).
+- Power redundancy via dual DC feed or local UPS buffer within wayside cabinets.
+- Fiber connectors protected with sealed glands and color-coded for route identification.
 
 Security Architecture and Zero Trust Controls
 ---------------------------------------------
@@ -216,44 +279,6 @@ Resilience, Power, and Environmental Considerations
 - Fan/filter maintenance windows coordinated with off-peak hours.
 - Fiber plant with OTDR baselines; spare cores reserved; labeled and documented patch maps.
 
-Bill of Materials (Representative)
-----------------------------------
-- **Core/Ring Nodes**: Modular or fixed 25/100G-capable SPB/MPLS switches, redundant supervisors/PSUs.
-- **Station Aggreg
-
-Bill of Materials (Representative)
-----------------------------------
-- **Core/Ring Nodes**: Modular or fixed 25/100G-capable SPB/MPLS switches, redundant supervisors/PSUs.
-- **Station Aggregation**: Fixed 10/25G aggregation with MACsec options, PTP boundary clock.
-- **Access (Subsystem)**: PoE+/Hi-PoE 1/2.5/5G switches, extended temperature models where needed.
-- **Wireless**: Indoor/rugged APs with mounting kits; surge protection for outdoor.
-- **Servers**: VMS, PA/PIS controllers, AAA, NMS; dual-NIC bonding to aggregation.
-- **Optics & Cabling**: Single-mode SFP28/QSFP28; LC/SC as per ODF; ODF trays and labels.
-- **Racks & Power**: 42U racks, PDUs, cable managers, UPS integration.
-
-Testing & Validation Plan
--------------------------
-
-Factory Acceptance Test (FAT)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Build topology and validate ring protection and SPB/MPLS control-plane convergence.
-- Verify VRFs/I-SIDs/VPN instances and QoS classifications.
-- Inject simulated fiber cuts to confirm sub-50 ms convergence.
-- PTP accuracy validation where timing is critical.
-
-Site Acceptance Test (SAT)
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Deploy per station and test uplinks to ring.
-- Perform camera, PA/PIS, and Wi-Fi service tests under load.
-- Validate redundancy (AGG-A/B failover, fiber reroute).
-- Security policy enforcement tests (802.1X, ACL, VRF isolation).
-
-Operational Readiness
-~~~~~~~~~~~~~~~~~~~~~
-- Deliver NOC/SOC operational manuals and escalation matrices.
-- Setup monitoring dashboards and train operator staff.
-- Confirm backup/restore procedures and NMS integration.
-
 Appendix – Reference Config Snippets (Illustrative)
 ---------------------------------------------------
 
@@ -297,11 +322,4 @@ NAC/UNP Edge Template
      storm-control broadcast
      dhcp snooping trust disable
 
-Project-Specific Tailoring
---------------------------
-- Capacity matrix (CCTV camera count, PA zones, PIS displays, Wi-Fi APs) per station.
-- Fiber splicing diagrams with core allocation and ODF layout.
-- Custom QoS profiles and bandwidth allocation by operator SLA.
-- Cybersecurity governance alignment with railway operational policies.
-- Integration guidelines with signaling/back-office interfaces (read-only where mandated).
 
