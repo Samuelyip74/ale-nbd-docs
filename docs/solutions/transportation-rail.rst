@@ -13,27 +13,27 @@ This design proposes a validated, scalable, and secure rail transportation netwo
 
 The design is driven by five principles: **availability, determinism, security, visibility, and operational simplicity**.
 
-**Availability & Determinism**
-  - Fast convergence on ring failures with ERP/SPB or MPLS FRR (<50ms), dual-homing of all station aggregation pairs, and ECMP across diverse fiber paths.
-  - Hitless or near-hitless maintenance through ISSU-ready platforms and service-based rerouting.
+  **Availability & Determinism**
+    - Fast convergence on ring failures with ERP/SPB or MPLS FRR (<50ms), dual-homing of all station aggregation pairs, and ECMP across diverse fiber paths.
+    - Hitless or near-hitless maintenance through ISSU-ready platforms and service-based rerouting.
 
-**Security & Segmentation**
-  - Zero Trust at the edge with identity-based policies; strict **macro-segmentation (VRFs)** for Safety-Critical (SCADA/Interlocking), Mission-Critical (PIS/PA/CCTV), and Non-Critical (Guest Wi-Fi) domains; **micro-segmentation** via ACLs/roles.
+  **Security & Segmentation**
+    - Zero Trust at the edge with identity-based policies; strict **macro-segmentation (VRFs)** for Safety-Critical (SCADA/Interlocking), Mission-Critical (PIS/PA/CCTV), and Non-Critical (Guest Wi-Fi) domains; **micro-segmentation** via ACLs/roles.
 
-**Visibility & Simplicity**
-  - Single-pane-of-glass (OmniVista) for LAN/WLAN, AIOps analytics, topology, and compliance.
-  - Centralized visibility and control via OmniVista for LAN, WLAN, and user policies—reducing IT effort and human error.
-  - Plug-and-play onboarding of switches and access points with automated configuration templates, minimizing deployment time and ensuring configuration consistency.
+  **Visibility & Simplicity**
+    - Single-pane-of-glass (OmniVista) for LAN/WLAN, AIOps analytics, topology, and compliance.
+    - Centralized visibility and control via OmniVista for LAN, WLAN, and user policies—reducing IT effort and human error.
+    - Plug-and-play onboarding of switches and access points with automated configuration templates, minimizing deployment time and ensuring configuration consistency.
 
 
 Design Objectives
 -----------------
 
-Reliability and High Availability
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Target sub-second service protection on any single fiber cut or node failure on the ring.
-- Redundant fiber pairs (clockwise/counter-clockwise), dual power feeds, and dual control centers (OCC/BOCC).
-- Station-tier redundancy using dual aggregation switches (A/B) with multi-homed access.
+  Reliability and High Availability
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    - Target sub-second service protection on any single fiber cut or node failure on the ring.
+    - Redundant fiber pairs (clockwise/counter-clockwise), dual power feeds, and dual control centers (OCC/BOCC).
+    - Station-tier redundancy using dual aggregation switches (A/B) with multi-homed access.
 
 Deterministic Performance & QoS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
