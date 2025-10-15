@@ -324,13 +324,19 @@ Model Selection Matrix (Deployment Zone vs Technology)
 
    * - **Wireless (Wi-Fi APs)**
      - OAW-AP15xx (Indoor) / 
+       
        OAW-AP136x (Outdoor) / 
+       
        OAW-AP157x (Outdoor)  
      - OAW-AP15xx (Indoor) / 
+       
        OAW-AP136x (Outdoor) / 
+       
        OAW-AP157x (Outdoor)  
      - OAW-AP15xx (Indoor) / 
+       
        OAW-AP136x (Outdoor) / 
+       
        OAW-AP157x (Outdoor)  
 
    * - **Wireless Mgmt / NAC**
