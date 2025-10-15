@@ -21,11 +21,10 @@ The design is driven by five principles: **availability, determinism, security, 
   - Zero Trust at the edge with identity-based policies; strict **macro-segmentation (VRFs)** for Safety-Critical (SCADA/Interlocking), Mission-Critical (PIS/PA/CCTV), and Non-Critical (Guest Wi-Fi) domains; **micro-segmentation** via ACLs/roles.
 
 **Visibility & Simplicity**
-  - Single-pane-of-glass (OmniVista) for LAN/WLAN, AIOps analytics, topology, and compliance. ZTP and fabric auto-attach reduce deployment time.
-
-**Operational simplicity**
+  - Single-pane-of-glass (OmniVista) for LAN/WLAN, AIOps analytics, topology, and compliance.
   - Centralized visibility and control via OmniVista for LAN, WLAN, and user policies—reducing IT effort and human error.
   - Plug-and-play onboarding of switches and access points with automated configuration templates, minimizing deployment time and ensuring configuration consistency.
+
 
 Design Objectives
 -----------------
@@ -53,8 +52,8 @@ Manageability and Operational Efficiency
 
 Resilience and Disaster Recovery
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- OCC/BOCC active/standby services, replicated NMS and authentication systems.
-- Configuration/version archives and procedure runbooks for rapid restoration.
+- OCC/BOCC active/standby services, replicated NMS and authentication & shared (DHCP/DNS) systems.
+- Configuration/version archives and procedure playbooks for rapid restoration.
 
 Regulatory & Environment
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -121,7 +120,7 @@ Access Points (APs)
 
 Architecture
 ^^^^^^^^^^^^
-- Controllerless Stellar architecture with cloud augmentation (guest onboarding, analytics).
+- Controllerless Stellar architecture with on-premises management (guest onboarding, analytics).
 - Separate SSIDs mapped to VRFs (Staff/Operations, Maintenance, Guest).
 
 RF/Operations
@@ -129,13 +128,24 @@ RF/Operations
 - DRM for channel/power; 20/40 MHz in dense platform/concourse areas; 80 MHz in low-density rooms.
 - 802.11k/r/v for roaming; sticky client avoidance; minimum RSSI enforcement.
 
+Core Ring Design 
+---------------------------------
+- Two **Core** switches/Router (rack 1 & rack 2), each with:
+  - 2×25/40/50/100G attachment to the ring (opposite ring directions (diverse ducts)).
+  - Dual AC/DC power; separate UPS circuits; external dry-contact alarms to BMS.
+
+Logical Topology & Control Planes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- **Ring Core**: ERP Ring with IP/VLAN per service; SPB (IS-IS) with I-SIDs per service; or MPLS with LDP/SR and L2/L3VPNs.
+
+
 Station Network Design 
 ---------------------------------
 
 Physical Topology per Station
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Two **Aggregation** switches (rack 1 & rack 2), each with:
-  - 2×10/25/100G uplinks to opposite ring directions (diverse ducts).
+  - 2×10/25/40/50/100G uplinks to Core Switch/Router.
   - 2×10/25G downlinks (MC-LAG) to each Access switch block.
   - Dual AC/DC power; separate UPS circuits; external dry-contact alarms to BMS.
 - **Access** blocks by subsystem:
@@ -143,17 +153,18 @@ Physical Topology per Station
   - **PIS/PA**: audio controllers, displays; multicast (PIM-SM/SSM) only within VRF-OPS.
   - **AFC/Ticketing**: secure VLANs; PCI-DSS-aligned segmentation where applicable.
   - **O&M**: maintenance jacks with NAC posture checks; jump host model.
+  - **Wi-Fi APs**: dual-band, dual-radio.
 
 Logical Topology & Control Planes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- **Ring Core**: SPB (IS-IS) with I-SIDs per service; or MPLS with LDP/SR and L2/L3VPNs.
-- **Station Edge**: OSPF within VRF-IT if L3 aggregation is required for IT services; static/default routing for SCADA segments.
+- **Station Aggregation**: IP/VLAN/VRF per service; SPB (IS-IS) with I-SIDs per service;
+- **Station Edge**: VLAN with MVRP mapped to VRF or ISID service.
 - **RSTP** in primary forwarding paths; protection features only.
 
 Trackside Network Design
 ---------------------------------
 
-The trackside network extends the core SPB/MPLS ring to wayside environments, enabling
+The trackside network extends the core ERP/SPB/MPLS ring to wayside environments, enabling
 mission-critical communication for signalling, safety systems, surveillance, and
 operational maintenance. It supports both **CBTC and ETCS** signalling models through
 strict segregation of safety-related and non-safety services.
@@ -165,14 +176,14 @@ Trackside Fiber Topology & Redundancy
 - Integration with station aggregation via geographically diverse entries.
 - Passive optical joints and splice enclosures installed at regular intervals with OTDR
   test points for break detection and maintenance.
-- Fast reroute (SPB or MPLS-FRR) ensures sub-50 ms convergence upon track cut or equipment loss.
+- Fast reroute (ERP / SPB or MPLS-FRR) ensures sub-second convergence upon track cut or equipment loss.
 
 Wayside Cabinets & Industrial Switching
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Industrial EN50155/IEC61850-grade switches housed in trackside or tunnel cabinets.
 - Each cabinet includes:
-  - SPB/MPLS uplinks to track fiber pair.
+  - ERPSPB/MPLS uplinks to track fiber pair.
   - PoE/Hi-PoE downlinks for field devices (CCTV, PA, Signal I/O, Emergency Phones).
   - Dual DC power feeds (typically -48V DC) with local breaker isolation.
 - Cabinets are environmentally rated (IP54–IP66) to withstand temperature, humidity,
@@ -354,49 +365,4 @@ Model Selection Matrix (Deployment Zone vs Technology)
        OmniVista 2500/
        
        OmniVista Terra
-
-
-Appendix – Reference Config Snippets (Illustrative)
----------------------------------------------------
-
-.. note::
-   The following are sample patterns; exact syntax will vary depending on the selected hardware/software platform.
-
-SPB/I-SID Service Outline
-~~~~~~~~~~~~~~~~~~~~~~~~~
-.. code-block:: none
-
-   ! Enable SPB on ring interfaces
-   spb isis enable
-   interface Ten-GigabitEthernet 1/1/1
-     spb network
-   !
-   ! Create I-SID for CCTV
-   service i-sid 41001 name CCTV
-     vlan 110
-     bind ring-core
-
-MPLS L3VPN Outline
-~~~~~~~~~~~~~~~~~~
-.. code-block:: none
-
-   mpls enable
-   vrf OPS
-     rd 65000:100
-     route-target 65000:100 import
-     route-target 65000:100 export
-   router ospf vrf OPS
-     redistribute connected
-   !
-
-NAC/UNP Edge Template
-~~~~~~~~~~~~~~~~~~~~~
-.. code-block:: none
-
-   interface GigabitEthernet 1/0/5
-     dot1x enable
-     mab enable
-     storm-control broadcast
-     dhcp snooping trust disable
-
 
