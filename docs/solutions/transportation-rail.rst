@@ -287,13 +287,14 @@ Model Selection Matrix (Deployment Zone vs Technology)
    :widths: 20 30 25 25
 
    * - 
-     - ERP
-     - SPB
-     - MPLS
+     - **ERP**
+     - **SPB**
+     - **MPLS**
 
-   * - Scale
+   * - **Scalability**
      - 32 nodes ring  
-     - Large scale with sub-second convergence 
+     - Large scale with 
+       sub-second convergence 
      - Large scale with 50ms convergence
 
    * - **Core / Backbone**
@@ -322,14 +323,24 @@ Model Selection Matrix (Deployment Zone vs Technology)
      - OS6900 / OS68xx
 
    * - **Wireless (Wi-Fi APs)**
-     - OAW-AP15xx (Indoor) / OAW-AP136x (Outdoor) / OAW-AP157x (Outdoor)  
-     - OAW-AP15xx (Indoor) / OAW-AP136x (Outdoor) / OAW-AP157x (Outdoor)  
-     - OAW-AP15xx (Indoor) / OAW-AP136x (Outdoor) / OAW-AP157x (Outdoor)  
+     - OAW-AP15xx (Indoor) / 
+       OAW-AP136x (Outdoor) / 
+       OAW-AP157x (Outdoor)  
+     - OAW-AP15xx (Indoor) / 
+       OAW-AP136x (Outdoor) / 
+       OAW-AP157x (Outdoor)  
+     - OAW-AP15xx (Indoor) / 
+       OAW-AP136x (Outdoor) / 
+       OAW-AP157x (Outdoor)  
 
    * - **Wireless Mgmt / NAC**
-     - OmniVista 2500/OmniVista Terra  
-     - OmniVista 2500/OmniVista Terra
-     - Nokia NFM and OmniVista 2500/OmniVista Terra
+     - OmniVista 2500/
+       OmniVista Terra  
+     - OmniVista 2500/
+       OmniVista Terra
+     - Nokia NFM and 
+       OmniVista 2500/
+       OmniVista Terra
 
 
 Appendix – Reference Config Snippets (Illustrative)
