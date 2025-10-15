@@ -150,7 +150,7 @@ Logical Topology & Control Planes
 - **Station Edge**: OSPF within VRF-IT if L3 aggregation is required for IT services; static/default routing for SCADA segments.
 - **RSTP** in primary forwarding paths; protection features only.
 
-Trackside Network Architecture
+Trackside Network Design
 ---------------------------------
 
 The trackside network extends the core SPB/MPLS ring to wayside environments, enabling
@@ -278,6 +278,59 @@ Resilience, Power, and Environmental Considerations
 - Dual PSU per switch; separate UPS feeds; -48V DC where required in trackside cabinets.
 - Fan/filter maintenance windows coordinated with off-peak hours.
 - Fiber plant with OTDR baselines; spare cores reserved; labeled and documented patch maps.
+
+Model Selection Matrix (Deployment Zone vs Technology)
+---------------------------------------------------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 30 25 25
+
+   * - 
+     - ERP
+     - SPB
+     - MPLS
+
+   * - Scale
+     - 32 nodes ring  
+     - Large scale with sub-second convergence 
+     - Large scale with 50ms convergence
+
+   * - **Core / Backbone**
+     - OS6900 / OS68xx      
+     - OS9900 / OS6900 
+     - Nokia SR Router
+
+   * - **Station Aggregation**
+     - OS6900 / OS68xx  
+     - OS6900 / OS68xx
+     - OS6900 / OS68xx
+
+   * - **Station Access**  
+     - OS68xx / OS6560  
+     - OS68xx / OS6560
+     - OS68xx / OS6560
+
+   * - **Trackside / Wayside**
+     - OS6865 / OS6465  
+     - OS6865 / OS6465
+     - OS6865 / OS6465
+
+   * - **Data Center / OCC**
+     - OS6900 / OS68xx / OS6560
+     - OS6900 / OS68xx
+     - OS6900 / OS68xx
+
+   * - **Wireless (Wi-Fi APs)**
+     - OAW-AP15xx (Indoor) / OAW-AP136x (Outdoor) / OAW-AP157x (Outdoor)  
+     - OAW-AP15xx (Indoor) / OAW-AP136x (Outdoor) / OAW-AP157x (Outdoor)  
+     - OAW-AP15xx (Indoor) / OAW-AP136x (Outdoor) / OAW-AP157x (Outdoor)  
+
+   * - **Wireless Mgmt / NAC**
+     - OmniVista 2500/OmniVista Terra  
+     - OmniVista 2500/OmniVista Terra
+     - Nokia NFM and OmniVista 2500/OmniVista Terra
+
 
 Appendix – Reference Config Snippets (Illustrative)
 ---------------------------------------------------
