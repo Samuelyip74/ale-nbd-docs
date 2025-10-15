@@ -341,11 +341,15 @@ Model Selection Matrix (Deployment Zone vs Technology)
 
    * - **Wireless Mgmt / NAC**
      - OmniVista 2500/
+       
        OmniVista Terra  
      - OmniVista 2500/
+       
        OmniVista Terra
      - Nokia NFM and 
+       
        OmniVista 2500/
+       
        OmniVista Terra
 
 
