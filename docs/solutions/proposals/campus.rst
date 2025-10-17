@@ -172,9 +172,9 @@ and **Access** layers, each engineered for redundancy, resiliency, and determini
 * Client/AP analytics and reporting.
 
 
-**E. Operational Resilience Summary**
+**E. Operational Resilience**
 
-.. list-table:: **E. Operational Resilience Summary**
+.. list-table:: 
    :header-rows: 1
    :widths: 20 40 40
 
