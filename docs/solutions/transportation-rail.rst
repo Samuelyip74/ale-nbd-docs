@@ -29,11 +29,11 @@ The design is driven by five principles: **availability, determinism, security, 
 Design Objectives
 -----------------
 
-  Reliability and High Availability
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    - Target sub-second service protection on any single fiber cut or node failure on the ring.
-    - Redundant fiber pairs (clockwise/counter-clockwise), dual power feeds, and dual control centers (OCC/BOCC).
-    - Station-tier redundancy using dual aggregation switches (A/B) with multi-homed access.
+Reliability and High Availability
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Target sub-second service protection on any single fiber cut or node failure on the ring.
+- Redundant fiber pairs (clockwise/counter-clockwise), dual power feeds, and dual control centers (OCC/BOCC).
+- Station-tier redundancy using dual aggregation switches (A/B) with multi-homed access.
 
 Deterministic Performance & QoS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

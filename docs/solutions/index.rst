@@ -15,3 +15,5 @@ These designs accelerate implementation with proven best practices and reference
    hospitality
    surveillance
    metro-ethernet
+   proposals/index
+   
