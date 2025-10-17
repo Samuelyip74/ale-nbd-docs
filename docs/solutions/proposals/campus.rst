@@ -90,7 +90,7 @@ Key Design Principles
 6.1 High-Level Architecture Overview
 ------------------------------------
 
-High-level architecture diagram:
+High-level architecture diagram
 
 .. image:: campus_network_architecture.png
    :alt: Campus Network Architecture
@@ -174,13 +174,25 @@ and **Access** layers, each engineered for redundancy, resiliency, and determini
 
 **E. Operational Resilience Summary**
 
-| **Layer**      | **Redundancy Measures**                 | **Convergence / Protection**              |
-|----------------|------------------------------------------|-------------------------------------------|
-| Core           | Dual nodes, LACP links, dual PSUs       | OSPF + BFD + ECMP + GR/NSF                |
-| Distribution   | MLAG, dual PSUs, HSRP/VRRP              | RSTP/MSTP                                 |
-| Access         | Stack/VC, dual uplinks (LACP)           | ISSU + Edge Security + PoE Redundancy     |
-| WLAN           | Overlapped Radio coverage, Redundant management | 802.11r/k/v Fast Failover, wIDS/IPS Rogue AP Containment |
+.. list-table:: **E. Operational Resilience Summary**
+   :header-rows: 1
+   :widths: 20 40 40
 
+   * - **Layer**
+     - **Redundancy Measures**
+     - **Convergence / Protection**
+   * - Core
+     - Dual nodes, LACP links, dual PSUs
+     - OSPF + BFD + ECMP + GR/NSF
+   * - Distribution
+     - MLAG, dual PSUs, HSRP/VRRP
+     - RSTP / MSTP
+   * - Access
+     - Stack/VC, dual uplinks (LACP)
+     - ISSU + Edge Security + PoE Redundancy
+   * - WLAN
+     - Overlapped Radio coverage, Redundant management
+     - 802.11r/k/v Fast Failover, wIDS/IPS Rogue AP Containment
 
 
 6.2.2 EVPN Data Center (Spine/Leaf Fabric)
