@@ -1,5 +1,5 @@
 ====================================================
-Technical Proposal for Enterprise Network Architecture
+Campus/Enterprise Network Architecture
 ====================================================
 
 :Document Title:  Technical Proposal – Network Infrastructure Modernization
@@ -12,7 +12,7 @@ Technical Proposal for Enterprise Network Architecture
 
 The Proposed Solution shall deliver a secure, resilient, and scalable enterprise network infrastructure
 supporting wired, wireless, and hybrid-cloud connectivity.  It shall provide end-to-end high availability,
-zero-trust security, and centralized visibility to meet the Authority’s operational and compliance objectives.
+zero-trust security, and centralized visibility to meet the Authority’s/Customer **(delete appropriate)** operational and compliance objectives.
 
 Key features include:
 
@@ -31,8 +31,8 @@ The scope of this project shall encompass design, supply, installation, configur
 and commissioning of the enterprise network infrastructure, including:
 
 * Campus switching and wireless systems
-* Data-center networking and fabric
-* Cloud and Internet connectivity
+* Data-center fabric, Data Center interconnect, and Data-to-cloud connectivity
+* Internet & VPN connectivity
 * Unified communications integration
 * Network security, access control, and monitoring
 * Ongoing support, training, and documentation
@@ -40,7 +40,7 @@ and commissioning of the enterprise network infrastructure, including:
 **Objectives**
 
 * Modernize the existing network to support digital-first services
-* Transform the Wireless experience with Wi-Fi 6/6E/7 **(deleted appropriate)** technology
+* Transform the Wireless experience with Wi-Fi 6/6E/7 **(delete appropriate)** technology
 * Enhance availability to ≥ 99.95 % uptime
 * Improve performance and scalability through automation and SD-WAN
 * Strengthen cybersecurity posture through segmentation, least privilege access, identity management, and MFA
@@ -60,7 +60,7 @@ The proposed modernization shall address these constraints through an integrated
 =============================
 
 The Proposed Solution shall introduce a unified, service-oriented architecture
-covering access, aggregation, core, data-center, and cloud domains.
+covering access (wired and wireless), aggregation **(delete appropriate)**, core, data-center, and cloud domains.
 
 Key Design Principles
 ----------------------
@@ -68,7 +68,7 @@ Key Design Principles
 * High availability and fault tolerance – no single point of failure
 * Modular scalability – independent growth of domains
 * Standards-based interoperability (IEEE, IETF)
-* Zero-Trust security and Identity management with Microsoft Entra ID **(deleted appropriate)**
+* Zero-Trust security and Identity management with Microsoft Entra ID **(delete appropriate)**
 * End-to-end QoS policy control for different class of applications (Gold/Silver/Bronze)
 * Centralized monitoring, automation, and analytics
 
@@ -80,7 +80,7 @@ Key Design Principles
 * **Redundancy:**  Hardware, link, and power-feed duplication across all layers.
 * **Security:**  VRF/VLAN for macro segmentation, Role-based with ACL for micro-segmentation, 802.1X/MAB, and identity & MFA management.
 * **Scalability:**  Horizontal expansion through stackable or leaf-spine designs.
-* **Operational Efficiency:**  Single-pane-of-glass management with OmniVista 2500/Cirrus **(deleted appropriate)**, Infrastructure-as-Code (IaC) deployment, API-based integration,
+* **Operational Efficiency:**  Single-pane-of-glass management with OmniVista 2500/Cirrus **(delete appropriate)**, Infrastructure-as-Code (IaC) deployment, API-based integration,
   and automated configuration validation.
 
 
@@ -89,6 +89,12 @@ Key Design Principles
 
 6.1 High-Level Architecture Overview
 ------------------------------------
+
+High-level architecture diagram:
+.. image:: campus_network_architecture.png
+   :alt: Campus Network Architecture
+   :align: center
+   :width: 800px
 
 The Proposed Solution shall comprise six (6) inter-connected network domains:
 
@@ -111,10 +117,10 @@ ensuring *no single point of failure*.
 
 **Overview**
 
-The Campus network shall adopt a **Three-Tier Architecture**/ **Two-Tier Architecture** **(deleted appropriate)** consisting of **Core**, **Distribution** **(deleted appropriate)**,
+The Campus network shall adopt a **Three-Tier Architecture**/ **Two-Tier Architecture** **(delete appropriate)** consisting of **Core**, **Distribution** **(delete appropriate)**,
 and **Access** layers, each engineered for redundancy, resiliency, and deterministic convergence.
 
-**A. Core Layer**
+**A. Core Layer** **(please adapt for Virtual Chassis)**
 
 * Two (2) or more high-performance core switches in redundant pair.
 * Dual supervisors, fabric modules, PSUs, and hot-swappable interface cards.
@@ -122,7 +128,7 @@ and **Access** layers, each engineered for redundancy, resiliency, and determini
 * **OSPF + BFD** for sub-second failover; **NSF/GR** for control-plane stability.
 * Dual uplinks from every Distribution pair to both Core nodes.
 
-**B. Distribution Layer** **(deleted appropriate)**
+**B. Distribution Layer** **(please adapt for Virtual Chassis)** **(delete appropriate)**
 
 * Redundant Distribution pairs with **Virtual Chassis** or equivalent to Access.
 * Dual supervisors and PSUs per chassis.
@@ -140,9 +146,27 @@ and **Access** layers, each engineered for redundancy, resiliency, and determini
 
 **D. Wireless LAN Subsystem**
 
-* OmniVista 2500/Cirrus centralized WLAN management. **(deleted appropriate)**
-* Wi-Fi 6/6E/7 **(deleted appropriate)** APs with 802.11r/k/v fast roaming.
+* OmniVista 2500/Cirrus centralized WLAN management. **(delete appropriate)**
+* Wi-Fi 6/6E/7 **(delete appropriate)** APs with 802.11r/k/v fast roaming.
 * APs powered via PoE+ switches.
+* Auto RF optimization and automatic channel/power adjustment.
+* L2 and L3 roaming support.
+* WPA2/WPA3 personal and Enterprise security modes.
+* 802.1X/MAC and RADIUS integration.
+* Microsoft Entra ID **(delete appropriate)** for identity-based access control.
+* Bonjour/mDNS service discovery.
+* wIDS/IPS with dedicated scanning radio **(delete appropriate)**
+* Rogue AP detection and containment.
+* Role-based WLAN segmentation (Corp, Guest, IoT, Voice).
+* L2-L7 access-control
+* QoS for voice/video prioritization.
+* IoT analytics and device profiling.
+* Guest Management and Captive Portal support.
+* Guest onboarding via self-service portal, vouchers, sponsor approval, social media login (Facebook/Google).
+* BYOD onboarding
+* Heatmap & Floorplan visualization.
+* Client/AP analytics and reporting.
+
 
 **E. Operational Resilience Summary**
 
