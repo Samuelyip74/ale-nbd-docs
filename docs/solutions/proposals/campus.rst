@@ -40,7 +40,7 @@ and commissioning of the enterprise network infrastructure, including:
 **Objectives**
 
 * Modernize the existing network to support digital-first services
-* Transform the Wireless experience with Wi-Fi 6/6E/7 **(delete appropriate)** technology
+* Transform the Wireless network to Wi-Fi 6/6E/7 **(delete appropriate)** technology to improve coverage and experiences.
 * Enhance availability to ≥ 99.95 % uptime
 * Improve performance and scalability through automation and SD-WAN
 * Strengthen cybersecurity posture through segmentation, least privilege access, identity management, and MFA
@@ -91,6 +91,7 @@ Key Design Principles
 ------------------------------------
 
 High-level architecture diagram:
+
 .. image:: campus_network_architecture.png
    :alt: Campus Network Architecture
    :align: center
@@ -112,7 +113,7 @@ ensuring *no single point of failure*.
 6.2 Detailed Architecture by Domain
 -----------------------------------
 
-6.2.1 Campus LAN / WLAN (Three-Tier Architecture)
+6.2.1 Campus LAN / WLAN (Three-Tier Architecture)/(Two-Tier Architecture) **(delete appropriate)**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Overview**
@@ -132,14 +133,15 @@ and **Access** layers, each engineered for redundancy, resiliency, and determini
 
 * Redundant Distribution pairs with **Virtual Chassis** or equivalent to Access.
 * Dual supervisors and PSUs per chassis.
-* **MVRP** for VLAN management.
-* **RSTP/MSTP** for L2 recovery < 1 s.
+* **MVRP** for dynamic VLAN registration.
+* **RSTP/MSTP** for L2 recovery < 2s recovery.
 * **HSRP/VRRP** default-gateway redundancy.
 * **OSPF + BFD** uplinks to Core; inter-distribution link for sync.
 
 **C. Access Layer**
 
 * Stack/Virtual-Chassis access switches with ISSU support.
+* **MVRP** for dynamic VLAN registration
 * Dual LACP uplinks to both Distribution switches.
 * 802.1X/MAB NAC enforcement; DHCP Snooping / ARP Inspection.
 * Dual power feeds and PoE priority for critical devices.
@@ -174,63 +176,62 @@ and **Access** layers, each engineered for redundancy, resiliency, and determini
 | **Layer**      | **Redundancy Measures**                 | **Convergence / Protection**              |
 +================+==========================================+===========================================+
 | Core           | Dual nodes, LACP links, dual PSUs       | OSPF + BFD + ECMP + GR/NSF                |
-| Distribution   | MLAG, dual PSUs, HSRP/VRRP              | RSTP/MSTP + BFD                           |
+| Distribution   | MLAG, dual PSUs, HSRP/VRRP              | RSTP/MSTP                                 |
 | Access         | Stack/VC, dual uplinks (LACP)           | ISSU + Edge Security + PoE Redundancy     |
-| WLAN           | Dual controllers, dual uplinks          | 802.11r/k/v Fast Failover                 |
+| WLAN           | Overlapped Radio coverage, Redundant    | 802.11r/k/v Fast Failover                 |
+|                | management                              | wIDS/IPS Rogue AP Containment             |
 +----------------+------------------------------------------+-------------------------------------------+
 
 
 6.2.2 EVPN Data Center (Spine/Leaf Fabric)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* Non-blocking **Clos Spine-Leaf** topology with **ECMP**.
-* Each Leaf dual-homed to Spines; underlay iBGP/eBGP or IS-IS + BFD.
-* VXLAN overlay with **EVPN Multihoming (EVPN-MH)** for active-active links.
-* **Graceful Restart / NSF** control-plane protection.
-* Redundant PSUs, fan trays, and hot-swap line cards.
-* Distributed anycast gateways for workload mobility.
+The Data Center Fabric shall adopt a **spine-and-leaf** architecture consisting of **10/25/40/50/100 Gbe** **(delete appropriate)** spine and leaf nodes.
+The Data Center shall support east-west traffic patterns, workload mobility, and multi-tenancy through VXLAN/EVPN overlays.
 
+* Non-blocking **Spine-Leaf** topology with Layer 3 links for **ECMP** load-balancing.
+* Each Leaf dual-homed to Spines; underlay OSPF for IGP with BFD for fast convergence.
+* VXLAN overlay with **EVPN Multihoming (EVPN-MH)** for active-active links.
+* Distributed anycast gateways for workload mobility, and optimal routing.
+
+A pair of leaf nodes shall provide connectivity to Campus Core and Hybrid Cloud gateways.
 
 6.2.3 Hybrid Cloud (AWS/Azure Integration)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* Redundant **Direct Connect / ExpressRoute** circuits via separate PoPs/providers.
-* Backup IPsec VPN with BGP failover and BFD.
+* Redundant **Direct Connect / Transit Gateway** circuits/service via separate PoPs/providers.
 * Segregated VRFs/VPCs for Prod/Dev/DR environments.
-* Route summarization and filtering to prevent leaks.
-* Centralized IPAM/DNS/DHCP; use of private endpoints only.
-* Multi-region failover using cloud transit gateways and IaC automation.
+* BGP to OSPF redistribution for routes convergence.
 
 
 6.2.4 Internet Edge and SD-WAN Perimeter
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * Dual firewalls (Active/Active or Standby) with state synchronization.
-* Dual edge routers with dual ISPs using eBGP multi-homing + BFD.
-* **DDoS protection** and **RTBH** capabilities.
-* **SD-WAN fabric** over MPLS + DIA/Internet/5G underlays.
+* Dual edge routers with dual ISPs using eBGP multi-homing.
+* **SD-WAN fabric** over Internet/MPLS/5G **(delete appropriate)** underlays.
 * Application-aware path selection, FEC, packet duplication.
-* Dual SD-WAN controllers/orchestrators in HA mode.
-* Edge links via LACP; VRRP/HSRP for gateway redundancy.
-* GSLB for SaaS/public services resilience.
+* Dual SD-WAN controllers in HA mode / CLoud controller **(delete appropriate)**.
 
 
 6.2.5 Unified Communication (Voice / Video / Collaboration)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* Redundant Call Manager servers (Publisher + Subscriber).
-* SBC clusters with dual SIP trunks to separate carriers.
-* Branch Survivable Remote Gateways (SRGs) for WAN failover.
+* Redundant Call Manager servers.
+* SBC gateway with HA for SIP trunks to telco/carriers.
+* Branch Survivable Remote Gateways for WAN failover.
 * QoS: EF (RTP), AF41 (Video), CS3 (Signaling).
 * SRTP and TLS for media and signaling encryption.
+* IP Phones (wired/Wi-Fi/Dect) auto-provisioning via TFTP/HTTP(S).
+* Unified Communications service such as presence, voicemail, conferencing, and collaboration tools integration.
+* Softphone and mobile client support.
 
 
 6.2.6 Remote VPN / Work-from-Home
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * Dual VPN concentrators in HA cluster with session replication.
-* GEO-DNS load balancing to nearest gateway.
-* IPsec/SSL VPN with BFD and Dead Peer Detection (DPD).
+* IPsec/SSL VPN with Dead Peer Detection (DPD).
 * Zero-Trust policies with MFA, posture assessment, dynamic ACLs.
 * Split/full tunnel modes as approved by the Authority.
 
@@ -241,7 +242,7 @@ and **Access** layers, each engineered for redundancy, resiliency, and determini
 * **Routing:** OSPF / BGP with GR, NSF, and BFD (200–500 ms).
 * **IP Services:** Redundant DNS/DHCP servers with synchronized IPAM.
 * **AAA/NAC:** Centralized RADIUS / TACACS+ with redundant nodes.
-* **Management:** Dedicated Mgmt VRF; secure protocols (SSH v2, HTTPS, SNMP v3).
+* **Management:** Web GUI/SSH/SNMP using secure protocols (SSH v2, HTTPS, SNMP v3).
 
 
 6.4 Addressing, Segmentation and Traffic Engineering
