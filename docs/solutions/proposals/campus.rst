@@ -174,15 +174,13 @@ and **Access** layers, each engineered for redundancy, resiliency, and determini
 
 **E. Operational Resilience Summary**
 
-+----------------+------------------------------------------+-------------------------------------------+
 | **Layer**      | **Redundancy Measures**                 | **Convergence / Protection**              |
-+================+==========================================+===========================================+
+|----------------|------------------------------------------|-------------------------------------------|
 | Core           | Dual nodes, LACP links, dual PSUs       | OSPF + BFD + ECMP + GR/NSF                |
 | Distribution   | MLAG, dual PSUs, HSRP/VRRP              | RSTP/MSTP                                 |
 | Access         | Stack/VC, dual uplinks (LACP)           | ISSU + Edge Security + PoE Redundancy     |
-| WLAN           | Overlapped Radio coverage, Redundant    | 802.11r/k/v Fast Failover                 |
-|                | management                              | wIDS/IPS Rogue AP Containment             |
-+----------------+------------------------------------------+-------------------------------------------+
+| WLAN           | Overlapped Radio coverage, Redundant management | 802.11r/k/v Fast Failover, wIDS/IPS Rogue AP Containment |
+
 
 
 6.2.2 EVPN Data Center (Spine/Leaf Fabric)
