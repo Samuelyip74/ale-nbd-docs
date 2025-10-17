@@ -97,6 +97,8 @@ High-level architecture diagram:
    :align: center
    :width: 800px
 
+   :height: 600px
+
 The Proposed Solution shall comprise six (6) inter-connected network domains:
 
 #. Campus LAN, and WLAN with Distributed WLAN Architecture
