@@ -97,7 +97,7 @@ High-level architecture diagram
    :align: center
    :width: 70%
 
-   :height: 600px
+\
 
 The Proposed Solution shall comprise six (6) inter-connected network domains:
 
