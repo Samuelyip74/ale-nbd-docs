@@ -92,7 +92,7 @@ Key Design Principles
 
 High-level architecture diagram
 
-.. image:: campus_network_architecture.png
+.. image:: https://ale-nbd-docs.readthedocs.io/en/latest/_static/images/hld-campus-architecture.png
    :alt: Campus Network Architecture
    :align: center
    :width: 800px
