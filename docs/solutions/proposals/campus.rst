@@ -95,7 +95,7 @@ High-level architecture diagram
 .. image:: https://ale-nbd-docs.readthedocs.io/en/latest/_static/images/hld-campus-architecture.png
    :alt: Campus Network Architecture
    :align: center
-   :width: 800px
+   :width: 70%
 
    :height: 600px
 
