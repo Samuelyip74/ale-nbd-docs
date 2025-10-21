@@ -432,6 +432,150 @@ Client VLAN Role Breakdown
    * - 108
 
 
+Client VLAN Role Breakdown
+++++++++++++++++++++++++++
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10 25 15 40
+
+   * - VLAN ID
+     - Role / Department
+     - Subnet
+     - Description / Notes
+   * - 100
+     - Corporate Staff – HQ
+     - 10.4.4.0/24
+     - Standard users in HQ building
+   * - 101
+     - Corporate Staff – Block A
+     - 10.4.5.0/24
+     - Admin & HR offices
+   * - 102
+     - Corporate Staff – Block B
+     - 10.4.6.0/24
+     - Finance, procurement
+   * - 103
+     - Corporate Staff – Block C
+     - 10.4.7.0/24
+     - Marketing, sales teams
+   * - 104
+     - Corporate Staff – R&D
+     - 10.4.8.0/24
+     - Development & engineering users
+   * - 105
+     - Guest Wi-Fi – HQ
+     - 10.4.9.0/24
+     - Internet-only guest VLAN
+   * - 108
+     - IoT / Smart Devices
+     - 10.4.12.0/24
+     - IP cameras, printers, sensors
+   * - 114
+     - Finance Restricted
+     - 10.4.18.0/24
+     - Financial systems VLAN
+   * - 117
+     - IT Admin VLAN
+     - 10.4.21.0/24
+     - Network admin systems
+   * - 128
+     - Surveillance VLAN
+     - 10.4.32.0/24
+     - CCTV and security devices
+   * - 129
+     - Voice VLAN
+     - 10.4.33.0/24
+     - IP telephony
+   * - 131
+     - Staff BYOD VLAN
+     - 10.4.35.0/24
+     - Employee personal devices
+   * - 139
+     - Temporary VLAN 2
+     - 10.4.43.0/24
+     - Overflow or temporary use
+
+
+WAN & Cloud
+++++++++++++++++++++++++++
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30 15 55
+
+   * - Zone
+     - CIDR
+     - Usage
+   * - WAN Switches
+     - 10.6.0.0/28
+     - WAN switch interconnect and mgmt
+   * - Internet Edge
+     - 10.6.0.16/28
+     - ISP handoff and DMZ
+   * - AWS VPN / Direct Connect
+     - 10.7.0.0/24
+     - Tunnel endpoints
+   * - AWS Servers
+     - 10.7.1.0/24
+     - 100 servers hosted in AWS
+
+
+Management Network
+++++++++++++++++++++++++++
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30 15 55
+
+   * - Zone
+     - CIDR
+     - Usage
+   * - OOB Management
+     - 10.8.0.0/20
+     - Switches, firewalls, LAN/WLAN Management
+   * - NMS & Monitoring
+     - 10.8.16.0/22
+     - Syslog, Radius, SNMP, and monitoring
+
+------------------------
+Addressing Summary
+------------------------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 25 15 20 40
+
+   * - Category
+     - Count
+     - Subnet Size
+     - Coverage
+   * - Access Points
+     - 2000
+     - /22
+     - 4096 IPs
+   * - Edge Switches
+     - 400
+     - /20
+     - 4096 IPs
+   * - Clients
+     - 10,000
+     - /15
+     - 131,072 IPs
+   * - On-Prem Servers
+     - 500
+     - /21 per DC
+     - 4096 IPs total
+   * - AWS Servers
+     - 100
+     - /24
+     - 256 IPs
+   * - Management
+     - ~1000
+     - /20
+     - 4096 IPs   
+
+
 
 6.5 Security and Compliance
 ---------------------------
