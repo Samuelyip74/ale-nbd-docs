@@ -58,12 +58,8 @@ OS9900-PS-DC
 Bill of Materials (BOM) Example – Campus Core Deployment
 ---------------------------------------------------------
 
-Example BOM for two OS9907 chassis configured as a resilient campus core with PoE, fabric backbone,
-and OmniVista Cirrus cloud management.
+Example BOM for two OS9907 chassis configured as a resilient campus core, fabric backbone.
 
-========================
-Bill of Materials
-========================
 
 .. list-table::
    :header-rows: 1
@@ -76,58 +72,68 @@ Bill of Materials
      - 
      -      
    * - OS9907-RCB1
-     - OS9907 redundant bundle with AC power. Redundant base bundle includes 1 × OS9907 Chassis with 3 × Fan Trays, 2 × OS99-CMM, 2 × OS9907-CFM2, 2 × OS99-PS-A, fully featured AOS software with advanced IP routing (IPv4/IPv6). Includes country-specific power cord.
+     - OS9907 redundant bundle with AC power. Redundant base bundle includes 1 × OS9907 Chassis with 
+     
+       3 × Fan Trays, 2 × OS99-CMM, 2 × OS9907-CFM2, 2 × OS99-PS-A, fully featured AOS software with 
+       
+       advanced IP routing (IPv4/IPv6). Includes country-specific power cord.
      - 2
    * - OS99-XNI-U48
-     - OS9900 10 Gigabit network interface card offering 48 1/10 G wire-rate unpopulated SFP+ ports. Enhanced model supports MPLS, MACsec hardware, and large table support for L2, L3, and ACL policies.
+     - OS9900 10 Gigabit network interface card offering 48 1/10 G wire-rate unpopulated SFP+ ports. 
+     
+       Enhanced model supports MPLS, MACsec hardware, and large table support for L2, L3, and ACL policies.
      - 2
    * - OS99-GNI-U48
-     - OS9900 Gigabit network interface card offering 48 unpopulated wire-rate SFP 1000Base-X ports. Enhanced model supports MPLS, MACsec, and large table support for L2, L3, and ACL policies.
+     - OS9900 Gigabit network interface card offering 48 unpopulated wire-rate SFP 1000Base-X ports. 
+     
+       Enhanced model supports MPLS, MACsec, and large table support for L2, L3, and ACL policies.
      - 2
    * - OS99-GNI-48
-     - OS9900 Gigabit network interface card offering 48 wire-rate RJ-45 10/100/1000 Base-T ports. Enhanced model supports MPLS, MACsec, and large table support for L2, L3, and ACL policies.
+     - OS9900 Gigabit network interface card offering 48 wire-rate RJ-45 10/100/1000 Base-T ports. 
+     
+       Enhanced model supports MPLS, MACsec, and large table support for L2, L3, and ACL policies.
      - 2
    * - QSFP-40G-C7M
      - 40 Gigabit direct-attached copper cable (7 m, QSFP+)
      - 2
    * - SFP-10G-SR
-     - 10 Gigabit optical transceiver (SFP+). Supports multimode fiber over 850 nm wavelength (nominal) with LC connector. Typical reach ≈ 300 m.
+     - 10 Gigabit optical transceiver (SFP+). Supports multimode fiber over 850 nm wavelength (nominal) 
+     
+       with LC connector. Typical reach ≈ 300 m.
      - 96
    * - SFP-GIG-SX
-     - 1000Base-SX Gigabit Ethernet optical transceiver (SFP MSA). Supports multimode fiber over 850 nm wavelength. Typical reach ≈ 300 m on 62.5/125 µm MMF or 550 m on 50/125 µm MMF.
+     - 1000Base-SX Gigabit Ethernet optical transceiver (SFP MSA). Supports multimode fiber over 850 nm 
+     
+       wavelength. Typical reach ≈ 300 m on 62.5/125 µm MMF or 550 m on 50/125 µm MMF.
      - 96
    * - **Support Services**
      - 
      -      
    * - PP3N-OS9907
-     - 3-year Partner Support Plus for one OS9907. Includes 24×7 technical assistance, software updates and upgrades, and advanced hardware replacement. See Network Essentials document on MyPortal for details.
+     - 3-year Partner Support Plus for one OS9907. Includes 24×7 technical assistance, software updates 
+     
+       and upgrades, and advanced hardware replacement. See Network Essentials document on MyPortal for details.
      - 2
 
 
-Note: OmniSwitch 9900 are not supported in OmniVista Cirrus.  Use OmniVista 2500 for on-premises management.
 
 Frequently Asked Questions (FAQ)
 --------------------------------
 
-**Q: What fabric and routing capabilities does OS9900 support?**  
-A: OS9900 supports SPB-M, EVPN/VXLAN, MPLS, VRF, and advanced routing (BGP, OSPF, IS-IS) via Metro/Fabric
-or Advanced Routing (AR) license.
 
 **Q: Does OS9900 support PoE for access aggregation?**  
-A: Yes. OS9900-Z24 line cards provide PoE+/PoE++ (up to 90W) for campus edge APs, cameras, and IoT devices.
+A: Yes. OS99-GNI-P48 line cards provide PoE+, Port 1-8 supports HPoE (75W), for campus edge APs, cameras, and IoT devices.
 
 **Q: What redundancy options are available?**  
-A: The system supports dual CMM, hot-swappable PSU, hitless failover, and Multi-Chassis Link Aggregation (MC-LAG)
-for sub-50ms resilience.
+A: The system supports dual CMM, hot-swappable PSU, hitless failover, and Virtual Chassis up to 2 nodes
+for fast failover.
 
-**Q: Is MACsec supported?**  
-A: Yes. MACsec (802.1AE) is available on fiber and copper via license, depending on line card capabilities.
 
 **Q: Can OS9900 be cloud-managed via OmniVista Cirrus?**  
-A: Yes. OVCX-65 licenses allow zero-touch provisioning, telemetry, and remote monitoring via OmniVista Cirrus 10.
+A: No. OS9900 is not supported in OmniVista Cirrus. Use OmniVista 2500 for on-premises management.
 
 **Q: Are DC power options available?**  
-A: Yes. Use OS9900-PS-DC modules for telco or industrial sites requiring battery-backed DC input.
+A: Yes. Use OS9900-PS-DC variant for telco or industrial sites requiring battery-backed DC input.
 
 
 Change Log
