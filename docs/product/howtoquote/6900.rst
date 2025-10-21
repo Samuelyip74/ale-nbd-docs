@@ -108,24 +108,33 @@ Frequently Asked Questions (FAQ)
 --------------------------------
 
 **Q: What advanced fabric features are supported on the OmniSwitch 6900?**  
-A: OS6900 supports SPB Fabric, EVPN/VXLAN, MPLS, VRF, and Layer 2/3 virtualization.  
-Fabric features require the Metro/Fabric or Advanced Routing (AR) license.
+
+A: OS6900 supports SPB Fabric, EVPN/VXLAN, MPLS, for Layer 2/3 virtualization.  
+
+To use MPLS, OS6900-MPLS-1 license is required.
 
 **Q: Does OS6900 support MACsec encryption?**  
-A: Yes. MACsec (802.1AE) is supported on both fiber (SFP+/QSFP+) and copper ports (on T models) with the proper license.
+
+A: Yes. MACsec (802.1AE) is supported on both fiber (SFP+/QSFP+) and copper ports on X48C4E model only.
 
 **Q: What are the power options for OS6900?**  
+
 A: Most OS6900 models support hot-swappable AC or DC power supplies.  
+
 Select DC PSU for data center or telco deployments.
 
-**Q: Can OS6900 be managed via OmniVista Cirrus Cloud?**  
+**Q: Can OS6900 be managed via OmniVista Cirrus Cloud?** 
+
 A: Yes. Use **OVCX-69-BAS** or **OVCX-69-BIZ** for cloud-based provisioning, telemetry, and lifecycle management.
 
 **Q: How is resiliency implemented on OS6900?**  
-A: Supports Virtual Chassis, Multi-Chassis Link Aggregation (MC-LAG), fast failover, and 40G/100G redundant fabric links.
+
+A: Supports Virtual Chassis of up to 6 nodes.  It supports ISSU, redundant PSU, fast failover using dynamic routing protocols
+with BFD support.
 
 **Q: Is VXLAN supported on OS6900?**  
-A: Yes. VXLAN bridging and EVPN control-plane are available with the proper software license.
+
+A: Yes. VXLAN bridging and EVPN control-plane are supported.
 
 
 Change Log

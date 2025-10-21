@@ -80,32 +80,36 @@ Frequently Asked Questions (FAQ)
 --------------------------------
 
 **Q: What licenses are required for advanced routing and fabric services?**  
-A: Install **OS6860-SW-AR** for Advanced Routing (OSPF, BGP, VRFs) and **Metro/Fabric license** if MPLS or SPB-M 
-core fabric services are required.
+
+A: No extra license is required for advanced routing such as OSPF/ISIS/SPB. However, OS6860N-MPLS-1 is required for MPLS.
 
 **Q: Does the OmniSwitch 6860 support MACsec encryption?**  
-A: Yes. All OS6860 Multi-Gig models (Z and M) support IEEE 802.1AE MACsec on copper and fiber uplink ports with 
-the appropriate license.
+
+A: Yes. All OS6860 Multi-Gig models support IEEE 802.1AE MACsec on copper and fiber uplink ports with 
+the appropriate license. OS-SW-MACSEC is required to enable MACsec functionality.
 
 **Q: Can OS6860 be used for Wi-Fi 6/6E high-power access points?**  
-A: Yes. PoE++ (802.3bt) support enables up to 90W per port, ideal for Wi-Fi 6/6E APs, PTZ cameras, and LED PoE 
+A: Yes. Advanced and Premium model support PoE++ (802.3bt up to 90W), whereas enhanced model support PoE++ (802.3bt up to 60W) ideal for Wi-Fi 6/6E APs, PTZ cameras, and LED PoE lighting systems.
 lighting systems.
 
 **Q: What stacking capacity do OS6860 switches provide?**  
-A: OS6860 supports Virtual Chassis with up to 8 units using QSFP (20G/40G/100G) stacking at sub-50ms failover. 
-Mixed stacking with 6860E and 6865 models is supported (software dependent).
+
+A: OS6860 supports Virtual Chassis with up to 8 units using QSFP (20G/40G/100G) for stacking. 
 
 **Q: Can OS6860 be managed in the cloud?**  
+
 A: Yes. Use **OVCX-65-BAS** or **OVCX-65-BIZ** license to manage 6860 via OmniVista Cirrus 10. On-prem 
 OmniVista 2500 is also supported.
 
-**Q: Does OS6860 support SPB-M and Fabric Connect?**  
-A: Yes. SPB-M (Shortest Path Bridging - MAC) is supported with Metro/Fabric license, enabling 
+**Q: Does OS6860 support SPB-M and Fabric Connect?** 
+
+A: Yes. SPB-M (Shortest Path Bridging - MAC) is supported without any additional license, enabling 
 zero-touch Layer 2/3 fabric services.
 
 **Q: Are there DC variants available for OS6860?**  
-A: No. OS6860 is an enterprise campus switch and is AC-powered only. For DC-based industrial installations, use 
-**OmniSwitch 6865**.
+
+A: Yes. OS6860-BP-D modular 150W DC power supply provides power to one non-PoE OS6860, OS6860E or OS6860N-U28 switch.  
+
 
 
 Change Log

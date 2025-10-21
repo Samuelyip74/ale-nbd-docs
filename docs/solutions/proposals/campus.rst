@@ -591,8 +591,8 @@ The security architecture **shall include**, but not limited to, the following c
 * Encrypted management and data-plane traffic (SSH, HTTPS, IPsec, TLS). 
 * Defense-in-depth architecture with segmentation, NAC, firewalls, IDS/IPS, SIEM.
 * Log retention ≥ 12 months; forward to central SIEM.
-* Common criteria certification
-* FIPS 140-2 compliance
+* Common Criteria certification
+* FIPS 140-2 certification
 
 
 6.6 Monitoring, Telemetry and Automation

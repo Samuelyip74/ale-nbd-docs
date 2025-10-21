@@ -106,19 +106,30 @@ Frequently Asked Questions (FAQ)
 --------------------------------
 
 **Q: Does OmniSwitch 6870 support MACsec encryption?**  
+
 A: Yes. MACsec (802.1AE) is supported on copper and fiber uplink ports with an optional MACsec license, OS-SW-MACSEC.
+Note: MACsec not supported on OS6870-24 VFL stacking port 25/26 & OS6870-48 VFL stacking port 49/50.
+
+**Q: Does OmniSwitch 6870 supports Fast/ Perpetual PoE ?
+
+A: Yes, OmniSwitch 6870 supports both Fast PoE and Perpetual PoE features to optimize power delivery and management for connected devices.
 
 **Q: Can 6870 be used for Wi-Fi 6/6E high-power access points?**  
-A: Yes. OS6870-P24Z/P48Z and P48M models support PoE++ (802.3bt) delivering up to 90W, ideal for next-generation APs, cameras, and IoT.
+
+A: Yes. Premium models of OmniSwitch 6870 support PoE (802.3bt) delivering up to 95W, ideal for next-generation APs, cameras, and IoT.
+Advanced models support PoE (802.3bt) delivering up to 60W per port.
 
 **Q: How is OmniVista support handled?**  
+
 A: OS6870 can be managed via **OmniVista Cirrus 10 (OVCX licenses)** for cloud-based provisioning, monitoring, and AI analytics.  
 On-prem OmniVista 2500 is also supported.
 
 **Q: Does OS6870 support DC power variants?**  
+
 A: Yes.
 
 **Q: What stacking or virtual chassis capabilities exist?**  
+
 A: The 6870 supports Virtual Chassis (VC) stacking up to 8 units via VFL ports, enabling simplified management and redundancy.
 
 

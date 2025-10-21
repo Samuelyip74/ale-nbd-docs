@@ -91,25 +91,31 @@ Frequently Asked Questions (FAQ)
 --------------------------------
 
 **Q: Is the OmniSwitch 6865 suitable for outdoor or roadside deployment?**  
+
 A: Yes. The OS6865 is fully hardened (-40°C to +74°C), supports DC power input, and complies with EN50121 railway EMC standards. It is suitable for cabinets, tunnels, substations, and transport waysides.
 
 **Q: Does OS6865 support MACSec encryption?**  
-A: MACSec (802.1AE) is available with the appropriate software license. Check specific model capabilities and license **OS6865-SW-MACSEC** if available.
+
+A: MACSec is not supported on OmniSwitch 6865.
 
 **Q: What routing features are available, and do I need a license?**  
-A: Basic Layer-3 routing (static, RIP) is included. To enable full OSPF and SPB core routing, install the **OS6865-SW-AR** or Metro license.
+
+A: OmniSwitch 6868 supports dynamic routing protocol such as OSPF/ISIS, no extra license is required.
 
 **Q: Does OS6865 support Precision Time Protocol (PTP)?**  
-A: Yes. IEEE 1588v2 PTP is supported on all SFP/SFP+ ports. Ideal for power utility and transport applications requiring sub-microsecond timing.
+
+A: Yes. IEEE 1588v2 end-to-end mode is supported. IEEE 1588v2 peer-to-peer mode is not supported. 
 
 **Q: Can OS6865 be managed via OmniVista Cirrus Cloud?**  
+
 A: Yes. Use **OVCX-65-BAS** or **OVCX-65-BIZ** licenses for cloud-based provisioning, analytics, and remote monitoring.
 
 **Q: What power configurations are available (AC/DC)?**  
-A: All OS6865 models support AC-only, DC-only, or AC+DC hybrid configurations. Dual DC input is recommended for industrial redundancy.
+
+A: All OS6865 models support AC/DC power supplies, Dual inputs is recommended for redundancy.
 
 
 Change Log
 ----------
 
-- **v1.0** — Initial OmniSwitch 6865 ordering and quoting guide.
+- **v1.0** — Initial OmniSwitch 6865 ordering and quoting guide.``
