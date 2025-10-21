@@ -260,10 +260,177 @@ A pair of DC-edge leaf nodes to provide connectivity to campus core and the Inte
 6.4 Addressing, Segmentation and Traffic Engineering
 ----------------------------------------------------
 
-* Structured IPv4/IPv6 scheme: /16 region, /20 site, /24 segment.
-* VRFs per domain (Corp, Guest, IoT, Voice, Mgmt).
-* L3 Gateway HA via HSRP/VRRP (Campus) and Anycast Gateway (DC).
-* ECMP for symmetric routing and optimal load sharing.
+This section defines the hierarchical IP addressing plan for the entire network topology, including
+data centers, campus core, wireless, WAN, and cloud connectivity. All addressing uses RFC1918 private
+address space for internal routing.
+
+
+Summary by Function
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 25 20 55
+
+   * - Function / Zone
+     - Range
+     - Purpose
+   * - Core & DC Backbone
+     - 10.0.0.0/16
+     - Core interconnects between firewalls, cores, DC spines, and WAN
+   * - Data Center 1
+     - 10.1.0.0/16
+     - DC1 spines, leafs, edge switches, and servers
+   * - Data Center 2
+     - 10.2.0.0/16
+     - DC2 spines, leafs, edge switches, and servers
+   * - Campus Distribution & Access
+     - 10.3.0.0/16
+     - Distribution and access switches, client VLANs
+   * - Wireless Network
+     - 10.4.0.0/15
+     - AP management and client VLANs
+   * - WAN & Internet Edge
+     - 10.6.0.0/16
+     - WAN switches, Internet, and cloud uplinks
+   * - AWS Cloud
+     - 10.7.0.0/16
+     - AWS VPC servers and VPN/Direct Connect links
+   * - Management Network
+     - 10.8.0.0/16
+     - Out-of-band management and monitoring services
+
+
+Core & Firewall Interconnects
+++++++++++++++++++++++++++
+
+.. list-table::
+   :header-rows: 1
+   :widths: 35 15 50
+
+   * - Segment
+     - CIDR
+     - Description
+   * - Core1 ↔ Core2
+     - 10.0.0.0/30
+     - Core redundancy link
+   * - Core1 ↔ FW1
+     - 10.0.0.4/30
+     - Internal interface to FW1
+   * - Core2 ↔ FW2
+     - 10.0.0.8/30
+     - Internal interface to FW2
+   * - FW1 ↔ FW2 HA
+     - 10.0.0.12/30
+     - Firewall sync/HA link
+   * - Core ↔ WAN
+     - 10.0.0.16/29
+     - Link between core and WAN switches
+
+
+Data Center Networks
+++++++++++++++++++++++++++
+
+.. list-table::
+   :header-rows: 1
+   :widths: 25 15 60
+
+   * - Zone
+     - CIDR
+     - Usage
+   * - DC1 Spine-Leaf Fabric
+     - 10.1.0.0/20
+     - Interconnect between spines and leafs
+   * - DC1 Servers
+     - 10.1.16.0/21
+     - ~200 servers
+   * - DC2 Spine-Leaf Fabric
+     - 10.2.0.0/20
+     - Interconnect between spines and leafs
+   * - DC2 Servers
+     - 10.2.16.0/21
+     - ~200 servers
+   * - Fabric Services
+     - 10.1.32.0/22, 10.2.32.0/22
+     - vMotion, storage, and infra VLANs
+
+
+Campus Distribution & Access
+++++++++++++++++++++++++++
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30 15 55
+
+   * - Zone
+     - CIDR
+     - Purpose
+   * - Distribution Switches
+     - 10.3.0.0/23
+     - Loopbacks and uplinks
+   * - Edge Switches
+     - 10.3.2.0/20
+     - 400 edge switches, each with /30 or /31 uplinks
+   * - Access VLANs
+     - 10.3.16.0/20
+     - Client VLANs for wired access
+
+
+Wireless Network
+++++++++++++++++++++++++++
+
+.. list-table::
+   :header-rows: 1
+   :widths: 25 15 60
+
+   * - Zone
+     - CIDR
+     - Usage
+   * - AP Management
+     - 10.4.0.0/22
+     - 2000 access points
+   * - Client VLAN Pool
+     - 10.4.4.0/15
+     - 10,000 clients (segmented by role)
+
+
+Client VLAN Role Breakdown
+++++++++++++++++++++++++++
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10 25 15 40
+
+   * - VLAN ID
+     - Role / Department
+     - Subnet
+     - Description / Notes
+   * - 100
+     - Corporate Staff – HQ
+     - 10.4.4.0/24
+     - Standard users in HQ building
+   * - 101
+     - Corporate Staff – Block A
+     - 10.4.5.0/24
+     - Admin & HR offices
+   * - 102
+     - Corporate Staff – Block B
+     - 10.4.6.0/24
+     - Finance, procurement
+   * - 103
+     - Corporate Staff – Block C
+     - 10.4.7.0/24
+     - Marketing, sales teams
+   * - 104
+     - Corporate Staff – R&D
+     - 10.4.8.0/24
+     - Development & engineering users
+   * - 105
+     - Guest Wi-Fi – HQ
+     - 10.4.9.0/24
+     - Internet-only guest VLAN
+   * - 108
+
 
 
 6.5 Security and Compliance
