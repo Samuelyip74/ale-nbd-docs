@@ -1,0 +1,172 @@
+.. _omniswitch-6570m-datasheet:
+
+===========================
+OmniSwitch 6570M Datasheet
+===========================
+
+.. contents::
+   :local:
+   :depth: 2
+
+
+Overview
+--------
+
+The Alcatel-Lucent Enterprise OmniSwitch 6570M Stackable Gigabit and Multi-Gigabit Ethernet
+LAN switch family provides high performance and scalability with a broad range of interface
+types and PoE capabilities, making it ideal for enterprise edge, aggregation, and small data
+center deployments.
+
+The switches offer high-density multi-gigabit access with 1G, 2.5G, 5G, and 10G ports, and
+uplinks up to 25G and 100G. They deliver advanced Layer 2 and Layer 3 switching, low latency,
+and comprehensive security features.
+
+Key features include:
+- High-density Multi-Gigabit access
+- Non-blocking switching capacity
+- PoE++ (up to 90W) on access ports
+- Hot-swappable, modular power supplies and fan trays
+- Stackable up to eight units
+- Front-to-back and back-to-front airflow options
+
+
+Models
+------
+
+**OS6570M-P24Z8**
+
+- 24× 1G/2.5G/5G/10G (RJ-45) ports with PoE++ support  
+- 8× 25G SFP28 uplinks  
+- 2× 100G QSFP28 uplink/stacking ports  
+- 600W modular AC power supply  
+- Supports up to 1,880W PoE budget  
+
+**OS6570M-P48Z16**
+
+- 48× 1G/2.5G/5G (RJ-45) ports with PoE++ support  
+- 16× 25G SFP28 uplinks  
+- 2× 100G QSFP28 uplink/stacking ports  
+- 920W modular AC power supply  
+- Supports up to 1,880W PoE budget  
+
+**OS6570M-X48**
+
+- 48× 10G/25G SFP28 ports  
+- 6× 100G QSFP28 uplink/stacking ports  
+- Modular AC power supply and fan tray  
+
+**OS6570M-C12**
+
+- 12× 10G/25G SFP28 ports  
+- 4× 100G QSFP28 uplink/stacking ports  
+- Modular AC power supply and fan tray  
+
+
+Hardware and Power Options
+--------------------------
+
+**Power Supply Units**
+
+- **OS6570M-BP-600W-AC** – 600W modular AC power supply  
+- **OS6570M-BP-600W-DC** – 600W modular DC power supply  
+- **OS6570M-BP-920W-AC** – 920W modular AC power supply  
+
+All power supplies are hot-swappable and support 1+1 redundancy.
+
+**Fan Trays**
+
+- **OS6570M-FAN-F2B** – Front-to-back airflow  
+- **OS6570M-FAN-B2F** – Back-to-front airflow  
+
+
+Performance
+-----------
+
+- Switching capacity: up to 1.2 Tbps  
+- Stacking capacity: 480 Gbps  
+- MAC addresses: 128K  
+- VLANs: 4K  
+- Jumbo frames: up to 9,216 bytes  
+- Latency: sub-2 microseconds  
+- Stack size: up to 8 units  
+
+
+Environmental and Compliance
+----------------------------
+
+- Operating temperature: 0°C to 50°C  
+- Storage temperature: -40°C to 70°C  
+- Operating humidity: 10% to 90% (non-condensing)  
+- Certifications: CE, UL, FCC, RoHS, WEEE  
+
+
+Management and Software
+-----------------------
+
+- Managed by Alcatel-Lucent OmniVista Network Management System  
+- Supports OmniVista Cirrus Cloud-based Management  
+- Supports CLI, WebView, SNMPv1/v2/v3, and REST APIs  
+- Zero-touch provisioning (ZTP) support  
+
+
+Security
+--------
+
+- IEEE 802.1X authentication  
+- ACLs and dynamic VLAN assignment  
+- Denial of Service (DoS) protection  
+- Network Access Control (NAC) integration  
+
+
+Applications
+------------
+
+- High-density multi-gigabit access in campus networks  
+- Aggregation for high-performance enterprise backbones  
+- Data center Top-of-Rack (ToR) or small spine layer  
+- PoE++ power delivery for Wi-Fi 6/6E and IoT devices  
+
+
+Ordering Information
+--------------------
+
+.. list-table::
+   :widths: 25 65 10
+   :header-rows: 1
+
+   * - **Part Number**
+     - **Description**
+     - **Qty**
+   * - OS6570M-P24Z8
+     - 24× Multi-Gig PoE++ ports, 8× 25G uplinks, 2× 100G stacking ports, 600W PSU
+     - 1
+   * - OS6570M-P48Z16
+     - 48× Multi-Gig PoE++ ports, 16× 25G uplinks, 2× 100G stacking ports, 920W PSU
+     - 1
+   * - OS6570M-X48
+     - 48× 10G/25G ports, 6× 100G uplinks, modular AC PSU
+     - 1
+   * - OS6570M-C12
+     - 12× 25G ports, 4× 100G uplinks, modular AC PSU
+     - 1
+   * - OS6570M-BP-600W-AC
+     - 600W modular AC power supply
+     - 1
+   * - OS6570M-BP-600W-DC
+     - 600W modular DC power supply
+     - 1
+   * - OS6570M-BP-920W-AC
+     - 920W modular AC power supply
+     - 1
+   * - OS6570M-FAN-F2B
+     - Fan tray, front-to-back airflow
+     - 1
+   * - OS6570M-FAN-B2F
+     - Fan tray, back-to-front airflow
+     - 1
+
+
+Change Log
+----------
+
+- **v1.0** — Extracted directly and faithfully from the official OmniSwitch 6570M datasheet.
