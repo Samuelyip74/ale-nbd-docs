@@ -45,8 +45,7 @@ Models
 
 **OS6570M-U28X/U28XD**
 
-  • 20x100/1000 Base-X SFP ports, 4xSFP/RJ45 1G combo, 4x1G/10G* SFP+ ports and 2x1G/10G SFP+
-  uplink/VLF ports
+  • 20x100/1000 Base-X SFP ports, 4xSFP/RJ45 1G combo, 4x1G/10G* SFP+ ports and 2x1G/10G SFP+ uplink/VLF ports
   • Modular primary AC/DC power supply with optional modular AC/DC backup power supply
   • Supports additional 4x10 GigE uplink/VFL ports with the OS6570-SW-PERF4* license
   • Fan-design with 0 to 50° C operating temperature
