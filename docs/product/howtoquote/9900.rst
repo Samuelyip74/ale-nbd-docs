@@ -61,43 +61,50 @@ Bill of Materials (BOM) Example – Campus Core Deployment
 Example BOM for two OS9907 chassis configured as a resilient campus core with PoE, fabric backbone,
 and OmniVista Cirrus cloud management.
 
+========================
+Bill of Materials
+========================
+
 .. list-table::
-   :widths: 15 65 10
    :header-rows: 1
+   :widths: 15 45 10
 
    * - **SKU**
      - **Description**
      - **Qty**
    * - **Hardware**
      - 
-     - 
-   * - OS9907
-     - 7-slot modular chassis with backplane, fan trays, and labeled slots. Supports dual CMM and redundant PSU.
+     -      
+   * - OS9907-RCB1
+     - OS9907 redundant bundle with AC power. Redundant base bundle includes 1 × OS9907 Chassis with 3 × Fan Trays, 2 × OS99-CMM, 2 × OS9907-CFM2, 2 × OS99-PS-A, fully featured AOS software with advanced IP routing (IPv4/IPv6). Includes country-specific power cord.
      - 2
-   * - OS9900-CMM
-     - Control and Management Module for OS9900 chassis. Required for fabric and routing operations.
+   * - OS99-XNI-U48
+     - OS9900 10 Gigabit network interface card offering 48 1/10 G wire-rate unpopulated SFP+ ports. Enhanced model supports MPLS, MACsec hardware, and large table support for L2, L3, and ACL policies.
      - 2
-   * - OS9900-Z24
-     - 24-port 10G PoE+/PoE++ line card (campus access aggregation). Supports Wi-Fi 6/6E high-power APs.
-     - 4
-   * - OS9900-PS-AC
-     - AC power supply module for OS9900 chassis. Hot-swappable, redundant capable.
-     - 4
-
+   * - OS99-GNI-U48
+     - OS9900 Gigabit network interface card offering 48 unpopulated wire-rate SFP 1000Base-X ports. Enhanced model supports MPLS, MACsec, and large table support for L2, L3, and ACL policies.
+     - 2
+   * - OS99-GNI-48
+     - OS9900 Gigabit network interface card offering 48 wire-rate RJ-45 10/100/1000 Base-T ports. Enhanced model supports MPLS, MACsec, and large table support for L2, L3, and ACL policies.
+     - 2
+   * - QSFP-40G-C7M
+     - 40 Gigabit direct-attached copper cable (7 m, QSFP+)
+     - 2
+   * - SFP-10G-SR
+     - 10 Gigabit optical transceiver (SFP+). Supports multimode fiber over 850 nm wavelength (nominal) with LC connector. Typical reach ≈ 300 m.
+     - 96
+   * - SFP-GIG-SX
+     - 1000Base-SX Gigabit Ethernet optical transceiver (SFP MSA). Supports multimode fiber over 850 nm wavelength. Typical reach ≈ 300 m on 62.5/125 µm MMF or 550 m on 50/125 µm MMF.
+     - 96
    * - **Support Services**
      - 
-     - 
-   * - PP10-OS9900
-     - 10-Year Partner Support Plus with hardware replacement, TAC access, and major software updates.
+     -      
+   * - PP3N-OS9907
+     - 3-year Partner Support Plus for one OS9907. Includes 24×7 technical assistance, software updates and upgrades, and advanced hardware replacement. See Network Essentials document on MyPortal for details.
      - 2
 
-   * - **Cloud Management License**
-     - 
-     - 
-   * - OVCX-65-BAS-3Y
-     - OmniVista Cirrus 10 Cloud Base License (3-Year) for OS69xx/OS99xx platforms.
-     - 2
 
+Note: OmniSwitch 9900 are not supported in OmniVista Cirrus.  Use OmniVista 2500 for on-premises management.
 
 Frequently Asked Questions (FAQ)
 --------------------------------

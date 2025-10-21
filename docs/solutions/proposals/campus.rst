@@ -533,10 +533,10 @@ Management Network
      - Usage
    * - OOB Management
      - 10.8.0.0/20
-     - Switches, firewalls, LAN/WLAN Management
+     - Switches, firewalls 
    * - NMS & Monitoring
      - 10.8.16.0/22
-     - Syslog, Radius, SNMP, and monitoring
+     - LAN/WLAN Management, Syslog, Radius, SNMP, and monitoring
 
 ------------------------
 Addressing Summary
