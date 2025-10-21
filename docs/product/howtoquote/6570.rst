@@ -1,7 +1,7 @@
 .. _omniswitch-6570m-datasheet:
 
 ===========================
-OmniSwitch 6570M Datasheet
+OmniSwitch 6570M Ordering Guide
 ===========================
 
 .. contents::
