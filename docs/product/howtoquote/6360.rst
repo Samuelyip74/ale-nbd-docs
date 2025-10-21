@@ -129,15 +129,19 @@ Frequently Asked Questions (FAQ)
 --------------------------------
 
 **Q: How do I mount OS6360-10/P10 on a 19" rack?**  
+
 A: Purchase the **OS6360-RM-19-L** rack mount kit.
 
 **Q: My customer does not have a 19" rack. What are the mounting alternatives?**  
+
 A: Use the **OS6360-WALL-MNT** kit to mount the switch on a flat surface or wall.
 
 **Q: When is the OS6360-SW-PERF license required?**  
+
 A: The OS6360-SW-PERF license is required to enable 10G uplink ports on OS6360-PH24 or OS6360-PH48 models.
 
 **Q: What is the difference between OVCX-63-BAS-3Y and OVCX-63-BIZ-3Y?**  
+
 A: OVCX-63-BIZ-3Y includes all features of BAS plus Partner Support Plus.  
    BAS and BIZ licenses are mutually exclusive.
 

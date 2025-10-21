@@ -110,16 +110,20 @@ Frequently Asked Questions (FAQ)
 --------------------------------
 
 **Q: What is the difference between OS6560 and OS6560E models?**  
+
 A: OS6560E models include Multi-Gig (2.5G/5G) Ethernet ports and support higher PoE (802.3bt / 95 W) for next-generation 
 Wi-Fi access points. 
 
 **Q: Does the OmniSwitch 6560 support MACSec?**  
+
 A: Yes. OS6560-48X4, OS6560-P48X4, and OS6560E-P48Z16 support IEEE 802.1AE MACSec on all access and uplink ports.
 
-**Q: How do I enable full OSPF routing?**  
+**Q: How do I enable full OSPF routing?** 
+
 A: Install the **OS6560-SW-AR** Advanced Routing license to enable extended OSPFv2/v3 scalability and routing features.
 
 **Q: Can the OmniSwitch 6560 be managed via OmniVista Cirrus cloud?**  
+
 A: Yes. Use **OVCX-65-BAS** (Base) or **OVCX-65-BIZ** (Business) licenses for secure cloud-based management and analytics.
 
 
