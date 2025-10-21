@@ -33,137 +33,101 @@ Key features include:
 Models
 ------
 
-**OS6570M-P24Z8**
+**OS6570M-12/12D**
 
-- 24× 1G/2.5G/5G/10G (RJ-45) ports with PoE++ support  
-- 8× 25G SFP28 uplinks  
-- 2× 100G QSFP28 uplink/stacking ports  
-- 600W modular AC power supply  
-- Supports up to 1,880W PoE budget  
-
-**OS6570M-P48Z16**
-
-- 48× 1G/2.5G/5G (RJ-45) ports with PoE++ support  
-- 16× 25G SFP28 uplinks  
-- 2× 100G QSFP28 uplink/stacking ports  
-- 920W modular AC power supply  
-- Supports up to 1,880W PoE budget  
-
-**OS6570M-X48**
-
-- 48× 10G/25G SFP28 ports  
-- 6× 100G QSFP28 uplink/stacking ports  
-- Modular AC power supply and fan tray  
-
-**OS6570M-C12**
-
-- 12× 10G/25G SFP28 ports  
-- 4× 100G QSFP28 uplink/stacking ports  
-- Modular AC power supply and fan tray  
+  • 8 ports RJ45 port non-PoE 10/100/1000 Base-T with 2x100/1G Base-X SFP and 2x1G/10G SFP+ ports
+  • Primary internal AC/DC power supply with optional external AC/DC backup power supply
+  • Optimised ½ x 1RU form factor with optional mounting offerings
+  • Fan-less design with 0 to 50° C operating temperature
+  • Metro Ethernet Service features included for service provider deployments
+  • IEEE 802.1AE MACsec encryption**
 
 
-Hardware and Power Options
---------------------------
+**OS6570M-U28X/U28XD**
 
-**Power Supply Units**
+  • 20x100/1000 Base-X SFP ports, 4xSFP/RJ45 1G combo, 4x1G/10G* SFP+ ports and 2x1G/10G SFP+
+  uplink/VLF ports
+  • Modular primary AC/DC power supply with optional modular AC/DC backup power supply
+  • Supports additional 4x10 GigE uplink/VFL ports with the OS6570-SW-PERF4* license
+  • Fan-design with 0 to 50° C operating temperature
+  • 1RU x rack width form factor
+  • Metro Ethernet Service features included for service provider deployments
+  • IEEE 1588v2 (PTP) Transparent Clock** and IEEE 802.1AE MACsec encryption**
 
-- **OS6570M-BP-600W-AC** – 600W modular AC power supply  
-- **OS6570M-BP-600W-DC** – 600W modular DC power supply  
-- **OS6570M-BP-920W-AC** – 920W modular AC power supply  
-
-All power supplies are hot-swappable and support 1+1 redundancy.
-
-**Fan Trays**
-
-- **OS6570M-FAN-F2B** – Front-to-back airflow  
-- **OS6570M-FAN-B2F** – Back-to-front airflow  
-
-
-Performance
------------
-
-- Switching capacity: up to 1.2 Tbps  
-- Stacking capacity: 480 Gbps  
-- MAC addresses: 128K  
-- VLANs: 4K  
-- Jumbo frames: up to 9,216 bytes  
-- Latency: sub-2 microseconds  
-- Stack size: up to 8 units  
-
-
-Environmental and Compliance
-----------------------------
-
-- Operating temperature: 0°C to 50°C  
-- Storage temperature: -40°C to 70°C  
-- Operating humidity: 10% to 90% (non-condensing)  
-- Certifications: CE, UL, FCC, RoHS, WEEE  
-
-
-Management and Software
------------------------
-
-- Managed by Alcatel-Lucent OmniVista Network Management System  
-- Supports OmniVista Cirrus Cloud-based Management  
-- Supports CLI, WebView, SNMPv1/v2/v3, and REST APIs  
-- Zero-touch provisioning (ZTP) support  
-
-
-Security
---------
-
-- IEEE 802.1X authentication  
-- ACLs and dynamic VLAN assignment  
-- Denial of Service (DoS) protection  
-- Network Access Control (NAC) integration  
-
-
-Applications
-------------
-
-- High-density multi-gigabit access in campus networks  
-- Aggregation for high-performance enterprise backbones  
-- Data center Top-of-Rack (ToR) or small spine layer  
-- PoE++ power delivery for Wi-Fi 6/6E and IoT devices  
 
 
 Ordering Information
 --------------------
 
 .. list-table::
-   :widths: 25 65 10
+   :widths: 20 65 15
    :header-rows: 1
 
-   * - **Part Number**
+   * - **SKU**
      - **Description**
      - **Qty**
-   * - OS6570M-P24Z8
-     - 24× Multi-Gig PoE++ ports, 8× 25G uplinks, 2× 100G stacking ports, 600W PSU
-     - 1
-   * - OS6570M-P48Z16
-     - 48× Multi-Gig PoE++ ports, 16× 25G uplinks, 2× 100G stacking ports, 920W PSU
-     - 1
-   * - OS6570M-X48
-     - 48× 10G/25G ports, 6× 100G uplinks, modular AC PSU
-     - 1
-   * - OS6570M-C12
-     - 12× 25G ports, 4× 100G uplinks, modular AC PSU
-     - 1
-   * - OS6570M-BP-600W-AC
-     - 600W modular AC power supply
-     - 1
-   * - OS6570M-BP-600W-DC
-     - 600W modular DC power supply
-     - 1
-   * - OS6570M-BP-920W-AC
-     - 920W modular AC power supply
-     - 1
-   * - OS6570M-FAN-F2B
-     - Fan tray, front-to-back airflow
-     - 1
-   * - OS6570M-FAN-B2F
-     - Fan tray, back-to-front airflow
-     - 1
+   * - **Hardware**
+     - 
+     - 
+   * - OS6570M-U28
+     - OS6570M-U28 GigE 1RU chassis. 20×100/1000 Base-X SFP ports, 4×SFP/RJ45 combo,
+      
+       4×1G/10G* SFP+ ports, and 2×1G/10G SFP+ uplink/VLF ports. Includes AC PSU, 
+       
+       country-specific power cord, and mounting brackets. Optional backup PS and *10G port license upgrade.
+     - 2
+   * - OS6570-BP
+     - OS6570-BP modular 150W AC backup power supply. Provides backup power to one non-PoE OS6570 
+     
+       24/48 port switch. Ships with country-specific power cord.
+     - 2
+   * - OS6570-SW-PERF4
+     - Performance software license allowing 4 fixed SFP+ ports of an OS6570-U28 model switch to operate 
+     
+       at 10G speed.
+     - 2
+   * - OS6570M-SW-AR
+     - OS6570 Software License to enable advanced routing with OSPF, ISIS, PIM, and VRF for IPv4 and IPv6. 
+     
+       Check the specification and AOS user guides for more details.
+     - 2
+   * - SFP-10G-LR
+     - 10 Gigabit optical transceiver (SFP+). Supports monomode fiber over 1310 nm wavelength 
+       (nominal) with an LC connector. Typical reach of 10 km.
+     - 4 
+   * - SFP-GIG-LX
+     - 1000Base-LX Gigabit Ethernet optical transceiver (SFP MSA). Supports single-mode fiber over 1310 nm 
+       
+       wavelength (nominal) with an LC connector. Typical reach of 10 km on 9/125 µm SMF.
+     - 24
+   * - **Support Services**
+     - 
+     -      
+   * - PP3N-OS6570
+     - 3-Year Partner Support Plus for one OS6570. Includes 24×7 access to technical assistance, 
+     
+       software updates and upgrades, and advanced replacement of faulty equipment. Refer to Network Essentials document on MyPortal.
+     - 2
+   * - **Cloud Management License**
+     - 
+     - 
+   * - OVCX-65-BAS-3Y
+     - OmniVista Cirrus 10 Cloud Base License (3-Year) for OS65xx series. Includes management updates and support.
+     - 2     
+
+**Q: Does the OmniSwitch 6570 support MACSec?**  
+
+A: Yes. The hardware supports IEEE 802.1AE MACSec encryption on all access and uplink ports, however, the software is not ready for MACSec deployment.
+
+Please contact your Alcatel-Lucent Enterprise representative for availability details.
+
+**Q: How do I enable full OSPF routing?** 
+
+A: Install the **OS6570M-SW-AR** Advanced Routing license to enable extended OSPFv2/v3 scalability and routing features.
+
+**Q: Can the OmniSwitch 6560 be managed via OmniVista Cirrus cloud?**  
+
+A: Yes. Use **OVCX-65-BAS** (Base) or **OVCX-65-BIZ** (Business) licenses for secure cloud-based management and analytics.
 
 
 Change Log
