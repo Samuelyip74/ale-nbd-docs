@@ -125,7 +125,7 @@ Frequently Asked Questions (FAQ)
 A: Yes. OS99-GNI-P48 line cards provide PoE+, Port 1-8 supports HPoE (75W), for campus edge APs, cameras, and IoT devices.
 
 **Q: What redundancy options are available?**  \
-A: The system supports dual CMM, hot-swappable PSU, hitless failover, and Virtual Chassis up to 2 nodes
+A: The system supports dual CMM, hot-swappable PSU/CFM, ISSU failover, and Virtual Chassis up to 2 nodes
 for fast failover.
 
 
