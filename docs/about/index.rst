@@ -6,4 +6,5 @@ About Alcatel-Lucent Enterprise
    :maxdepth: 1
 
    ale.rst
+   corporate_ppt.rst
 
