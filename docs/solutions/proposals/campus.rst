@@ -301,16 +301,56 @@ and associated software licenses.
 
 <Placeholder for BOM table>
 
-| Item                       | Description                     | Quantity | Unit Price | Total Price |
-|----------------------------|---------------------------------|----------|------------|-------------|
-| Campus Core Switches       | High-performance core switches  | 2        | $XX,XXX    | $XX,XXX     |
-| Campus Distribution Switches| Redundant distribution switches | 4        | $XX,XXX    | $XX,XXX     |
-| Campus Access Switches     | Stackable access switches       | XX       | $X,XXX     | $XX,XXX     |
-| Wireless Access Points     | Wi-Fi 6/6E/7 APs                |  XX       | $X,XXX     | $XX,XXX     |
-| Data Center Spine Switches | High-capacity spine switches    | 4        | $XX,XXX    | $XX,XXX     |
-| Data Center Leaf Switches  | Leaf switches                   | 8        | $XX,XXX    | $XX,XXX     |
-| Firewalls                  | Dual firewalls for Internet Edge | 2        | $XX,XXX    | $XX,XXX     |
-| Software Licenses          | Network OS and feature licenses | XX       | $X,XXX     | $XX,XXX     |
+.. list-table::
+   :header-rows: 1
+   :widths: 25 35 10 15 15
+
+   * - Item
+     - Description
+     - Quantity
+     - Unit Price
+     - Total Price
+   * - Campus Core Switches
+     - High-performance core switches
+     - 2
+     - $XX,XXX
+     - $XX,XXX
+   * - Campus Distribution Switches
+     - Redundant distribution switches
+     - 4
+     - $XX,XXX
+     - $XX,XXX
+   * - Campus Access Switches
+     - Stackable access switches
+     - XX
+     - $X,XXX
+     - $XX,XXX
+   * - Wireless Access Points
+     - Wi-Fi 6/6E/7 APs
+     - XX
+     - $X,XXX
+     - $XX,XXX
+   * - Data Center Spine Switches
+     - High-capacity spine switches
+     - 4
+     - $XX,XXX
+     - $XX,XXX
+   * - Data Center Leaf Switches
+     - Leaf switches
+     - 8
+     - $XX,XXX
+     - $XX,XXX
+   * - Firewalls
+     - Dual firewalls for Internet Edge
+     - 2
+     - $XX,XXX
+     - $XX,XXX
+   * - Software Licenses
+     - Network OS and feature licenses
+     - XX
+     - $X,XXX
+     - $XX,XXX
+
 
 
 
