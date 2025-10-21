@@ -206,12 +206,12 @@ The Data Center shall support east-west traffic patterns, workload mobility, and
 * VXLAN overlay with **EVPN Multihoming (EVPN-MH)** for active-active links.
 * Distributed anycast gateways for workload mobility, and optimal routing.
 
-A pair of leaf nodes shall provide connectivity to Campus Core and Hybrid Cloud gateways.
+A pair of DC-edge leaf nodes to provide connectivity to campus core and the Internet.
 
 6.2.3 Hybrid Cloud (AWS/Azure Integration)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* Redundant **Direct Connect / Transit Gateway** circuits/service via separate PoPs/providers.
+* The network shall connect to AWS Private cloud via  **Direct Connect / Transit Gateway** over the Internet via separate PoPs/providers.
 * Segregated VRFs/VPCs for Prod/Dev/DR environments.
 * BGP to OSPF redistribution for routes convergence.
 
@@ -222,7 +222,7 @@ A pair of leaf nodes shall provide connectivity to Campus Core and Hybrid Cloud 
 * Dual firewalls (Active/Active or Standby) with state synchronization.
 * Dual edge routers with dual ISPs using eBGP multi-homing.
 * **SD-WAN fabric** over Internet/MPLS/5G **(delete appropriate)** underlays.
-* Application-aware path selection, FEC, packet duplication.
+* Application-aware path selection.
 * Dual SD-WAN controllers in HA mode / CLoud controller **(delete appropriate)**.
 
 
@@ -230,7 +230,7 @@ A pair of leaf nodes shall provide connectivity to Campus Core and Hybrid Cloud 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * Redundant Call Manager servers.
-* SBC gateway with HA for SIP trunks to telco/carriers.
+* vSBC gateway with HA for SIP trunks to telco/carriers.
 * Branch Survivable Remote Gateways for WAN failover.
 * QoS: EF (RTP), AF41 (Video), CS3 (Signaling).
 * SRTP and TLS for media and signaling encryption.
@@ -242,7 +242,7 @@ A pair of leaf nodes shall provide connectivity to Campus Core and Hybrid Cloud 
 6.2.6 Remote VPN / Work-from-Home
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* Dual VPN concentrators in HA cluster with session replication.
+* Dual VPN concentrators/Firewall in HA cluster with session replication.
 * IPsec/SSL VPN with Dead Peer Detection (DPD).
 * Zero-Trust policies with MFA, posture assessment, dynamic ACLs.
 * Split/full tunnel modes as approved by the Authority.
@@ -269,19 +269,27 @@ A pair of leaf nodes shall provide connectivity to Campus Core and Hybrid Cloud 
 6.5 Security and Compliance
 ---------------------------
 
+The network **shall implement** a multi-layered security framework to protect against internal and external threats, ensuring data confidentiality, integrity, and availability.
+The security architecture **shall include**, but not limited to, the following components:
+
+* Zero Trust Network Architecture (ZTNA) principles.
+* Network Access Control (NAC) with 802.1X/MAB and RADIUS integration.
+* Role-Based Access Control (RBAC) for device and network access.
+* Strong authentication with MFA for administrative and user access.
+* Network segmentation and micro-segmentation. 
+* Encrypted management and data-plane traffic (SSH, HTTPS, IPsec, TLS). 
 * Defense-in-depth architecture with segmentation, NAC, firewalls, IDS/IPS, SIEM.
-* Administrative access via MFA and RBAC.
 * Log retention ≥ 12 months; forward to central SIEM.
-* Compliance with CIS Controls, ISO 27001, and NIST CSF.
+* Common criteria certification
+* FIPS 140-2 compliance
 
 
 6.6 Monitoring, Telemetry and Automation
 ----------------------------------------
 
-* Real-time telemetry (SNMP v3, gNMI/gRPC, IPFIX/NetFlow).
+* Real-time telemetry (SNMP v3, sFlow, RMON).
 * Site availability ≥ 99.95 %; routing convergence ≤ 500 ms (BFD).
-* IaC automation with validation and rollback.
-* Monthly SLA and capacity reports (ports, APs, VPNs, UC metrics).
+* Monthly SLA and capacity reports (ports, APs, Switches).
 
 
 7. Bill of Materials (BOM) and Licensing
@@ -291,57 +299,22 @@ The Bidder **shall supply** all required active and passive components,
 including switches, routers, controllers, APs, firewalls, servers, optics, cables,
 and associated software licenses.
 
-* All equipment **shall be new and of current production**.
-* Licenses **shall include** five-year software and support entitlements.
-* Quantities **shall** be confirmed during detailed design.
+<Placeholder for BOM table>
+
+| Item                       | Description                     | Quantity | Unit Price | Total Price |
+|----------------------------|---------------------------------|----------|------------|-------------|
+| Campus Core Switches       | High-performance core switches  | 2        | $XX,XXX    | $XX,XXX     |
+| Campus Distribution Switches| Redundant distribution switches | 4        | $XX,XXX    | $XX,XXX     |
+| Campus Access Switches     | Stackable access switches       | XX       | $X,XXX     | $XX,XXX     |
+| Wireless Access Points     | Wi-Fi 6/6E/7 APs                |  XX       | $X,XXX     | $XX,XXX     |
+| Data Center Spine Switches | High-capacity spine switches    | 4        | $XX,XXX    | $XX,XXX     |
+| Data Center Leaf Switches  | Leaf switches                   | 8        | $XX,XXX    | $XX,XXX     |
+| Firewalls                  | Dual firewalls for Internet Edge | 2        | $XX,XXX    | $XX,XXX     |
+| Software Licenses          | Network OS and feature licenses | XX       | $X,XXX     | $XX,XXX     |
 
 
-8. Implementation Plan and Timeline
-===================================
-
-* **Phase 1:** Detailed Design – 4 weeks
-* **Phase 2:** Procurement & Staging – 6 weeks
-* **Phase 3:** Deployment – 8 weeks
-* **Phase 4:** Testing & Acceptance – 2 weeks
-* **Phase 5:** Handover & Training – 2 weeks
-
-Total implementation timeline ≈ 22 weeks (subject to site access).
 
 
-9. Testing and Acceptance
-==========================
-
-* Factory Acceptance Test (FAT) and Site Acceptance Test (SAT)
-  **shall** verify functionality, performance, and redundancy.
-* Acceptance criteria include latency, throughput, failover time, and security policy validation.
-* Comprehensive test reports **shall** be submitted to the Authority for approval.
-
-
-10. Operations and Maintenance
-==============================
-
-* 24×7 technical support with defined SLA response times.
-* Proactive monitoring via NMS and automated alerts.
-* Firmware maintenance and patch management under vendor guidelines.
-* On-site spare strategy for critical components.
-
-
-11. Training and Documentation
-==============================
-
-* The Contractor **shall provide** comprehensive training for administrators and operations staff.
-* Deliverables include System Design Document (SDD), As-Built Drawings, and Configuration Backups.
-* All documentation **shall be provided** in editable electronic format and hard copy.
-
-
-12. Service Level and Warranty Commitments
-==========================================
-
-* Minimum availability commitment: 99.95 % per site.
-* Hardware warranty: 5 years comprehensive replacement.
-* Software support: 5 years updates and security patches.
-* Mean Time to Restore (MTTR): ≤ 4 hours for critical failures.
-* Periodic SLA reviews and reporting to the Authority.
 
 ----
 
