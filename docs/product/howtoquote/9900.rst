@@ -16,6 +16,8 @@ The OmniSwitch 9900 is a high-capacity, modular core switching platform designed
 campus backbones, large-scale aggregation, and data center fabric environments. It supports advanced
 AOS features such as SPB Fabric, EVPN/VXLAN, MPLS, VRF, SDN, MACsec, and high PoE delivery.
 
+Note: EVPN/MPLS are supported in future software releases. Please consult ALE product management for roadmap details.
+
 **Chassis Models**
 
 OS9907
