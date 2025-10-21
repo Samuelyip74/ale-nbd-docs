@@ -3,7 +3,7 @@ Corporate Presentation
 ==================
 
 Download the presentation:
-:download:`Corporate Presentation </en/latest/_static/alcatel-lucent-enterprise-corporate-presentation-master-june-2025-en.pptx>`
+:download:`Corporate Presentation <https://ale-nbd-docs.readthedocs.io//en/latest/_static/alcatel-lucent-enterprise-corporate-presentation-master-june-2025-en.pptx>`
 
 .. raw:: html 
 
