@@ -4,7 +4,7 @@ OmniAccess Stellar AP1301
 
 .. raw:: html
 
-   <iframe src="/en/latest/_static/omniaccess-stellar-oaw-ap1301-datasheet-en.pdf"
+   <iframe src="/en/latest/_static/omniaccess-stellar-ap1301-datasheet-en.pdf"
            width="1024px" height="800px"
            style="border:none;">
    </iframe>
